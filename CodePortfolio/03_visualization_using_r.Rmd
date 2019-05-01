@@ -1,0 +1,640 @@
+---
+title: "Visualization using R"
+author: "Vivek Vijayaraghavan"
+date: "4/4/2019"
+output:
+  html_document:
+    df_print: paged
+    toc: true # table of content true
+    toc_depth: 3  # upto three depths of headings (specified by #, ## and ###)
+    number_sections: true  ## if you want number sections at each table header
+    theme: united  # many options for theme, this one is my favorite.
+    highlight: tango  # specifies the syntax highlighting style
+    #css: my.css   # you can add your custom css, should be in same folder
+---
+
+```{r echo=FALSE}
+library(knitr)
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = '/Users/user/SynapseIT/Dropbox/SynapseIT/Education/DataScience/Masters in Data Science/IU Bloomington/Courses/02-INFO-I590-Applied Data Science/project/DataScience/CodePortfolio/data' )
+
+set_plot_dimensions <- function(width_choice, height_choice) {
+        options(repr.plot.width=width_choice, repr.plot.height=height_choice)
+        }
+```
+
+# Introduction
+This document is dedicated to focus on the concepts and best practices for visualization as a toolkits of data scientist. We will use R and R-Markdown as the mechanism to collate the information relating to visualization. Over time, I would expect this document to evolve and grow into containing additional code snippets of visualizations that can help tell the story about the data we are analyzing.
+
+Data visualization is Statistics and Design combined in a useful and meaning fule way to interpret the data analysis. On one side, it is the Graphical Data Analysis to interpret data and on the other it relies on good Design principles (understading and communicating) to help articulate the interpretations in a meaningful way.
+
+Exploratory data is easily generated from the data and is used to confirm and analyze the data as it is and is used to convey the interpretations to a specific audience. Explanatory data is used to interpret and persuade readers about the hypothesis using data and is used to communicate to a broader audience. Visualization is a creative process that involves some trial and error.
+
+R has several systems for making graphs, but ggplot2 is one of the most elegant and most versatile. ggplot2 implements the grammar of graphics, a coherent system for describing and building graphs. With ggplot2, you can do more faster by learning one system and applying it in many places.
+
+## References
+
+ - https://campus.datacamp.com/courses/data-visualization-with-ggplot2-1
+ - https://r4ds.had.co.nz/data-visualisation.html
+ - https://www.ggplot2-exts.org/
+ - [The Layered Grammar of Graphics](http://vita.had.co.nz/papers/layered-grammar.pdf)
+ - The Grammar of Graphics, Leyland Wilkinson, 1999.
+ - [Tidyverse](https://ggplot2.tidyverse.org/reference/labs.html)
+ 
+## Pre-Requisites
+ggplot2 is one of the core memebers of the tidyverse package in R. One of the first steps is to install and load the tidyverse package. If the package is not already installed, we could run the install.packages('tidyverse') to first install the package.
+```{r}
+library(tidyverse)
+library(grid)
+library(gridExtra)
+```
+
+## Preliminary expoloratory visualization
+In this section, we make sure that the basic functions and data can be validated before we proceed to more complex and intricate examples. We will walk through the syntax and interpretations in th elater sections. Note on how we first used the variable cyl as a continuous variable and then identified that it was really a categorical variable and updated the ggplot syntx accordingly to eliminate cyl values of 5, 7 etc to avoid interpretation confusion.
+```{r}
+# Explore the mtcars data frame with str()
+str(mtcars)
+
+# Execute the following command to validate visualization
+ggplot(mtcars, aes(x = cyl, y = mpg)) +
+  geom_point()
+
+# Convert cyl from a continuous variable to categorical variable using factor function
+ggplot(mtcars, aes(x = factor(cyl), y = mpg)) +
+  geom_point()
+```
+
+## Grammar of Graphics
+The first step in appreciating data visualization is to udnerstand that graphics are built upon an underlying grammar. The underlying grammar helps define the plotting framework. The grammar of graphics provides building blocks for solid, creative and meaningful visualizations, but does not limit us in extending on these building blocks. There are two key principles upon which all of the visualization is built. They are:
+
+ - Grpahics = distinct layers of grammatical elements
+ 	- There are totally 7 graphical elements, out of which the first three are the core elements are:
+ 		- Data - The dataset being plotted
+ 		- Aesthetics - The scales onto which we map our data
+ 		- Geometries - The visual elements to which we map our data
+ 		- Facets - Plotting small multiples
+ 		- Statistics - Representations of the data to aid our understanding
+ 		- Coordinates - The space on which the data is plotted
+ 		- Themes - all non-data ink
+ - Meaningful plots are built through aesthetic mappings
+
+
+
+# Data
+There are multiple datasets we will use to help with understanding the data visualization concepts. These include the following:
+ - iris (r builtin dataset)
+ - mpg (r builtin dataframe)
+ - mtcars (r builtin dataset)
+ - daiamonds (r builtin dataframe)
+
+```{r}
+# Exploring the mtcars dataset to help understand some basic aesthetics concepts
+
+# Generate the plots and show them side by side
+# par(mfrow=c(1,3))    # set the plotting area into a 1*3 array
+
+# A basic scatter plot of mtcars data
+plot1 <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point()
+
+# In this example we help color the displacement variable disp
+plot2 <- ggplot(mtcars, aes(x = wt, y = mpg, color = disp)) +
+  geom_point()
+
+# In this example we use the value of the disp datapoints to visualize the differences
+plot3 <- ggplot(mtcars, aes(x = wt, y = mpg, size = disp)) +
+  geom_point()
+
+# Generate the plots and show them side by side
+grid.arrange(plot1, plot2, plot3, nrow=1, ncol=3)
+```
+
+The example below walks us through the 7 graphical elements that are built as layers to get a nice, professional looking visualization. We will use the iris dataset to highlight the layers and how they are built.
+```{r}
+# Exploring the iris dataset to help understand the 7 elements of plotting framework
+
+# The 3 core elements (Data, Aesthetics and Geometry) are always required 
+# to create a bsic plot
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_jitter(alpha = 0.6)
+
+# Use facets to seperate the plots, one for each of the species
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_jitter(alpha = 0.6) + 
+	facet_grid(. ~ Species)
+
+# Use statistics layer to add calculations and parameters - here it is the linear model
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_jitter(alpha = 0.6) + 
+	facet_grid(. ~ Species) + 
+	stat_smooth(method = "lm", se = F, color = "red")
+
+# Use corodinates layer to add the dimensions of the plot
+# This includes labeling and scaling across x and y axis
+levels(iris$Species) <- c("Setosa", "Versicolor", "Virginica")
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_jitter(alpha = 0.6) + 
+	facet_grid(. ~ Species) + 
+	stat_smooth(method = "lm", se = F, color = "red") + 
+	scale_y_continuous("Sepal Width cm",
+										 limits = c(2,5),
+										 expand = c(0,0)) +
+	scale_x_continuous("Sepal Length cm",
+										 limits = c(4,8),
+										 expand = c(0,0)) +
+	coord_equal()
+
+
+# Use Themes layer to add the non-ink data and create professional looking plots
+levels(iris$Species) <- c("Setosa", "Versicolor", "Virginica")
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_jitter(alpha = 0.6) + 
+	facet_grid(. ~ Species) + 
+	stat_smooth(method = "lm", se = F, color = "red") + 
+	scale_y_continuous("Sepal Width cm",
+										 limits = c(2,5),
+										 expand = c(0,0)) +
+	scale_x_continuous("Sepal Length cm",
+										 limits = c(4,8),
+										 expand = c(0,0)) +
+	coord_equal() +
+	theme(panel.background = element_blank(),
+				plot.background = element_blank(),
+				legend.background = element_blank(),
+				legend.key = element_blank(),
+				strip.background = element_blank(),
+				axis.text = element_text(color = "black"),
+				axis.ticks = element_line(color = "black"),
+				panel.grid.major = element_blank(),
+				panel.grid.minor = element_blank(),
+				axis.line = element_line(color = "black"),
+				strip.text = element_blank(),
+				panel.spacing = unit(1,"lines"))
+
+# Generate the plots and show them side by side
+# grid.arrange(plot1, plot2, plot3, nrow=1, ncol=3)
+```
+
+Another example using diamonds dataframe from r.
+```{r}
+# Geomtric functions geom_point() and geom_smooth()
+# Explore the diamonds data frame with str()
+str(diamonds)
+
+# Add geom_point() with +...draw points on the plot
+ggplot(diamonds, aes(x = carat, y = price)) +
+geom_point()
+
+
+# Add geom_point() and geom_smooth() with +..draw points on the plot and draw a smooth line
+ggplot(diamonds, aes(x = carat, y = price)) +
+geom_point() + 
+geom_smooth()
+
+
+# If you want to show only the line and not the points...
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_smooth()
+
+
+# If you want to show the line but is colored for the clarity variable...
+ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
+  geom_smooth()
+
+
+# If you want to show the points and line but is colored for the clarity variable...
+# alpha parameter represents 60% transparent, 40% visible
+ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
+  geom_point(alpha = 0.4) + 
+	geom_smooth()
+```
+
+## Objects & Layers
+We need to have some idea about our data to even try and comprehend on what types of visualizations we can overlay on the data. It is not always easy or straightforward to understand the data. This is where data wrangling becomes a critical step in the data analysis process.
+
+One of the best mechanisms to understand the structure of the data is using the str() function. Here we use the str() function on iris data to help understand the structure of the data. The output indicates that there are 150 observations (rows) and 5 variables (feature or columns). The following lines indicate each of the variable name, data type and some sample data associated with each of those variables.
+
+```{r}
+str(iris)
+```
+
+## Base packages & ggplot2
+R by default comes with a base plot package. It is powerful by itself, but ggplot extends the base plot to provide more capabilities more intuitive and with extensions making it a very powerful addon to the base plot.
+
+Let us understand the difference between the base plot and ggplot using the iris data.
+```{r}
+# using the base plot function in R
+plot(iris$Sepal.Length, iris$Sepal.Width)
+
+#add the petal length and width to the same plot
+points(iris$Petal.Length, iris$Petal.Width, col = "red")
+```
+
+There are 4 limitation of the base plot over the ggplot. They are:
+ - The plot does not get redrawn as we add additional points. We could lose information due to this.
+ - The plot is drawn as an image. The plot is not an aobject we can manipulate.
+ - If we need to add legend, it will have to be done manually.
+ - The types of plots will be seperate functions in the base package such as histograms, bar, line etc.
+
+In ggplot we can assign the plot to an object and then continue to manipulate the object. Note how when using ggplot the plotting space is adjusted because ggplot creates an object instead of layering over static images. The way we would do the above plot in ggplot would be:
+```{r}
+# using the ggplot  function in R
+plot1 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + 
+					geom_point()
+
+# Add Petal data to the Sepal data plot.
+plot2 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + 
+					labs(x = "Length", y = "Width") +
+					geom_point() +
+					geom_point(aes(x=Petal.Length, y=Petal.Width), col = "red")
+
+
+# Generate the plots and show them side by side
+grid.arrange(plot1, plot2, nrow=1, ncol=2)
+```
+
+To see how quickly th ebase plot can get complicated, we will use the mtcars dataframe and create a linear model and then plot the data.
+```{r}
+# Use lm() to calculate a linear model and save it as carModel
+carModel <- lm(mpg ~ wt, data = mtcars)
+
+# Generate the plots and show them side by side
+par(mar=c(2,2,2,1))
+par(mfrow=c(1,2))    # set the plotting area into a 1*2 array
+#set_plot_dimensions(16, 4)
+#show_distribution(x, 'test vector')
+
+# Basic plot
+mtcars$cyl <- as.factor(mtcars$cyl)
+plot(mtcars$wt, mtcars$mpg, col = mtcars$cyl)
+
+# Call abline() with carModel as first argument and set line type to 2
+abline(carModel, lty = 2)
+
+# Plot each subset efficiently with lapply
+# You don't have to edit this code
+plot(mtcars$wt, mtcars$mpg, col = mtcars$cyl)
+lapply(mtcars$cyl, function(x) {
+  abline(lm(mpg ~ wt, mtcars, subset = (cyl == x)), col = x)
+  })
+
+# This code will draw the legend of the plot
+# You don't have to edit this code
+legend(x = 5, y = 33, legend = levels(mtcars$cyl),
+       col = 1:3, pch = 1, bty = "n")
+
+# Using ggplot
+plot1 <- ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point()
+
+plot2 <- ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point() + 
+  geom_smooth(se=FALSE)
+
+plot3 <- ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point() + 
+  geom_smooth(se=FALSE) + 
+  geom_smooth(aes(group=1),method="lm",se=FALSE, linetype=2) 
+
+# Generate the plots and show them side by side
+grid.arrange(plot1, plot2, plot3, nrow=1, ncol=3)
+```
+
+## Tidy data
+To make better plots, it is important to tidy the data. It is also importatnt that we do not try to make the visualizations complex, because we do not want to tidy our data. In the example, below, we show one way to tidy the iris data and then the subsequent visualizations become simpler.
+```{r}
+# Load the tidyr package
+library(tidyr)
+
+# Tidy the iris data. Includes gathering data around Species and splitting the data by part and measure.
+iris.tidy <- iris %>%
+  gather(key, Value, -Species) %>%
+  separate(key, c("Part", "Measure"), "\\.")
+
+str(iris.tidy)
+
+# Now the visualization in ggplot can be reduced to 
+ggplot(iris.tidy, aes(x = Species, y = Value, col = Part)) +
+  geom_jitter() +
+  facet_grid(. ~ Measure)
+```
+
+# Aesthetics
+Aesthetics is the method by which your tell how your data corresponds to visual elements of your plot. This mapping between data and visual aesthetics is the second element of a ggplot2 layer. The visual elements of a plot, or aesthetics, include lines, points, symbols, colors, position . . . anything that you can see. For example, you can map a column of your data to the x-axis of your plot, or you can map a column of your data to correspond to the y-axis of your plot. You also can map data to groups, colors, or the size of points in scatterplots.
+
+## Visible Aesthetics
+```{r}
+# No aesthetics. as you can see all you see is a blank canvas
+plot1 <- ggplot(iris)
+
+# by adding x and y co-ordinates as visible aesthetics we get...
+# x and y axis, but no points..
+plot2 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width))
+
+# by adding geometry to the data and aestetics we get a basic plot..
+plot3 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+	geom_point()
+
+# by adding additional color to geom_point, we change the color of all dots...
+plot4 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+	geom_point(col="red")
+
+# However, if we want to color the dots based on species (column data)...
+plot5 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+	geom_point()
+
+# There are many attributes of visible aestheics that we can play around with..
+plot6 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+	geom_point(size=3, alpha=0.6, linetype=2)
+
+# Generate the plots and show them side by side
+grid.arrange(plot1, plot2, plot3, plot4, plot5, plot6, nrow=3, ncol=2)
+```
+## Aesthetics & Variables
+The example below shows the various ways we can use aesthetics to visualize. We will use mtcars as dataset.
+```{r}
+# Map cyl to size
+plot1 <- ggplot(mtcars, aes(x = wt, y = mpg, size=cyl)) +
+	geom_point()
+
+
+# Map cyl to alpha
+plot2 <- ggplot(mtcars, aes(x = wt, y = mpg, alpha=cyl)) +
+	geom_point()
+
+
+# Map cyl to shape 
+plot3 <- ggplot(mtcars, aes(x = wt, y = mpg, shape=cyl)) +
+	geom_point()
+
+
+# Map cyl to label
+plot4 <- ggplot(mtcars, aes(x = wt, y = mpg, label=cyl)) +
+	geom_text()
+
+# Generate the plots and show them side by side
+grid.arrange(plot1, plot2, plot3, plot4, nrow=2, ncol=2)
+```
+
+
+## Aesthetics Best Practices
+A worthwhile plot will serv its purpose. Some of the best practices for visualization are:
+
+ - It is important to note that form follows function. 
+ - We are more interested in accurately representing the data and analysis. 
+ - It is also important to make sure that visualization is adjusted to the audience. 
+ - Color is not the best aesthetics for continuous variables. 
+ - Position on unaligned sacle on the unaligned y-axis is less efficient to interpret data.
+ - Always remove unnecessary information from the visual plots. 
+ - Hollow shapes are better distinguished than solod shapes. 
+ - Circles (dots) are better interpreted than lines.
+ 
+ 
+## Overplotting
+A major consideration in any scatter plot is dealing with overplotting. Overplotting is when the data or labels in a data visualization overlap, making it difficult to see individual data points in a data visualization. We will have to deal with overplotting when you have:
+ - Large datasets,
+ - Imprecise data and so points are not clearly separated on your plot,
+ - Interval data (i.e. data appears at fixed values), or
+ - Aligned data values on a single axis.
+
+Listed below is an example on how to solve for some of the overplotting challenges. We start with an exampe of overplotting (in scatter plots) and work through visualization techniques such as reducing teh size of the dots, transparency, grouping etc.
+```{r}
+# Libraries
+library(tidyverse)
+library(hrbrthemes)
+library(viridis)
+#library(patchwork)
+
+# Dataset:
+a <- data.frame( x=rnorm(20000, 10, 1.2), y=rnorm(20000, 10, 1.2), group=rep("A",20000))
+b <- data.frame( x=rnorm(20000, 14.5, 1.2), y=rnorm(20000, 14.5, 1.2), group=rep("B",20000))
+c <- data.frame( x=rnorm(20000, 9.5, 1.5), y=rnorm(20000, 15.5, 1.5), group=rep("C",20000))
+data <- do.call(rbind, list(a,b,c))               
+
+plot1<- ggplot(data, aes(x=x, y=y)) +
+    geom_point(color="#69b3a2", size=2) +
+		ggtitle("Overplotting") +
+    theme_ipsum() +
+    theme(
+      legend.position="none"
+    )
+
+# Plot with small dot size
+plot2<- ggplot(data, aes(x=x, y=y)) +
+    geom_point(color="#69b3a2", size=0.02) +
+	ggtitle("Reduce dot size") +
+    theme_ipsum() +
+    theme(
+      legend.position="none"
+    )
+
+    
+# Plot with small dot size and transparency
+plot3 <-  ggplot(data, aes(x=x, y=y)) +
+    geom_point(color="#69b3a2", size=2, alpha=0.01) +
+	ggtitle("Add Transparency") + 
+    theme_ipsum() +
+    theme(
+      legend.position="none"
+    )
+
+
+# Plot with small dot size and sampling
+data_frac <- data %>% sample_frac(0.05) 
+
+plot4 <-  ggplot(data_frac, aes(x=x, y=y)) +
+    geom_point(color="#69b3a2", size=2) +
+	ggtitle("Sample data") + 
+    theme_ipsum() +
+    theme(
+      legend.position="none"
+    )
+
+# Plot with small dot size and grouped
+
+plot5 <-  ggplot(data, aes(x=x, y=y, color=group)) +
+    geom_point( size=2, alpha=0.1) +
+    scale_color_viridis(discrete=TRUE) +
+	ggtitle("Grouped") + 
+    theme_ipsum()
+
+# Generate the plots and show them side by side
+#grid.arrange(plot1, plot2, plot3, plot4, nrow=2, ncol=2)
+#par(mfrow=c(1,2)) 
+plot1
+plot2
+plot3
+plot4
+plot5
+```
+
+
+# Geometries
+A geom is the geometrical object that a plot uses to represent data. It represents on how does the graph look. There are 37 different forms of geometric objects we can use. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms, line charts use line geoms, boxplots use boxplot geoms, and so on. Scatterplots break the trend; they use the point geom. We can use different geoms to plot the same data. Listed below are some exampe of different type of geometric objects.
+
+## Scatter Plots
+```{r}
+# Shown in the viewer:
+plot1 <- ggplot(mtcars, aes(x = cyl, y = wt)) +
+  geom_point()
+
+# 1 - With geom_jitter()
+plot2 <- ggplot(mtcars, aes(x = cyl, y = wt)) +
+  geom_jitter()
+
+# 2 - Set width in geom_jitter()
+plot3 <- ggplot(mtcars, aes(x = cyl, y = wt)) +
+  geom_jitter(width=0.1)
+
+# 3 - Set position = position_jitter() in geom_point()
+plot4 <- ggplot(mtcars, aes(x = cyl, y = wt)) +
+  geom_point( position = position_jitter(0.1))
+
+# Generate the plots and show them side by side
+grid.arrange(plot1, plot2, plot3, plot4, nrow=2, ncol=2)
+
+```
+
+## Bar Plots / Histograms
+Histograms show the bin distribution of the data. It does not actually plot data, but statistical distribution of the data. There are many ways to do binning. If there are no spaces between the bars, it represents the continuous variable, while the gaps would indicate discrete data. These plots are used to get quick view of the data. Histograms can be used to get a quick view of the counts and/or statistical distributions of data.
+```{r}
+# covert am variable in mtcars to factor
+mtcars$am <- as.factor(mtcars$am)
+
+# Draw a bar plot of cyl, filled according to am
+plot1 <- ggplot(mtcars, aes(x = cyl, fill = am)) +
+  geom_bar(position="stack")
+
+# Change the position argument to fill
+plot2 <- ggplot(mtcars, aes(x = cyl, fill = am)) +
+  geom_bar(position="fill")
+
+# Change the position argument to dodge
+plot3 <- ggplot(mtcars, aes(x = cyl, fill = am)) +
+  geom_bar(position="dodge")
+
+# Change geom to freqpoly (position is identity by default)
+plot4 <- ggplot(mtcars, aes(x=mpg, color=cyl)) +
+  geom_freqpoly(binwidth=1, position = "identity")
+
+# Generate the plots and show them side by side
+grid.arrange(plot1, plot2, plot3, plot4, nrow=2, ncol=2)
+```
+
+## Line Plots & Time Series
+There are various ways to plot data that is represented by a time series in R. The ggplot2 package has scales that can handle dates reasonably easily. To highlight the line plots and time series data, we will use the r built-in dataset economics.
+
+```{r}
+# Print out structure of economics
+str(economics)
+
+# Create recession dataset for use in graphs..
+#populate recession data
+recess <- data.frame(begin = c('1969-12-01', '1973-11-01', '1980-01-01','1981-07-01', '1990-07-01', '2001-03-01'), end = c('1970-11-01','1975-03-01', '1980-07-01','1982-11-01','1991-03-01','2001-11-01'))
+
+# Covert datatype from factor to date
+recess$begin = as.Date(as.character(recess$begin),  format =  "%Y-%m-%d")
+recess$end = as.Date(as.character(recess$end),  format =  "%Y-%m-%d")
+
+# Plot unemploy as a function of date using a line plot
+plot1 <- ggplot(economics, aes(x = date, y = unemploy)) +
+geom_line()
+
+# Adjust plot to represent the fraction of total population that is unemployed
+plot2 <- ggplot(economics, aes(x = date, y = unemploy/pop)) +
+geom_line()
+
+# Expand the following command with geom_rect() to draw the recess periods
+plot3 <- ggplot(economics, aes(x = date, y = unemploy/pop)) +
+  geom_rect(data= recess,
+         aes(xmin = begin, xmax = end, ymin = -Inf, ymax = Inf),
+         inherit.aes = FALSE, fill = "red", alpha = 0.2) +
+  geom_line()
+
+# Expand the following command with geom_rect() to draw the recess periods
+plot4 <- ggplot(economics, aes(x = date, y = unemploy/pop)) +
+  geom_rect(data= recess,
+         aes(xmin = begin, xmax = end, ymin = -Inf, ymax = Inf),
+         inherit.aes = FALSE, fill = "red", alpha = 0.2) +
+  geom_line()
+
+# Generate the plots and show them side by side
+grid.arrange(plot1, plot2, plot3, plot4, nrow=2, ncol=2)
+```
+
+## Facets
+Facets are a mechanism to split a plot intomultiple subplots that each display one subset of the data. This is particularly useful for categorical variables.
+In this section we will dwell into some concepts of faceting in ggplot..
+```{r}
+# faceting a continuous variable...
+# The continuous variable is converted to a categorical variable, and the plot contains a
+# facet for each distinct value.
+plot1 <- ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point() +
+  facet_grid(. ~ cty)
+
+# Faceting by class
+plot2 <- ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_wrap(~class, nrow = 2)
+
+# Plot to show class differentiated by color instead of faceting.
+# This could very easily lead to overplotting...
+plot3 <- ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+
+# Facet plot of more than one variable. In this case drv and cyl
+plot4 <- ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(drv ~ cyl)
+
+# Generate the plots and show them side by side
+grid.arrange(plot1, plot2, plot3, plot4, nrow=2, ncol=2)
+
+``` 
+
+## Statistical Transformations
+Some plot types (such as scatterplots) do not require transformations–each point is plotted at x and y coordinates equal to the original value. Other plots, such as boxplots, histograms, prediction lines etc. require statistical transformations. The algorithm used to calculate new values for a graph is called a stat, short for statistical transformation. In the example below, we show som eof the statistical transformation values being created and visualized. Note that we use multiple datasets to highlight startistical transformation capabilities.
+
+```{r}
+# faceting a continuous variable...
+# The continuous variable is converted to a categorical variable, and the plot contains a
+# facet for each distinct value.
+plot1 <- ggplot(data = diamonds) +
+  stat_summary(
+    mapping = aes(x = cut, y = depth),
+    fun.ymin = min,
+    fun.ymax = max,
+    fun.y = median
+  )
+
+# Using the iris dataset to highlight some of the statistical transformations..
+plot2 <- ggplot(iris, aes(x = Sepal.Width)) +
+	geom_histogram(binwidth=0.1)
+
+# Differentiating data by species, by using the fill option...
+plot3 <- ggplot(iris, aes(x = Sepal.Width, fill=Species)) +
+	geom_histogram(binwidth=0.1)
+
+
+# create a scatter plot of highway miles for each displacement value and 
+# then use stat_summary to plot the mean highway miles at each displacement value.
+plot4 <- ggplot(mpg, aes(displ, hwy)) + 
+  geom_point(color = "grey") + 
+  stat_summary(fun.y = "mean", geom = "line", size = 1, linetype = "dashed")
+
+# Generate the plots and show them side by side
+grid.arrange(plot1, plot2, plot3, plot4, nrow=2, ncol=2)
+
+``` 
+
+# Conclusion
+As part of data visualization, we learned the foundations based on the layered grammar of graphics and how to use the grammar within the context of the ggplot2 function. In addition to the ggplot2, there are base plots and qplots that can be used in R for quick data visualization. We were able to see on how to use the foundations to make much more than scatterplots, bar charts, and boxplots. 
+
+By using the seven parameter, we are now able to layered template, Our new template takes seven parameters, the bracketed words that appear in the template.compose the grammar of graphics, a formal system for building plots. The grammar of graphics is based on the insight that you can uniquely describe any plot as a combination of a dataset, a geom, a set of mappings, a stat, a position adjustment, a coordinate system, and a faceting scheme. In practice, you rarely need to supply all seven parameters to make a graph because ggplot2 will provide useful defaults for everything except the data, the mappings, and the geom function.
+
+

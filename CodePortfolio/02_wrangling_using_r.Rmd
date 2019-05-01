@@ -1,0 +1,324 @@
+---
+title: "Wrangling using R"
+author: "Vivek Vijayaraghavan"
+date: "4/4/2019"
+output:
+  html_document:
+    df_print: paged
+    toc: true # table of content true
+    toc_depth: 3  # upto three depths of headings (specified by #, ## and ###)
+    number_sections: true  ## if you want number sections at each table header
+    theme: united  # many options for theme, this one is my favorite.
+    highlight: tango  # specifies the syntax highlighting style
+    #css: my.css   # you can add your custom css, should be in same folder
+---
+
+```{r echo=FALSE}
+library(knitr)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = '/Users/user/SynapseIT/Dropbox/SynapseIT/Education/DataScience/Masters in Data Science/IU Bloomington/Courses/02-INFO-I590-Applied Data Science/project/DataScience/CodePortfolio/data' )
+```
+
+# Data Wrangling
+## Overview
+Data wrangling is the process of cleaning and unifying messy and complex data sets for easy access and analysis. With the amount of data and data sources rapidly growing and expanding, it is getting more and more essential for the large amounts of available data to be organized for analysis. This process typically includes manually converting/mapping data from one raw form into another format to allow for more convenient consumption and organization of the data.
+
+## Pre-Requisites
+As part of the data wrangling, we will focus on how to use the dplyr package, which is a core member of the tidyverse. We will use ggplot2 to highlight nay visualization and also primarily work on the nycflights13 package as dataset, We would use additional datasets as and when appropriate to highlight certain concepts.
+
+```{r}
+library(tidyverse)
+library(nycflights13)
+data(flights)
+str(flights)
+```
+
+
+
+## dplyr core functions
+In this section we will learn 5 key dplyr functions that will allow to solve the vast majority of data manipulation challenges. They are:
+ - Pick obervations by their values (filter())
+ - Reorder the rows (arrange())
+ - Pick variables by their names (select())
+ - Create new variables with functions of existing variables (mutate())
+ - Collapse many values down to a single summary (summarize())
+ 
+ The r code snippet that highlights the above functions are listed below:
+
+```{r}
+# Filter flights for a specific day
+# Note the format / syntax for comparisons is ==
+f1 <- filter(flights, month == 1, day ==1)
+head(f1)
+
+# Multiple arguments in the filter can be combined using the set opertaions - and, or etc
+f2 <- filter(flights, month == 11 & month == 12)
+head(f2)
+
+# OR Clause
+f3 <- filter(flights, month == 11 | month == 12)
+head(f3)
+
+# Exercise problem
+# Find all flights that had an arrival delay of more than 2 hours, flew to Houston (IAH or HOU) and were operated by United, American or Delta
+f4 <- filter(flights, arr_delay >= 120 & (dest %in% c("IAH","HOU")) & carrier %in% c("UA","AA","DL"))
+str(f4)
+
+# Use arrange to sort the rows by ascending or descending
+# ascending order is by default and missing values are sorted to the end
+f5 <- arrange(flights, year, month, desc(day))
+head(f5)
+
+# select function to select specific columns or variables
+f6 <- select(flights, flight, year, month, day)
+head(f6)
+
+# add new varaibles using mutate
+f7 <- select(flights, flight, year:day, ends_with("time"), distance, ends_with("delay"))
+f8 <- mutate(f7, duration = arr_time - dep_time, speed = distance/air_time)
+head(select(f8, duration, speed, everything()))
+
+# group and summarize
+f9 <- group_by(flights, year, month, day)
+f10 <- summarize(f9, delay = mean(dep_delay, na.rm = TRUE))
+tail(f10)
+
+```
+## References
+ - [Data Watch] (https://www.datawatch.com/what-is-data-wrangling/)
+ - R for Data Science - Hadley Wickham & Garrett Grolemund
+ - [Tidy Data](https://r4ds.had.co.nz/tidy-data.html)
+ - [Case Study](https://rpubs.com/mm-c/gather-and-spread)
+ 
+
+# Tidy Data
+Tidy data is a consistent organization mechanism  to organize data in R. tidyr is a package that provides a bunch of tools to help tidy up messy datasets. tidyr is a memebr of the code tidyverse. There are three inherent rules that makes a dataset tidy:
+ - Each variable must have its own column
+ - Each observation muct have its own row
+ - Each value must have its own cell.
+
+To make better plots, it is important to tidy the data. It is also importatnt that we do not try to make the visualizations complex, because we do not want to tidy our data. In the example, below, we show one way to tidy the iris data and then the subsequent visualizations become simpler.
+```{r}
+# Load the tidyr package
+library(tidyr)
+
+# Original iris dataset
+str(iris)
+
+# Tidy the iris data. Includes gathering data around Species and splitting the data by part and measure.
+iris.tidy <- iris %>%
+  gather(key, Value, -Species) %>%
+  separate(key, c("Part", "Measure"), "\\.")
+
+str(iris.tidy)
+
+# Now the visualization in ggplot can be reduced to 
+ggplot(iris.tidy, aes(x = Species, y = Value, col = Part)) +
+  geom_jitter() +
+  facet_grid(. ~ Measure)
+```
+
+## Unique
+We can use the unique function to get a distinct values in a dataset variable. For example, in iris dataset to get unique values of the species we ca:
+```{r}
+str(iris)
+print("Unique values of the species are...")
+unique(iris$Species)
+```
+
+## Gathering & Spreading
+One of the most common scenario encountered is to udnerstand if the data contains rows when it should be columns and viceversa. We will use the three core characteristics of the tidy data to clean some messy data. There are two commands we can use to moving rows to columns and columns to rows. They are:
+ - gather (move columns into rows)
+ - spread (move rows into columns)
+
+To highlight the above two functions, we will go ahead and get messy sample data and then use these functions to tidy the data. In the example below, we will see that the raw data contains:
+ - The years are in columns, which is fine for side-by-side eyeballing, but terrible for charting or similar
+ - The patient bed days and separations counts are muddled together.
+
+In this case we will do the following:
+ - Move all of the years into one column and
+ - seperate patient days and seperations as variables (columns) from rows.
+ 
+```{r}
+# data showing the general reasons people were admitted to hospital 
+# by financial year from July 1993 to June 1998.
+rsns <- read_csv("http://www.mm-c.me/mdsi/hospitals93to98.csv")
+str(rsns)
+head(rsns)
+
+rsns_tidy <- rsns %>%
+  gather(year,value,FY1993:FY1998) %>%
+  spread(Field,value)
+
+str(rsns_tidy)
+head(rsns_tidy)
+```
+
+## Seperating & Pulling
+In the untidy datasets, we will encounter situations where a variable (column) that can have multiple values. Similarly, we could also have the inverse situation, where we have multiple columns that have partitions of the same variable. We will use sepearte and pull functions to help tidy this data.
+```{r}
+# We will artificially merge multiple columns in wage data to show how to seperate and pull data together.
+library('ISLR')
+data(Wage) #Load the builtin dataset Wage.
+# head(Wage) # Top 6 rows of the dataset Wage.
+
+#wage_untidy contains one column called details that has merged three unique details to create untidy data.
+wage_untidy <- Wage %>% unite(details, maritl, race, education, sep="/")
+print("Untidy Data...")
+str(wage_untidy)
+head(wage_untidy)
+
+# Tidy data to seperate the details columns into three seperate columns
+wage_tidy <- wage_untidy %>% separate(details, into = c("maritl","race","education"), sep = "/")
+print("Tidy Data...")
+str(wage_tidy)
+head(wage_tidy)
+```
+
+# Relational data with dplyr
+Data analysis typically involves multiple tables. We will have to combine these tables to get answers to questions we are interested in. Collectively, multiple tables together are called relational data as its the relationship between these tables that are important. To work with relational tables, we will need verbs that work with pairs of tables. We will use nycflights13 daatset to help articulate the below concepts.
+
+There are multiple tables within nycflights13 dataset. These tables are listed below:
+ - airlines, which has the list of airline carriers
+ - airports, which has th elist of airport codes and locations
+ - planes, which gives information about each physical plane
+ - weather, which gives the weather at each NYC airport by the hour
+ - flights, whch gives the data of an actual flight
+
+## Keys
+Keys are used to identify data within a table or relate data across multiple tables. Primary key is used to uniquely identify data within a table. Foreign keys are used to relate data across multiple tables.
+
+
+## Mutating Joins
+Mutating joins add new variables from one dataframe to matching observations in another. The example below shows multiple ways to join tables.
+```{r}
+# dataset details of nycflights13
+library('nycflights13')
+
+#left outer join between flights and planes to get seat capacity for a given flight
+str(flights)
+str(planes)
+
+seat_cap <- flights %>% left_join(planes, by = "tailnum") %>% select(flight, origin, dest, tailnum, seats) %>% unique()
+str(seat_cap)
+head(seat_cap)
+
+# Another example to plot flight data with airport data to get the average delay by destination...
+
+airports %>%
+	semi_join(flights, c("faa" = "dest"))
+	
+```
+
+## Filtering Joins
+Filtering joins filter observations from one dataframe based on whether or not they match an observation in another.
+```{r}
+# Create top destinations by sorting for the destinations where the most number of flights land.
+top_dest <- flights %>%
+  count(dest, sort = TRUE) %>%
+  head(10)
+top_dest
+
+# Filter for flights which are in the top destinations
+flights %>% 
+  filter(dest %in% top_dest$dest)
+
+# Join such that only the data in flights that match with top_dest is stored.
+top_dest_flights <- flights %>% 
+  semi_join(top_dest)
+head(top_dest_flights)
+```
+
+## Set Operations
+Set Operations treat observations as if they were set elements.
+```{r}
+df1 <- tribble(
+  ~x, ~y,
+   1,  1,
+   2,  1
+)
+df2 <- tribble(
+  ~x, ~y,
+   1,  1,
+   1,  2
+)
+
+# Interections of the two dataframes
+intersect(df1, df2)
+
+# Note that we get 3 rows, not 4
+union(df1, df2)
+
+#Difference between two sets
+# the results vary based on the order of the sets provided as input
+setdiff(df1, df2)
+
+setdiff(df2, df1)
+
+```
+
+# Regular Expressions
+Regular expressions, or regexes for short, provide a concise and precise specification of patterns to be matched in text.
+
+The following code snippet highlights the use of regex. In this example, we are building a regular expression to match a date format. We will then parse through a text file trying to identify and match the date pattern. Once identified, we would like to store only those dates and then replace the format of those dates to a new format.
+
+RegEx Methods
+Install library `strings`
+
+```{r}
+library(stringr)
+library(htmlwidgets)
+library(tidyverse)
+library(readr)
+
+# import text file
+text <- read_lines("scraping.txt")
+
+# build regex
+dates <- regex("
+[a-zA-Z]+
+\\s
+[0-9]
+[0-9]
+,
+\\s
+[0-9]{4}
+", comments = TRUE)
+
+# Match regex - print all
+str_match(text, dates)
+
+#print only the dates and store them as vector
+results = str_match(text, dates)
+vector <- c()
+for (i in results){
+  if (!is.na(i)){
+    # print(i)
+  	vector <- c(vector, i)
+  }
+}
+print(vector)
+
+# Use replace to convert one string pattern at a time string patterns. 
+
+vector1 <- c()
+for (item in vector){
+	val1 <- str_replace(item, "Mar\\w*\\s","03/")
+	val1 <- str_replace(val1, "Feb\\w*\\s","02/")
+	val2 <- str_replace(val1, "\\,\\s", "/")
+	vector1 <- c(vector1, val2)
+}
+print(vector1)
+```
+
+
+
+# Conclusion
+Data wrangling is all about transforming data and getting it easy to use for visualization and analysis. Most of the data scientist work (80%) is spent on importing and wrangling with the data. Only 20% of teh time is spent in the anlaysis. Hence, getting the input data tidy is a very critical step to help simplify the complexity of the visualization and analysis.
+
+
+
+

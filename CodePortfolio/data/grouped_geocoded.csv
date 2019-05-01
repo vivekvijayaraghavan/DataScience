@@ -1,0 +1,691 @@
+,country,city,industry,student_count,geocode_input,lat,long
+0,Australia,Adelaide,Other or Unknown,1,"Adelaide, Australia",-34.9284989,138.6007456
+1,Australia,Bronte,Other or Unknown,1,"Bronte, Australia",-33.90532,151.26069
+2,Australia,Buddina,ICT,1,"Buddina, Australia",-26.69,153.134
+3,Australia,Carlingford,ICT,1,"Carlingford, Australia",-33.777,151.048
+4,Australia,Glen Waverley,ICT,1,"Glen Waverley, Australia",-37.8856521,145.165179
+5,Australia,Haberfield,ICT,1,"Haberfield, Australia",-33.8833,151.1416
+6,Australia,Kellyville,Other or Unknown,1,"Kellyville, Australia",-33.71053,150.95114
+7,Australia,Kogarah Bay,Other or Unknown,1,"Kogarah Bay, Australia",-33.98338,151.12166
+8,Australia,Logan ,Other or Unknown,1,"Logan , Australia",-36.6173657,143.4736579
+9,Australia,Manly,Other or Unknown,1,"Manly, Australia",-33.8060158,151.2947775
+10,Australia,Melbourne,Finance & Insurance,1,"Melbourne, Australia",-37.8162789,144.9642459
+11,Australia,Melbourne,ICT,1,"Melbourne, Australia",-37.8162789,144.9642459
+12,Australia,Melbourne,Other or Unknown,4,"Melbourne, Australia",-37.8162789,144.9642459
+13,Australia,Perth,Arts & Education,1,"Perth, Australia",-31.9505269,115.8604572
+14,Australia,Redcliffe,Other or Unknown,1,"Redcliffe, Australia",-27.2258,153.1063
+15,Australia,South Melbourne,Energy & Transport,1,"South Melbourne, Australia",-37.835,144.96
+16,Australia,Sydney,Finance & Insurance,2,"Sydney, Australia",-33.8688197,151.2092955
+17,Australia,Sydney,ICT,3,"Sydney, Australia",-33.8688197,151.2092955
+18,Australia,Sydney,Media & Marketing,1,"Sydney, Australia",-33.8688197,151.2092955
+19,Australia,Sydney,Other or Unknown,1,"Sydney, Australia",-33.8688197,151.2092955
+20,Austria,Lieboch,Arts & Education,1,"Lieboch, Austria",46.9741562,15.335778
+21,Austria,Vienna,Energy & Transport,1,"Vienna, Austria",48.2081743,16.3738189
+22,Austria,Vienna,Other or Unknown,1,"Vienna, Austria",48.2081743,16.3738189
+23,Belgium,Brussels,ICT,1,"Brussels, Belgium",50.8503396,4.3517103
+24,Belgium,Brussels,Other or Unknown,1,"Brussels, Belgium",50.8503396,4.3517103
+25,Belgium,Burst ,Other or Unknown,1,"Burst , Belgium",50.9134028,3.9202801
+26,Belgium,Dinant,Other or Unknown,1,"Dinant, Belgium",50.260494,4.9127457
+27,Belgium,Uccle,Other or Unknown,1,"Uccle, Belgium",50.8023982,4.34067
+28,Belgium,Wilrijk,Health,1,"Wilrijk, Belgium",51.1683102,4.3942868
+29,Brazil,Brasilia,Public Sector,1,"Brasilia, Brazil",-15.7942287,-47.8821658
+30,Brazil,Juiz De Fora,Health,1,"Juiz De Fora, Brazil",-21.7624237,-43.3433999
+31,Brazil,Natal,Engineering,1,"Natal, Brazil",-5.7792569,-35.200916
+32,Brazil,Niteroi,Media & Marketing,1,"Niteroi, Brazil",-22.8858975,-43.1152211
+33,Brazil,Rio De Janeiro,ICT,1,"Rio De Janeiro, Brazil",-22.9068467,-43.1728965
+34,Brazil,Rio De Janeiro,Media & Marketing,2,"Rio De Janeiro, Brazil",-22.9068467,-43.1728965
+35,Brazil,Rio De Janeiro,Other or Unknown,1,"Rio De Janeiro, Brazil",-22.9068467,-43.1728965
+36,Brazil,Sao Paulo,Finance & Insurance,2,"Sao Paulo, Brazil",-23.5505199,-46.6333094
+37,Brazil,Sao Paulo,ICT,2,"Sao Paulo, Brazil",-23.5505199,-46.6333094
+38,Brazil,Sao Paulo,Mining,1,"Sao Paulo, Brazil",-23.5505199,-46.6333094
+39,Brazil,Sao Paulo,Other or Unknown,5,"Sao Paulo, Brazil",-23.5505199,-46.6333094
+40,Brazil,Sâo Paulo,Other or Unknown,1,"Sâo Paulo, Brazil",-23.5505199,-46.6333094
+41,Brazil,São Paulo,Arts & Education,1,"São Paulo, Brazil",-23.5505199,-46.6333094
+42,Brazil,São Paulo,Media & Marketing,2,"São Paulo, Brazil",-23.5505199,-46.6333094
+43,Brazil,São Paulo,Real Estate,2,"São Paulo, Brazil",-23.5505199,-46.6333094
+44,Canada,Bradford,Finance & Insurance,1,"Bradford, Canada",44.120221,-79.561908
+45,Canada,Brampton,Finance & Insurance,1,"Brampton, Canada",43.7315479,-79.7624177
+46,Canada,Brampton,ICT,1,"Brampton, Canada",43.7315479,-79.7624177
+47,Canada,Brossard,Engineering,1,"Brossard, Canada",45.4514357,-73.4619103
+48,Canada,Brossard,Other or Unknown,1,"Brossard, Canada",45.4514357,-73.4619103
+49,Canada,Burnaby ,Other or Unknown,1,"Burnaby , Canada",49.2488091,-122.9805104
+50,Canada,Calgary,ICT,1,"Calgary, Canada",51.0486151,-114.0708459
+51,Canada,Calgary,Other or Unknown,2,"Calgary, Canada",51.0486151,-114.0708459
+52,Canada,Cambridge,Other or Unknown,1,"Cambridge, Canada",43.3616211,-80.3144276
+53,Canada,Chambly,Finance & Insurance,1,"Chambly, Canada",45.4391627,-73.2902463
+54,Canada,Edmonton,Engineering,1,"Edmonton, Canada",53.544389,-113.4909267
+55,Canada,Edmonton,Other or Unknown,1,"Edmonton, Canada",53.544389,-113.4909267
+56,Canada,Georgetown,Arts & Education,1,"Georgetown, Canada",43.6502046,-79.9036236
+57,Canada,Halifax,Finance & Insurance,1,"Halifax, Canada",44.6488625,-63.5753196
+58,Canada,Hamilton,Arts & Education,1,"Hamilton, Canada",43.2500208,-79.8660914
+59,Canada,La Prairie,Other or Unknown,1,"La Prairie, Canada",45.4159003,-73.4830021
+60,Canada,Lethbridge,Media & Marketing,1,"Lethbridge, Canada",49.69349,-112.84184
+61,Canada,Markham,ICT,1,"Markham, Canada",43.8561002,-79.3370188
+62,Canada,Milton,Arts & Education,1,"Milton, Canada",43.5182991,-79.8774042
+63,Canada,Milton,Other or Unknown,1,"Milton, Canada",43.5182991,-79.8774042
+64,Canada,Mississauga,Arts & Education,1,"Mississauga, Canada",43.5890452,-79.6441198
+65,Canada,Mississauga,Energy & Transport,1,"Mississauga, Canada",43.5890452,-79.6441198
+66,Canada,Mississauga,Other or Unknown,1,"Mississauga, Canada",43.5890452,-79.6441198
+67,Canada,Montreal,Engineering,1,"Montreal, Canada",45.5016889,-73.567256
+68,Canada,Montreal,Finance & Insurance,1,"Montreal, Canada",45.5016889,-73.567256
+69,Canada,Montreal,Other or Unknown,3,"Montreal, Canada",45.5016889,-73.567256
+70,Canada,Montréal,Other or Unknown,1,"Montréal, Canada",45.5016889,-73.567256
+71,Canada,New Westminster,ICT,1,"New Westminster, Canada",49.2057179,-122.910956
+72,Canada,North York,Other or Unknown,1,"North York, Canada",43.7615377,-79.4110794
+73,Canada,North York,Public Sector,1,"North York, Canada",43.7615377,-79.4110794
+74,Canada,Oakville,Finance & Insurance,1,"Oakville, Canada",43.467517,-79.6876659
+75,Canada,Ottawa,ICT,1,"Ottawa, Canada",45.4215296,-75.6971931
+76,Canada,Ottawa,Other or Unknown,1,"Ottawa, Canada",45.4215296,-75.6971931
+77,Canada,Québec,Other or Unknown,1,"Québec, Canada",52.9399159,-73.5491361
+78,Canada,Regina,Arts & Education,1,"Regina, Canada",50.4452112,-104.6188944
+79,Canada,Richmond,Other or Unknown,1,"Richmond, Canada",49.1665898,-123.133569
+80,Canada,Saint Hubert,Engineering,1,"Saint Hubert, Canada",45.4983322,-73.4065074
+81,Canada,Saskatoon,Media & Marketing,1,"Saskatoon, Canada",52.1332144,-106.6700458
+82,Canada,South Lake Tahoe,Finance & Insurance,1,"South Lake Tahoe, Canada",50.9368579,-114.0545999
+83,Canada,St-Laurent,ICT,1,"St-Laurent, Canada",50.4478377,-97.9738996
+84,Canada,Surrey,Other or Unknown,1,"Surrey, Canada",49.1044302,-122.801094
+85,Canada,Thornhill,Other or Unknown,1,"Thornhill, Canada",43.8079675,-79.4591378
+86,Canada,Toronto,Arts & Education,3,"Toronto, Canada",43.653226,-79.3831843
+87,Canada,Toronto,Engineering,1,"Toronto, Canada",43.653226,-79.3831843
+88,Canada,Toronto,Finance & Insurance,2,"Toronto, Canada",43.653226,-79.3831843
+89,Canada,Toronto,Legal Services,1,"Toronto, Canada",43.653226,-79.3831843
+90,Canada,Toronto,Other or Unknown,4,"Toronto, Canada",43.653226,-79.3831843
+91,Canada,Toronto,Public Sector,1,"Toronto, Canada",43.653226,-79.3831843
+92,Canada,Vancouver,Engineering,1,"Vancouver, Canada",49.2827291,-123.1207375
+93,Canada,Victoria,ICT,1,"Victoria, Canada",48.4284207,-123.3656444
+94,Canada,Waterloo,ICT,1,"Waterloo, Canada",43.4642578,-80.5204096
+95,Canada,Windsor,ICT,1,"Windsor, Canada",42.3149367,-83.0363633
+96,Chile,Santiago,Arts & Education,1,"Santiago, Chile",-33.4488897,-70.6692655
+97,China,Chengdu,Health,1,"Chengdu, China",30.572816,104.066801
+98,China,Hong Kong ,Other or Unknown,1,"Hong Kong , China",22.396428,114.109497
+99,China,Shanghai,Manufacturing,1,"Shanghai, China",31.230416,121.473701
+100,China,Taipa,Other or Unknown,2,"Taipa, China",22.1596848,113.563922
+101,China,Zhuhai,Other or Unknown,1,"Zhuhai, China",22.270978,113.576678
+102,Costa Rica,Escazu,Other or Unknown,1,"Escazu, Costa Rica",9.920695,-84.1461519
+103,Costa Rica,Escazú,Other or Unknown,1,"Escazú, Costa Rica",9.920695,-84.1461519
+104,Croatia,Bestovije,ICT,1,"Bestovije, Croatia",45.8068679,15.8104824
+105,Croatia,Zagreb,Other or Unknown,1,"Zagreb, Croatia",45.8150108,15.981919
+106,Czech Republic,Plzen,Other or Unknown,1,"Plzen, Czech Republic",49.7384314,13.3736371
+107,Czech Republic,Praha 3,ICT,1,"Praha 3, Czech Republic",50.0854115,14.4543504
+108,Denmark,Copenhagen,ICT,1,"Copenhagen, Denmark",55.6760968,12.5683371
+109,Denmark,Copenhagen,Other or Unknown,1,"Copenhagen, Denmark",55.6760968,12.5683371
+110,Ethiopia,Addis Ababa,Other or Unknown,1,"Addis Ababa, Ethiopia",8.9806034,38.7577605
+111,France,Bagneux,Arts & Education,1,"Bagneux, France",48.796696,2.31002
+112,France,Fontenay Aux Roses,Real Estate,1,"Fontenay Aux Roses, France",48.789776,2.287181
+113,France,La Garenne Colombes,Other or Unknown,1,"La Garenne Colombes, France",48.906535,2.244085
+114,France,Paris,Media & Marketing,1,"Paris, France",48.856614,2.3522219
+115,France,Paris,Other or Unknown,3,"Paris, France",48.856614,2.3522219
+116,France,Sathonay Camp,ICT,1,"Sathonay Camp, France",45.824968,4.875322
+117,France,Soissons,ICT,1,"Soissons, France",49.376636,3.32342
+118,Germany,Bad Nauheim,Arts & Education,1,"Bad Nauheim, Germany",50.3672668,8.7393914
+119,Germany,Berlin,Health,1,"Berlin, Germany",52.5200066,13.404954
+120,Germany,Düsseldorf,ICT,1,"Düsseldorf, Germany",51.2277411,6.7734556
+121,Germany,Halle,Manufacturing,1,"Halle, Germany",51.4969802,11.9688029
+122,Germany,Magstadt,Mining,1,"Magstadt, Germany",48.7425459,8.9665575
+123,Germany,Munich,Other or Unknown,1,"Munich, Germany",48.1351253,11.5819806
+124,Germany,Wildeshausen,Finance & Insurance,1,"Wildeshausen, Germany",52.891579,8.4258585
+125,Greece,Thessaloniki,Arts & Education,1,"Thessaloniki, Greece",40.6400629,22.9444191
+126,Guatemala,Guatemala,Engineering,1,"Guatemala, Guatemala",14.6349149,-90.5068824
+127,Guatemala,Guatemala ,Public Sector,1,"Guatemala , Guatemala",14.6349149,-90.5068824
+128,Hong Kong,Hk,Other or Unknown,1,"Hk, Hong Kong",22.2783151,114.174695
+129,Hong Kong,Hong Kong,Arts & Education,1,"Hong Kong, Hong Kong",22.2783151,114.174695
+130,Hong Kong,Hong Kong,Engineering,2,"Hong Kong, Hong Kong",22.2783151,114.174695
+131,Hong Kong,Hong Kong,Finance & Insurance,2,"Hong Kong, Hong Kong",22.2783151,114.174695
+132,Hong Kong,Hong Kong,Health,1,"Hong Kong, Hong Kong",22.2783151,114.174695
+133,Hong Kong,Hong Kong,ICT,7,"Hong Kong, Hong Kong",22.2783151,114.174695
+134,Hong Kong,Hong Kong,Media & Marketing,5,"Hong Kong, Hong Kong",22.2783151,114.174695
+135,Hong Kong,Hong Kong,Other or Unknown,13,"Hong Kong, Hong Kong",22.2783151,114.174695
+136,Hong Kong,Hong Kong,Public Sector,2,"Hong Kong, Hong Kong",22.2783151,114.174695
+137,Hong Kong,Hong Kong,Retail,1,"Hong Kong, Hong Kong",22.2783151,114.174695
+138,Hong Kong,Hong Kong ,Other or Unknown,2,"Hong Kong , Hong Kong",22.2783151,114.174695
+139,Hong Kong,Hong Kong Sar,Other or Unknown,1,"Hong Kong Sar, Hong Kong",22.2783151,114.174695
+140,Hong Kong,Hung Hom,Engineering,1,"Hung Hom, Hong Kong",22.3055658,114.1887233
+141,Hong Kong,Hung Hom,Health,1,"Hung Hom, Hong Kong",22.3055658,114.1887233
+142,Hong Kong,Hung Hom,Other or Unknown,1,"Hung Hom, Hong Kong",22.3055658,114.1887233
+143,Hong Kong,Kennedy Town,Other or Unknown,1,"Kennedy Town, Hong Kong",22.2822235,114.1292619
+144,Hong Kong,Kowloon,Other or Unknown,2,"Kowloon, Hong Kong",22.3185673,114.1796057
+145,Hong Kong,Midlevels,Other or Unknown,1,"Midlevels, Hong Kong",22.2811673,114.142449
+146,Hong Kong,New Territories,Other or Unknown,1,"New Territories, Hong Kong",22.4060834,114.1201536
+147,Hong Kong,New Territory,ICT,1,"New Territory, Hong Kong",22.2783151,114.174695
+148,Hong Kong,North Point,ICT,1,"North Point, Hong Kong",22.2884683,114.192803
+149,Hong Kong,North Point,Retail,1,"North Point, Hong Kong",22.2884683,114.192803
+150,Hong Kong,Prince Edward,Arts & Education,1,"Prince Edward, Hong Kong",22.3243935,114.1692021
+151,Hong Kong,Quarry Bay,ICT,1,"Quarry Bay, Hong Kong",22.2827206,114.2123009
+152,Hong Kong,Quarry Bay,Other or Unknown,1,"Quarry Bay, Hong Kong",22.2827206,114.2123009
+153,Hong Kong,Sai Ying Pun,ICT,1,"Sai Ying Pun, Hong Kong",22.2875634,114.1417059
+154,Hong Kong,Sai Ying Pun,Media & Marketing,1,"Sai Ying Pun, Hong Kong",22.2875634,114.1417059
+155,Hong Kong,"Shamshuipo, Kowloon",Media & Marketing,1,"Shamshuipo, Kowloon, Hong Kong",22.3320934,114.146908
+156,Hong Kong,Shatin,Retail,1,"Shatin, Hong Kong",22.3771304,114.1974398
+157,Hong Kong,Sheung Shui,ICT,1,"Sheung Shui, Hong Kong",22.5112008,114.1260991
+158,Hong Kong,Tai Hang,Retail,1,"Tai Hang, Hong Kong",22.2751881,114.1937244
+159,Hong Kong,Tin Hau,Other or Unknown,1,"Tin Hau, Hong Kong",22.2823972,114.1922382
+160,Hong Kong,Tin Shui Wai,Other or Unknown,1,"Tin Shui Wai, Hong Kong",22.4606419,114.0041996
+161,Hong Kong,Tko  Hk,ICT,1,"Tko  Hk, Hong Kong",22.3119357,114.2568776
+162,Hong Kong,Tsim Sha Tsui East,Construction,1,"Tsim Sha Tsui East, Hong Kong",22.2998509,114.1788626
+163,Hong Kong,Tuen Mun,ICT,1,"Tuen Mun, Hong Kong",22.3908295,113.9725126
+164,Hong Kong,Yuen Long,Other or Unknown,1,"Yuen Long, Hong Kong",22.4445376,114.0222076
+165,Hungary,Budapest,ICT,1,"Budapest, Hungary",47.497912,19.040235
+166,Hungary,Debrecen,Media & Marketing,1,"Debrecen, Hungary",47.5316049,21.6273123
+167,India,Bangalore,Engineering,3,"Bangalore, India",12.9715987,77.5945627
+168,India,Bangalore,ICT,7,"Bangalore, India",12.9715987,77.5945627
+169,India,Bangalore,Other or Unknown,3,"Bangalore, India",12.9715987,77.5945627
+170,India,Hyderabad,Media & Marketing,1,"Hyderabad, India",17.385044,78.486671
+171,India,Kolkata,Other or Unknown,1,"Kolkata, India",22.572646,88.363895
+172,India,New Delhi,Public Sector,1,"New Delhi, India",28.6139391,77.2090212
+173,India,Varanasi,Engineering,1,"Varanasi, India",25.3176452,82.9739144
+174,Italy,Busto Arsizio,Retail,1,"Busto Arsizio, Italy",45.611892,8.8531265
+175,Italy,Ispra,Other or Unknown,1,"Ispra, Italy",45.8139584,8.6120782
+176,Italy,Milan,Media & Marketing,1,"Milan, Italy",45.4654219,9.1859243
+177,Italy,Milano,ICT,1,"Milano, Italy",45.4654219,9.1859243
+178,Italy,Vicenza,Public Sector,1,"Vicenza, Italy",45.5454787,11.5354214
+179,Japan,Bunkyo-Ku,Arts & Education,1,"Bunkyo-Ku, Japan",35.7080677,139.752167
+180,Japan,Chiyoda,Other or Unknown,1,"Chiyoda, Japan",35.6940027,139.7535951
+181,Japan,Chuou,Other or Unknown,1,"Chuou, Japan",35.6706505,139.7718614
+182,Japan,Ichikawa,Other or Unknown,1,"Ichikawa, Japan",35.7219115,139.9310099
+183,Japan,Kyoto,Health,1,"Kyoto, Japan",35.0116363,135.7680294
+184,"Korea, Republic Of",Seoul,Other or Unknown,1,"Seoul, Korea, Republic Of",37.566535,126.9779692
+185,"Korea, Republic Of",Uiwang,Engineering,1,"Uiwang, Korea, Republic Of",37.344701,126.9683104
+186,Lebanon,Metn,Other or Unknown,1,"Metn, Lebanon",33.8918921,35.5630312
+187,Malaysia,Klang,Engineering,1,"Klang, Malaysia",3.044917,101.4455621
+188,Malaysia,Kuala Lumpur,Other or Unknown,1,"Kuala Lumpur, Malaysia",3.139003,101.686855
+189,Malaysia,Subang Jaya,Arts & Education,1,"Subang Jaya, Malaysia",3.081213,101.5844108
+190,Malta,Xemxija,ICT,1,"Xemxija, Malta",35.950551,14.380172
+191,Mexico,Ciudad De México,Retail,1,"Ciudad De México, Mexico",19.4326077,-99.133208
+192,Mexico,Coacalco,Other or Unknown,1,"Coacalco, Mexico",19.6290831,-99.1043451
+193,Mexico,Mexico,ICT,1,"Mexico, Mexico",19.4326077,-99.133208
+194,Mexico,Mexico,Other or Unknown,2,"Mexico, Mexico",19.4326077,-99.133208
+195,Mexico,Mexico City,Other or Unknown,1,"Mexico City, Mexico",19.4326077,-99.133208
+196,Mexico,Mexico City,Public Sector,1,"Mexico City, Mexico",19.4326077,-99.133208
+197,Mexico,México ,Media & Marketing,1,"México , Mexico",19.4326077,-99.133208
+198,Mexico,San Pedro,Other or Unknown,1,"San Pedro, Mexico",25.7572143,-102.9838564
+199,Mexico,San Pedro Garza García,Other or Unknown,1,"San Pedro Garza García, Mexico",25.6573447,-100.4017501
+200,Mexico,Zapopan,Other or Unknown,1,"Zapopan, Mexico",20.6719563,-103.416501
+201,Netherlands,Amersfoort,Energy & Transport,1,"Amersfoort, Netherlands",52.1561113,5.3878266
+202,Netherlands,Diemen,Retail,1,"Diemen, Netherlands",52.3389926,4.9591888
+203,Netherlands,Emmen,Other or Unknown,1,"Emmen, Netherlands",52.7858037,6.8975851
+204,Netherlands,Leiden,Media & Marketing,1,"Leiden, Netherlands",52.1601144,4.4970097
+205,Netherlands,S-Gravenhage,Engineering,1,"S-Gravenhage, Netherlands",52.0704978,4.3006999
+206,Netherlands,The Hague,Public Sector,1,"The Hague, Netherlands",52.0704978,4.3006999
+207,Netherlands,Zwolle,Finance & Insurance,1,"Zwolle, Netherlands",52.5167747,6.0830219
+208,New Zealand,Auckland,Construction,1,"Auckland, New Zealand",-36.8484597,174.7633315
+209,New Zealand,Wellington,ICT,2,"Wellington, New Zealand",-41.2864603,174.776236
+210,Nigeria,Ajah,Arts & Education,1,"Ajah, Nigeria",6.4725155,3.5686162
+211,Nigeria,Lekki Phase 1,Other or Unknown,1,"Lekki Phase 1, Nigeria",6.4439009,3.4750836
+212,Norway,Hjelset,Media & Marketing,1,"Hjelset, Norway",62.7805086,7.4927767
+213,Panama,Panama,Other or Unknown,1,"Panama, Panama",9.1011785,-79.4028639
+214,Peru,Lima,Other or Unknown,2,"Lima, Peru",-12.046374,-77.0427934
+215,Peru,Los Olivos,Finance & Insurance,1,"Los Olivos, Peru",-11.9594023,-77.0760457
+216,Philippines,Pasig City,Other or Unknown,1,"Pasig City, Philippines",14.5763768,121.0851097
+217,Philippines,Quezon City,Other or Unknown,1,"Quezon City, Philippines",14.6760413,121.0437003
+218,Philippines,Taguig,Other or Unknown,1,"Taguig, Philippines",14.5176184,121.0508645
+219,Poland,Krakow,Engineering,1,"Krakow, Poland",50.0646501,19.9449799
+220,Portugal,Lisbon,Other or Unknown,1,"Lisbon, Portugal",38.7222524,-9.1393366
+221,Portugal,Odivelas,Media & Marketing,1,"Odivelas, Portugal",38.795369,-9.18518
+222,Puerto Rico,Luquillo,ICT,1,"Luquillo, Puerto Rico",18.3724507,-65.7165511
+223,Qatar,Doha,ICT,1,"Doha, Qatar",25.2854473,51.5310398
+224,Romania,Bucharest,Arts & Education,1,"Bucharest, Romania",44.4267674,26.1025384
+225,Romania,Bucharest,Engineering,1,"Bucharest, Romania",44.4267674,26.1025384
+226,Romania,Cluj-Napoca,Arts & Education,1,"Cluj-Napoca, Romania",46.7712101,23.6236353
+227,Saudi Arabia,Riyadh,Other or Unknown,1,"Riyadh, Saudi Arabia",24.7135517,46.6752957
+228,Singapore,Singapore,Arts & Education,4,"Singapore, Singapore",1.3553794,103.8677444
+229,Singapore,Singapore,Energy & Transport,2,"Singapore, Singapore",1.3553794,103.8677444
+230,Singapore,Singapore,Engineering,6,"Singapore, Singapore",1.3553794,103.8677444
+231,Singapore,Singapore,Finance & Insurance,6,"Singapore, Singapore",1.3553794,103.8677444
+232,Singapore,Singapore,Health,6,"Singapore, Singapore",1.3553794,103.8677444
+233,Singapore,Singapore,ICT,12,"Singapore, Singapore",1.3553794,103.8677444
+234,Singapore,Singapore,Media & Marketing,12,"Singapore, Singapore",1.3553794,103.8677444
+235,Singapore,Singapore,Mining,2,"Singapore, Singapore",1.3553794,103.8677444
+236,Singapore,Singapore,Other or Unknown,27,"Singapore, Singapore",1.3553794,103.8677444
+237,Singapore,Singapore,Public Sector,1,"Singapore, Singapore",1.3553794,103.8677444
+238,Singapore,Singapore,Retail,1,"Singapore, Singapore",1.3553794,103.8677444
+239,Singapore,Singapore ,Public Sector,1,"Singapore , Singapore",1.3553794,103.8677444
+240,South Africa,Cape Town,Arts & Education,1,"Cape Town, South Africa",-33.9248685,18.4240553
+241,South Africa,Cape Town,Other or Unknown,1,"Cape Town, South Africa",-33.9248685,18.4240553
+242,South Africa,Johannesburg,Energy & Transport,1,"Johannesburg, South Africa",-26.2041028,28.0473051
+243,South Africa,Sandton,Other or Unknown,1,"Sandton, South Africa",-26.1075663,28.0567007
+244,South Africa,St Francis Bay,Energy & Transport,1,"St Francis Bay, South Africa",-34.1605375,24.824107
+245,Spain,A Coruña,Arts & Education,1,"A Coruña, Spain",43.3623436,-8.4115401
+246,Spain,Alcobendas,ICT,1,"Alcobendas, Spain",40.5372512,-3.6372245
+247,Spain,Barcelona,Other or Unknown,1,"Barcelona, Spain",41.3850639,2.1734035
+248,Spain,Elche,Finance & Insurance,1,"Elche, Spain",38.2699329,-0.7125608
+249,Spain,España,Other or Unknown,1,"España, Spain",40.463667,-3.74922
+250,Spain,Galapagar,Arts & Education,1,"Galapagar, Spain",40.5768377,-4.0058027
+251,Spain,Madrid,Engineering,1,"Madrid, Spain",40.4167754,-3.7037902
+252,Spain,Madrid,Finance & Insurance,1,"Madrid, Spain",40.4167754,-3.7037902
+253,Spain,Madrid,Health,1,"Madrid, Spain",40.4167754,-3.7037902
+254,Spain,Madrid,ICT,1,"Madrid, Spain",40.4167754,-3.7037902
+255,Spain,Madrid,Media & Marketing,2,"Madrid, Spain",40.4167754,-3.7037902
+256,Spain,Madrid,Other or Unknown,1,"Madrid, Spain",40.4167754,-3.7037902
+257,Spain,Ponferrada,Finance & Insurance,1,"Ponferrada, Spain",42.5499958,-6.598259
+258,Spain,Valencia,Other or Unknown,1,"Valencia, Spain",39.4699075,-0.3762881
+259,Sudan,Cartama Estacion,Manufacturing,1,"Cartama Estacion, Sudan",36.7370625,-4.6105763
+260,Sweden,Varberg,Other or Unknown,1,"Varberg, Sweden",57.107118,12.2520907
+261,Switzerland,Bern,Other or Unknown,1,"Bern, Switzerland",46.9479739,7.4474468
+262,Switzerland,Colombier,ICT,1,"Colombier, Switzerland",46.9668714,6.8589727
+263,Switzerland,Geneva,Health,1,"Geneva, Switzerland",46.2043907,6.1431577
+264,Switzerland,Schaffhausen,ICT,1,"Schaffhausen, Switzerland",47.6958897,8.6380488
+265,Switzerland,Sigirino,ICT,1,"Sigirino, Switzerland",46.080154,8.9202869
+266,Switzerland,Zürich,Engineering,1,"Zürich, Switzerland",47.3768866,8.541694
+267,"Taiwan, Province Of China",Taipei,ICT,1,"Taipei, Taiwan, Province Of China",25.0329636,121.5654268
+268,United Arab Emirates,Abu Dhabi,ICT,1,"Abu Dhabi, United Arab Emirates",24.2991738,54.6972774
+269,United Arab Emirates,Abu Dhabi,Public Sector,1,"Abu Dhabi, United Arab Emirates",24.2991738,54.6972774
+270,United Arab Emirates,Abu Dhabi ,ICT,1,"Abu Dhabi , United Arab Emirates",24.2991738,54.6972774
+271,United Arab Emirates,Dubai,Media & Marketing,1,"Dubai, United Arab Emirates",25.2048493,55.2707828
+272,United Arab Emirates,Dubai,Other or Unknown,2,"Dubai, United Arab Emirates",25.2048493,55.2707828
+273,United Arab Emirates,Dubai,Retail,1,"Dubai, United Arab Emirates",25.2048493,55.2707828
+274,United Kingdom,Banbury,Other or Unknown,1,"Banbury, United Kingdom",52.0629009,-1.339775
+275,United Kingdom,Bracknell,Other or Unknown,1,"Bracknell, United Kingdom",51.41604,-0.75398
+276,United Kingdom,"Chadwell Heath, Romford",Media & Marketing,1,"Chadwell Heath, Romford, United Kingdom",51.5719564,0.1375425
+277,United Kingdom,Chatham,Engineering,1,"Chatham, United Kingdom",51.380952,0.52213
+278,United Kingdom,Haslemere,Other or Unknown,1,"Haslemere, United Kingdom",51.090856,-0.713373
+279,United Kingdom,Hawick,Other or Unknown,1,"Hawick, United Kingdom",55.42706,-2.780914
+280,United Kingdom,Llandudno ,ICT,1,"Llandudno , United Kingdom",53.324061,-3.827609
+281,United Kingdom,London,Arts & Education,2,"London, United Kingdom",51.5073509,-0.1277583
+282,United Kingdom,London,Energy & Transport,1,"London, United Kingdom",51.5073509,-0.1277583
+283,United Kingdom,London,Engineering,2,"London, United Kingdom",51.5073509,-0.1277583
+284,United Kingdom,London,Finance & Insurance,1,"London, United Kingdom",51.5073509,-0.1277583
+285,United Kingdom,London,ICT,4,"London, United Kingdom",51.5073509,-0.1277583
+286,United Kingdom,London,Media & Marketing,1,"London, United Kingdom",51.5073509,-0.1277583
+287,United Kingdom,London,Mining,1,"London, United Kingdom",51.5073509,-0.1277583
+288,United Kingdom,London,Other or Unknown,9,"London, United Kingdom",51.5073509,-0.1277583
+289,United Kingdom,London,Public Sector,1,"London, United Kingdom",51.5073509,-0.1277583
+290,United Kingdom,London,Real Estate,2,"London, United Kingdom",51.5073509,-0.1277583
+291,United Kingdom,Mayfield,Finance & Insurance,1,"Mayfield, United Kingdom",51.020641,0.262427
+292,United Kingdom,Plymouth,Other or Unknown,1,"Plymouth, United Kingdom",50.3754565,-4.1426565
+293,United Kingdom,Poole,Other or Unknown,1,"Poole, United Kingdom",50.71505,-1.987248
+294,United Kingdom,Reading,Health,1,"Reading, United Kingdom",51.4542645,-0.9781303
+295,United Kingdom,Surrey,Other or Unknown,1,"Surrey, United Kingdom",51.3147593,-0.5599501
+296,United Kingdom,Thames Ditton,Arts & Education,1,"Thames Ditton, United Kingdom",51.389686,-0.339189
+297,United Kingdom,Tonbridge,Other or Unknown,1,"Tonbridge, United Kingdom",51.195043,0.27568
+298,United Kingdom,Twickenham,ICT,1,"Twickenham, United Kingdom",51.444581,-0.335246
+299,United Kingdom,Uxbridge,ICT,1,"Uxbridge, United Kingdom",51.5485,-0.479611
+300,United Kingdom,Wandsworth,ICT,1,"Wandsworth, United Kingdom",51.4570716,-0.1817824
+301,United Kingdom,Warrington,Arts & Education,1,"Warrington, United Kingdom",53.3900441,-2.5969501
+302,United Kingdom,Wednesbury,Health,1,"Wednesbury, United Kingdom",52.552888,-2.02208
+303,United States,Addison,Other or Unknown,1,"Addison, United States",32.96179,-96.8291685
+304,United States,Albany,Arts & Education,1,"Albany, United States",42.6525793,-73.7562317
+305,United States,Albuquerque,Health,1,"Albuquerque, United States",35.0853336,-106.6055534
+306,United States,Aldie,ICT,1,"Aldie, United States",38.9756745,-77.6418724
+307,United States,Alexandria,ICT,1,"Alexandria, United States",38.8048355,-77.0469214
+308,United States,Alexandria,Other or Unknown,1,"Alexandria, United States",38.8048355,-77.0469214
+309,United States,Andover,Engineering,1,"Andover, United States",42.6583356,-71.1367953
+310,United States,Ankeny,Other or Unknown,1,"Ankeny, United States",41.7317884,-93.6001278
+311,United States,Ann Arbor ,ICT,1,"Ann Arbor , United States",42.2808256,-83.7430378
+312,United States,Antioch,Other or Unknown,1,"Antioch, United States",38.0049214,-121.805789
+313,United States,Arlignton,Other or Unknown,1,"Arlignton, United States",32.735687,-97.1080656
+314,United States,Arlington,ICT,1,"Arlington, United States",32.735687,-97.1080656
+315,United States,Arlington,Media & Marketing,1,"Arlington, United States",32.735687,-97.1080656
+316,United States,Arlington,Other or Unknown,1,"Arlington, United States",32.735687,-97.1080656
+317,United States,Ashburn,Arts & Education,1,"Ashburn, United States",39.0437567,-77.4874416
+318,United States,Ashburn,Finance & Insurance,1,"Ashburn, United States",39.0437567,-77.4874416
+319,United States,Ashton,Other or Unknown,1,"Ashton, United States",44.0715807,-111.4482884
+320,United States,Atlanta,ICT,1,"Atlanta, United States",33.7489954,-84.3879824
+321,United States,Atlanta,Other or Unknown,1,"Atlanta, United States",33.7489954,-84.3879824
+322,United States,Augusta,Health,1,"Augusta, United States",33.4734978,-82.0105148
+323,United States,Aurora,ICT,1,"Aurora, United States",39.7294319,-104.8319195
+324,United States,Aurora,Manufacturing,1,"Aurora, United States",39.7294319,-104.8319195
+325,United States,Aurora,Other or Unknown,1,"Aurora, United States",39.7294319,-104.8319195
+326,United States,Austin,Energy & Transport,1,"Austin, United States",30.267153,-97.7430608
+327,United States,Austin,Engineering,1,"Austin, United States",30.267153,-97.7430608
+328,United States,Austin,Finance & Insurance,1,"Austin, United States",30.267153,-97.7430608
+329,United States,Austin,ICT,2,"Austin, United States",30.267153,-97.7430608
+330,United States,Austin,Media & Marketing,1,"Austin, United States",30.267153,-97.7430608
+331,United States,Austin,Other or Unknown,1,"Austin, United States",30.267153,-97.7430608
+332,United States,Ayer,Other or Unknown,1,"Ayer, United States",42.5611947,-71.5899054
+333,United States,Ayer,Retail,1,"Ayer, United States",42.5611947,-71.5899054
+334,United States,Babylon,Other or Unknown,1,"Babylon, United States",40.6956552,-73.3256753
+335,United States,Bakersfield,Other or Unknown,1,"Bakersfield, United States",35.3732921,-119.0187125
+336,United States,Ballston Lake,Manufacturing,1,"Ballston Lake, United States",42.9117377,-73.8680872
+337,United States,Baltimore,Media & Marketing,1,"Baltimore, United States",39.2903848,-76.6121893
+338,United States,Baltimore,Other or Unknown,1,"Baltimore, United States",39.2903848,-76.6121893
+339,United States,Barrington,Arts & Education,1,"Barrington, United States",42.1539141,-88.1361888
+340,United States,Bartlett,Engineering,1,"Bartlett, United States",35.2045328,-89.8739753
+341,United States,Bear,ICT,1,"Bear, United States",35.268949,-95.4888653
+342,United States,Bedford ,ICT,1,"Bedford , United States",32.844017,-97.1430671
+343,United States,Bellingham,ICT,1,"Bellingham, United States",48.74908,-122.4781473
+344,United States,Belmont,ICT,1,"Belmont, United States",37.5202145,-122.2758008
+345,United States,Bend,ICT,1,"Bend, United States",44.0581728,-121.3153096
+346,United States,Bethany,Arts & Education,1,"Bethany, United States",35.5186678,-97.6322639
+347,United States,Bethlehem,Engineering,1,"Bethlehem, United States",40.6259316,-75.3704579
+348,United States,Beverly Hills,ICT,1,"Beverly Hills, United States",34.0736204,-118.4003563
+349,United States,Billerica,ICT,1,"Billerica, United States",42.5584218,-71.2689461
+350,United States,Birmingham,Finance & Insurance,1,"Birmingham, United States",33.5206608,-86.80249
+351,United States,Bloomfield,Arts & Education,1,"Bloomfield, United States",41.826488,-72.7300945
+352,United States,Bloomington,Finance & Insurance,1,"Bloomington, United States",44.840798,-93.2982799
+353,United States,Boston,Arts & Education,1,"Boston, United States",42.3600825,-71.0588801
+354,United States,Boston,Health,1,"Boston, United States",42.3600825,-71.0588801
+355,United States,Boston,ICT,2,"Boston, United States",42.3600825,-71.0588801
+356,United States,Boston,Other or Unknown,2,"Boston, United States",42.3600825,-71.0588801
+357,United States,Bowie,Public Sector,1,"Bowie, United States",39.0067768,-76.7791365
+358,United States,Braintree,Other or Unknown,1,"Braintree, United States",42.2079017,-71.0040013
+359,United States,Bridgeport ,Finance & Insurance,1,"Bridgeport , United States",41.1865478,-73.1951767
+360,United States,Bronx,Media & Marketing,1,"Bronx, United States",40.8370495,-73.8654295
+361,United States,Brookline,Arts & Education,1,"Brookline, United States",42.3317642,-71.1211635
+362,United States,Brookline,Other or Unknown,1,"Brookline, United States",42.3317642,-71.1211635
+363,United States,Brooklyn,Engineering,1,"Brooklyn, United States",40.6781784,-73.9441579
+364,United States,Brooklyn,ICT,1,"Brooklyn, United States",40.6781784,-73.9441579
+365,United States,Brooklyn,Other or Unknown,1,"Brooklyn, United States",40.6781784,-73.9441579
+366,United States,Broomall,Energy & Transport,1,"Broomall, United States",39.967933,-75.347048
+367,United States,Brownsville,ICT,1,"Brownsville, United States",25.9017472,-97.4974838
+368,United States,Brownwood,Health,1,"Brownwood, United States",31.7093197,-98.9911611
+369,United States,Burlington,Engineering,1,"Burlington, United States",44.4758825,-73.212072
+370,United States,Butler,Other or Unknown,1,"Butler, United States",40.8611755,-79.8953328
+371,United States,Cambridge,ICT,1,"Cambridge, United States",42.3736158,-71.1097335
+372,United States,Campbell,ICT,1,"Campbell, United States",37.2871651,-121.9499568
+373,United States,Canton,Other or Unknown,1,"Canton, United States",40.7989473,-81.378447
+374,United States,Carlsbad,Other or Unknown,3,"Carlsbad, United States",33.1580933,-117.3505939
+375,United States,Carmel,Other or Unknown,1,"Carmel, United States",39.978371,-86.1180435
+376,United States,Carrboro,ICT,1,"Carrboro, United States",35.9101438,-79.0752895
+377,United States,Carrboro,Other or Unknown,1,"Carrboro, United States",35.9101438,-79.0752895
+378,United States,Carrollton,Other or Unknown,1,"Carrollton, United States",32.9756415,-96.8899636
+379,United States,Casper,Other or Unknown,1,"Casper, United States",42.866632,-106.313081
+380,United States,Cedar Park,Construction,1,"Cedar Park, United States",30.505198,-97.8202888
+381,United States,Cedar Park,ICT,1,"Cedar Park, United States",30.505198,-97.8202888
+382,United States,Chandler,Other or Unknown,1,"Chandler, United States",33.3061605,-111.8412502
+383,United States,Chapel Hill,Engineering,1,"Chapel Hill, United States",35.9131996,-79.0558445
+384,United States,Chapel Hill,Media & Marketing,1,"Chapel Hill, United States",35.9131996,-79.0558445
+385,United States,Charlestown,Legal Services,1,"Charlestown, United States",41.3832162,-71.6418744
+386,United States,Charlotte,Finance & Insurance,1,"Charlotte, United States",35.2270869,-80.8431267
+387,United States,Charlotte,ICT,1,"Charlotte, United States",35.2270869,-80.8431267
+388,United States,Charlotte,Other or Unknown,1,"Charlotte, United States",35.2270869,-80.8431267
+389,United States,Chatham,Other or Unknown,1,"Chatham, United States",41.6820897,-69.9597664
+390,United States,Cherry Hill,Mining,1,"Cherry Hill, United States",39.926813,-75.0246312
+391,United States,Chesapeake,Other or Unknown,1,"Chesapeake, United States",36.7682088,-76.2874927
+392,United States,Chestnut Hill,Other or Unknown,1,"Chestnut Hill, United States",42.3303798,-71.166187
+393,United States,Chicago,Arts & Education,1,"Chicago, United States",41.8781136,-87.6297982
+394,United States,Chicago,ICT,2,"Chicago, United States",41.8781136,-87.6297982
+395,United States,Chicago,Manufacturing,1,"Chicago, United States",41.8781136,-87.6297982
+396,United States,Chicago,Other or Unknown,4,"Chicago, United States",41.8781136,-87.6297982
+397,United States,Chicopee,Engineering,1,"Chicopee, United States",42.1487043,-72.6078672
+398,United States,Cincinnati,Manufacturing,1,"Cincinnati, United States",39.1031182,-84.5120196
+399,United States,Closter,Health,1,"Closter, United States",40.9731536,-73.9615262
+400,United States,Coleraine,Engineering,1,"Coleraine, United States",47.2888298,-93.427708
+401,United States,Collierville,Other or Unknown,1,"Collierville, United States",35.042036,-89.6645266
+402,United States,Columbia,ICT,1,"Columbia, United States",34.0007104,-81.0348144
+403,United States,Columbia,Other or Unknown,1,"Columbia, United States",34.0007104,-81.0348144
+404,United States,Coram,Finance & Insurance,1,"Coram, United States",40.8687096,-73.0014946
+405,United States,Cumming,ICT,1,"Cumming, United States",34.2073196,-84.1401926
+406,United States,Cupertino,ICT,1,"Cupertino, United States",37.3229978,-122.0321823
+407,United States,Dallas,Media & Marketing,1,"Dallas, United States",32.7766642,-96.7969879
+408,United States,Dallas,Other or Unknown,1,"Dallas, United States",32.7766642,-96.7969879
+409,United States,Darien,Arts & Education,1,"Darien, United States",41.0771914,-73.4686858
+410,United States,Darien,Other or Unknown,1,"Darien, United States",41.0771914,-73.4686858
+411,United States,Davidson,Health,1,"Davidson, United States",35.4993031,-80.8486846
+412,United States,Davis,Agriculture,1,"Davis, United States",38.5449065,-121.7405167
+413,United States,Dearborn,Engineering,1,"Dearborn, United States",42.3222599,-83.1763145
+414,United States,Deerfield,Health,1,"Deerfield, United States",42.1711365,-87.8445119
+415,United States,Denton,ICT,1,"Denton, United States",33.2148412,-97.1330683
+416,United States,Denver,Arts & Education,1,"Denver, United States",39.7392358,-104.990251
+417,United States,Denver,Other or Unknown,1,"Denver, United States",39.7392358,-104.990251
+418,United States,Doral,Health,1,"Doral, United States",25.8195424,-80.3553302
+419,United States,Doral,Other or Unknown,1,"Doral, United States",25.8195424,-80.3553302
+420,United States,Dorchester,Engineering,1,"Dorchester, United States",42.3016305,-71.067605
+421,United States,Downers Grove,Finance & Insurance,1,"Downers Grove, United States",41.8089191,-88.0111746
+422,United States,Dublin,Arts & Education,1,"Dublin, United States",40.0992294,-83.1140771
+423,United States,Dublin,Engineering,1,"Dublin, United States",40.0992294,-83.1140771
+424,United States,East Hanover,Engineering,1,"East Hanover, United States",40.8200623,-74.3647247
+425,United States,East Hartford,Engineering,1,"East Hartford, United States",41.7634219,-72.6128339
+426,United States,Edina,Other or Unknown,1,"Edina, United States",44.8896866,-93.3499489
+427,United States,Edison,Finance & Insurance,1,"Edison, United States",40.5187154,-74.4120953
+428,United States,Elk Grove,Health,1,"Elk Grove, United States",38.4087993,-121.3716178
+429,United States,Elk Grove,ICT,1,"Elk Grove, United States",38.4087993,-121.3716178
+430,United States,Ellicott City,Engineering,1,"Ellicott City, United States",39.2673283,-76.7983067
+431,United States,Elmont,Health,1,"Elmont, United States",40.700936,-73.712909
+432,United States,Escondido,Other or Unknown,1,"Escondido, United States",33.1192068,-117.086421
+433,United States,Eugene,Other or Unknown,1,"Eugene, United States",44.0520691,-123.0867536
+434,United States,Evans,Public Sector,1,"Evans, United States",33.5337464,-82.1306747
+435,United States,Fairafx Station,ICT,1,"Fairafx Station, United States",38.8015452,-77.3254485
+436,United States,Fairfax,Other or Unknown,1,"Fairfax, United States",38.8462236,-77.3063733
+437,United States,Fairfax Station,ICT,1,"Fairfax Station, United States",38.8015452,-77.3254485
+438,United States,Fairfield,Other or Unknown,1,"Fairfield, United States",38.2493581,-122.0399663
+439,United States,Falls Church,Other or Unknown,1,"Falls Church, United States",38.882334,-77.1710914
+440,United States,Farmington,Engineering,1,"Farmington, United States",36.7280583,-108.2186856
+441,United States,Fayetteville,Other or Unknown,1,"Fayetteville, United States",35.0526641,-78.8783585
+442,United States,Fayetteville ,ICT,1,"Fayetteville , United States",35.0526641,-78.8783585
+443,United States,Florida,Finance & Insurance,1,"Florida, United States",27.6648274,-81.5157535
+444,United States,Flushing,ICT,1,"Flushing, United States",40.7674987,-73.833079
+445,United States,Fort Knox,Other or Unknown,1,"Fort Knox, United States",37.8836637,-85.9652686
+446,United States,Fort Lauderdale,Other or Unknown,1,"Fort Lauderdale, United States",26.1224386,-80.1373174
+447,United States,Fort Mill,ICT,1,"Fort Mill, United States",35.0073697,-80.9450759
+448,United States,Fort Worth,Other or Unknown,1,"Fort Worth, United States",32.7554883,-97.3307658
+449,United States,Foster City,Arts & Education,2,"Foster City, United States",37.5585465,-122.2710788
+450,United States,Foster City,Engineering,1,"Foster City, United States",37.5585465,-122.2710788
+451,United States,Franklin Park,Other or Unknown,1,"Franklin Park, United States",41.9348537,-87.879523
+452,United States,Fredericksburg,Other or Unknown,1,"Fredericksburg, United States",38.3031837,-77.4605399
+453,United States,Freehold,Finance & Insurance,1,"Freehold, United States",40.2136754,-74.3000878
+454,United States,Fremont,Engineering,1,"Fremont, United States",37.5482697,-121.9885719
+455,United States,Fremont,ICT,1,"Fremont, United States",37.5482697,-121.9885719
+456,United States,Fremont,Retail,1,"Fremont, United States",37.5482697,-121.9885719
+457,United States,Frisco,Other or Unknown,1,"Frisco, United States",33.1506744,-96.8236116
+458,United States,Front Royal,Other or Unknown,1,"Front Royal, United States",38.9181671,-78.1944446
+459,United States,Gainesville,Health,1,"Gainesville, United States",29.6516344,-82.3248262
+460,United States,Gaithersburg,Public Sector,1,"Gaithersburg, United States",39.1434406,-77.2013705
+461,United States,Glastonbury,Finance & Insurance,1,"Glastonbury, United States",41.6861794,-72.5450779
+462,United States,Grafton,Arts & Education,1,"Grafton, United States",43.3197265,-87.9534226
+463,United States,Grand Rapids,Retail,1,"Grand Rapids, United States",42.9633599,-85.6680863
+464,United States,Greenbelt ,Other or Unknown,1,"Greenbelt , United States",39.0045544,-76.8755282
+465,United States,Groton,ICT,1,"Groton, United States",41.3497456,-72.0790717
+466,United States,Harrison,ICT,1,"Harrison, United States",38.1701136,-86.1751759
+467,United States,Hartford,ICT,1,"Hartford, United States",41.7637111,-72.6850932
+468,United States,Hartford,Other or Unknown,1,"Hartford, United States",41.7637111,-72.6850932
+469,United States,Hatboro,ICT,1,"Hatboro, United States",40.1742757,-75.1068388
+470,United States,Hayward,Other or Unknown,1,"Hayward, United States",37.6688205,-122.0807964
+471,United States,Herndon,ICT,3,"Herndon, United States",38.9695545,-77.3860976
+472,United States,Herndon,Other or Unknown,1,"Herndon, United States",38.9695545,-77.3860976
+473,United States,Highland,Other or Unknown,1,"Highland, United States",38.3999743,-79.6052884
+474,United States,Highland Falls,Public Sector,1,"Highland Falls, United States",41.3692605,-73.9662504
+475,United States,Hoboken,Other or Unknown,1,"Hoboken, United States",40.7439905,-74.0323626
+476,United States,Homer Glen,Other or Unknown,1,"Homer Glen, United States",41.6000317,-87.9381112
+477,United States,Horseheads,Health,1,"Horseheads, United States",42.167019,-76.8205119
+478,United States,Houston,Energy & Transport,1,"Houston, United States",29.7604267,-95.3698028
+479,United States,Houston,Engineering,1,"Houston, United States",29.7604267,-95.3698028
+480,United States,Houston,ICT,1,"Houston, United States",29.7604267,-95.3698028
+481,United States,Houston,Legal Services,1,"Houston, United States",29.7604267,-95.3698028
+482,United States,Houston,Media & Marketing,1,"Houston, United States",29.7604267,-95.3698028
+483,United States,Houston,Real Estate,1,"Houston, United States",29.7604267,-95.3698028
+484,United States,Huntsville,Other or Unknown,2,"Huntsville, United States",34.7303688,-86.5861037
+485,United States,Indianapolis,Other or Unknown,1,"Indianapolis, United States",39.768403,-86.158068
+486,United States,Irvine,Energy & Transport,1,"Irvine, United States",33.6839473,-117.7946942
+487,United States,Irvine,Engineering,1,"Irvine, United States",33.6839473,-117.7946942
+488,United States,Irvine,ICT,2,"Irvine, United States",33.6839473,-117.7946942
+489,United States,Irvine,Other or Unknown,2,"Irvine, United States",33.6839473,-117.7946942
+490,United States,Irvine,Retail,1,"Irvine, United States",33.6839473,-117.7946942
+491,United States,Irving,ICT,1,"Irving, United States",32.8140177,-96.9488945
+492,United States,Irving,Media & Marketing,1,"Irving, United States",32.8140177,-96.9488945
+493,United States,Ithaca,Other or Unknown,1,"Ithaca, United States",42.4439614,-76.5018807
+494,United States,Jersey City,Finance & Insurance,1,"Jersey City, United States",40.7281575,-74.0776417
+495,United States,Jersey City,Other or Unknown,1,"Jersey City, United States",40.7281575,-74.0776417
+496,United States,Johnscreek,Finance & Insurance,1,"Johnscreek, United States",34.0289259,-84.198579
+497,United States,Kansas City,Other or Unknown,1,"Kansas City, United States",39.0997265,-94.5785667
+498,United States,Katy,Mining,1,"Katy, United States",29.7857853,-95.8243956
+499,United States,Kennebunkport,ICT,1,"Kennebunkport, United States",43.3617327,-70.4767274
+500,United States,Kenosha,Health,1,"Kenosha, United States",42.5847425,-87.8211854
+501,United States,Laguna Niguel,Hospitality,1,"Laguna Niguel, United States",33.5225261,-117.7075526
+502,United States,Lakeland,ICT,1,"Lakeland, United States",28.0394654,-81.9498042
+503,United States,Las Cruces,Other or Unknown,1,"Las Cruces, United States",32.3199396,-106.7636538
+504,United States,Lawrenceville,ICT,1,"Lawrenceville, United States",33.9562149,-83.9879625
+505,United States,Lebanon,Health,1,"Lebanon, United States",36.2081098,-86.2911024
+506,United States,Ledyard,Health,1,"Ledyard, United States",41.4456444,-72.0181743
+507,United States,Ledyard,Other or Unknown,1,"Ledyard, United States",41.4456444,-72.0181743
+508,United States,Lexington,Other or Unknown,1,"Lexington, United States",38.0405837,-84.5037164
+509,United States,Lithia,Other or Unknown,1,"Lithia, United States",27.8187623,-82.1496049
+510,United States,Littleton,Engineering,1,"Littleton, United States",39.613321,-105.0166498
+511,United States,Lombard,Arts & Education,1,"Lombard, United States",41.8800296,-88.0078435
+512,United States,Long Beach,ICT,1,"Long Beach, United States",33.7700504,-118.1937395
+513,United States,Lorton,Other or Unknown,1,"Lorton, United States",38.704282,-77.2277603
+514,United States,Los Angeles,Arts & Education,1,"Los Angeles, United States",34.0522342,-118.2436849
+515,United States,Los Angeles,ICT,1,"Los Angeles, United States",34.0522342,-118.2436849
+516,United States,Los Angeles,Other or Unknown,1,"Los Angeles, United States",34.0522342,-118.2436849
+517,United States,Los Gatos,ICT,1,"Los Gatos, United States",37.2358078,-121.9623751
+518,United States,Louisville,Engineering,1,"Louisville, United States",38.2526647,-85.7584557
+519,United States,Malden,Engineering,1,"Malden, United States",42.4250964,-71.066163
+520,United States,Mansfield,Finance & Insurance,1,"Mansfield, United States",40.75839,-82.5154471
+521,United States,Mansfield,Other or Unknown,1,"Mansfield, United States",40.75839,-82.5154471
+522,United States,Maple Grove,ICT,1,"Maple Grove, United States",45.0724642,-93.4557877
+523,United States,Marietta,Public Sector,1,"Marietta, United States",33.952602,-84.5499327
+524,United States,Maryland Heights,ICT,1,"Maryland Heights, United States",38.7131073,-90.4298401
+525,United States,Mckinney,Other or Unknown,2,"Mckinney, United States",33.1972465,-96.6397822
+526,United States,Mechanicsburg,ICT,1,"Mechanicsburg, United States",40.2142565,-77.0085876
+527,United States,Memphis,Other or Unknown,1,"Memphis, United States",35.1495343,-90.0489801
+528,United States,Menlo Park,ICT,2,"Menlo Park, United States",37.4529598,-122.1817252
+529,United States,Meriden,Finance & Insurance,1,"Meriden, United States",41.5381535,-72.8070435
+530,United States,Meridian,ICT,1,"Meridian, United States",43.6121087,-116.3915131
+531,United States,Mesa,Manufacturing,1,"Mesa, United States",33.4151843,-111.8314724
+532,United States,Metuchen,Other or Unknown,1,"Metuchen, United States",40.5431598,-74.3632049
+533,United States,Miami,Hospitality,1,"Miami, United States",25.7616798,-80.1917902
+534,United States,Miami,Media & Marketing,2,"Miami, United States",25.7616798,-80.1917902
+535,United States,Miami,Other or Unknown,1,"Miami, United States",25.7616798,-80.1917902
+536,United States,Miami Beach,Other or Unknown,1,"Miami Beach, United States",25.790654,-80.1300455
+537,United States,Middletown,Arts & Education,1,"Middletown, United States",41.5623209,-72.6506488
+538,United States,Minden,Engineering,1,"Minden, United States",32.6154278,-93.2868354
+539,United States,Missouri City,Health,1,"Missouri City, United States",29.6185669,-95.5377215
+540,United States,Monmouth Junction,ICT,1,"Monmouth Junction, United States",40.3789957,-74.5465436
+541,United States,Montgomery,ICT,1,"Montgomery, United States",32.3668052,-86.2999689
+542,United States,Morgantown,Other or Unknown,1,"Morgantown, United States",39.629526,-79.9558968
+543,United States,Mount Prospect,Health,1,"Mount Prospect, United States",42.0664167,-87.9372908
+544,United States,Mount Vernon,Media & Marketing,1,"Mount Vernon, United States",40.9125992,-73.8370786
+545,United States,Mountain View,ICT,1,"Mountain View, United States",37.3860517,-122.0838511
+546,United States,Mt Pleasant,Finance & Insurance,1,"Mt Pleasant, United States",32.8323225,-79.8284258
+547,United States,Mt Pleasant,Health,1,"Mt Pleasant, United States",32.8323225,-79.8284258
+548,United States,Nanuet,Manufacturing,1,"Nanuet, United States",41.0887073,-74.013473
+549,United States,Nashua,ICT,1,"Nashua, United States",42.7653662,-71.467566
+550,United States,Nashville,Other or Unknown,1,"Nashville, United States",36.1626638,-86.7816016
+551,United States,Nevada City,Media & Marketing,1,"Nevada City, United States",39.2615606,-121.0160594
+552,United States,New Britain,Other or Unknown,1,"New Britain, United States",41.6612104,-72.7795419
+553,United States,New Hampton,Health,1,"New Hampton, United States",43.6236211,-71.6304407
+554,United States,New York,Arts & Education,3,"New York, United States",40.7127837,-74.0059413
+555,United States,New York,ICT,3,"New York, United States",40.7127837,-74.0059413
+556,United States,New York,Media & Marketing,3,"New York, United States",40.7127837,-74.0059413
+557,United States,New York,Other or Unknown,5,"New York, United States",40.7127837,-74.0059413
+558,United States,Newark,Other or Unknown,1,"Newark, United States",40.735657,-74.1723667
+559,United States,Newburyport,Health,1,"Newburyport, United States",42.8125913,-70.8772751
+560,United States,Newhall,Arts & Education,1,"Newhall, United States",34.3847198,-118.5308652
+561,United States,Newton,Health,1,"Newton, United States",42.3370413,-71.2092214
+562,United States,North Caldwell,Other or Unknown,1,"North Caldwell, United States",40.8648215,-74.2582027
+563,United States,North Kansas City,Other or Unknown,1,"North Kansas City, United States",39.1429081,-94.5729781
+564,United States,North Potomac,Other or Unknown,1,"North Potomac, United States",39.097769,-77.2347674
+565,United States,North Providence,Other or Unknown,1,"North Providence, United States",41.8535518,-71.4676639
+566,United States,North Woodmere,ICT,1,"North Woodmere, United States",40.6501036,-73.7240205
+567,United States,Oak Harbor,ICT,1,"Oak Harbor, United States",48.2931559,-122.6432245
+568,United States,Ocala,Public Sector,1,"Ocala, United States",29.1871986,-82.1400923
+569,United States,Oceanside,Health,1,"Oceanside, United States",33.1958696,-117.3794834
+570,United States,Okemos,Other or Unknown,1,"Okemos, United States",42.722257,-84.4274744
+571,United States,Orlando,Finance & Insurance,1,"Orlando, United States",28.5383355,-81.3792365
+572,United States,Orlando,ICT,1,"Orlando, United States",28.5383355,-81.3792365
+573,United States,Oviedo,Engineering,1,"Oviedo, United States",28.669997,-81.2081203
+574,United States,Owings Mills,ICT,1,"Owings Mills, United States",39.4195499,-76.7802528
+575,United States,Palm Harbor,Health,1,"Palm Harbor, United States",28.0780718,-82.7637127
+576,United States,Park City,Other or Unknown,1,"Park City, United States",40.6460622,-111.4979729
+577,United States,Park Ridge,Media & Marketing,1,"Park Ridge, United States",42.0111412,-87.8406192
+578,United States,Parkland,ICT,1,"Parkland, United States",26.3107774,-80.2532249
+579,United States,Parsippany,Engineering,1,"Parsippany, United States",40.8652865,-74.4173877
+580,United States,Pawtucket,ICT,1,"Pawtucket, United States",41.878711,-71.3825558
+581,United States,Pembroke Pines,Other or Unknown,1,"Pembroke Pines, United States",26.007765,-80.2962555
+582,United States,Phoenix,Finance & Insurance,1,"Phoenix, United States",33.4483771,-112.0740373
+583,United States,Phoenix,Other or Unknown,1,"Phoenix, United States",33.4483771,-112.0740373
+584,United States,Pine Plains,Other or Unknown,1,"Pine Plains, United States",41.9798143,-73.6559602
+585,United States,Piscataway,Energy & Transport,1,"Piscataway, United States",40.554887,-74.4642861
+586,United States,Pittsford,Other or Unknown,1,"Pittsford, United States",43.0906186,-77.5149969
+587,United States,Plano,ICT,1,"Plano, United States",33.0198431,-96.6988856
+588,United States,Plymouth Meeting,ICT,1,"Plymouth Meeting, United States",40.1023319,-75.2743467
+589,United States,Ponchatoula,Hospitality,1,"Ponchatoula, United States",30.4388041,-90.4414762
+590,United States,Port St Lucie,Other or Unknown,1,"Port St Lucie, United States",27.2730492,-80.3582261
+591,United States,Portland,Arts & Education,1,"Portland, United States",45.5230622,-122.6764816
+592,United States,Portland,Health,2,"Portland, United States",45.5230622,-122.6764816
+593,United States,Portland,Other or Unknown,1,"Portland, United States",45.5230622,-122.6764816
+594,United States,Portland,Retail,1,"Portland, United States",45.5230622,-122.6764816
+595,United States,Portola Valley,ICT,1,"Portola Valley, United States",37.3841066,-122.2352443
+596,United States,Portsmouth ,Health,1,"Portsmouth , United States",36.8354258,-76.2982742
+597,United States,Poway ,ICT,1,"Poway , United States",32.9628232,-117.0358646
+598,United States,Princeton,Arts & Education,1,"Princeton, United States",40.3572976,-74.6672226
+599,United States,Princeton,Finance & Insurance,2,"Princeton, United States",40.3572976,-74.6672226
+600,United States,Princeton ,ICT,1,"Princeton , United States",40.3572976,-74.6672226
+601,United States,Providence,Real Estate,1,"Providence, United States",41.8239891,-71.4128343
+602,United States,Quincy,ICT,1,"Quincy, United States",42.2528772,-71.0022705
+603,United States,Rancho Murieta ,Other or Unknown,1,"Rancho Murieta , United States",38.5018527,-121.0946669
+604,United States,Redwood City,Other or Unknown,1,"Redwood City, United States",37.4852152,-122.2363548
+605,United States,Reston,Other or Unknown,1,"Reston, United States",38.9586307,-77.3570028
+606,United States,Rochester Hills,Other or Unknown,1,"Rochester Hills, United States",42.6583661,-83.1499322
+607,United States,Rockville,Health,1,"Rockville, United States",39.0839973,-77.1527578
+608,United States,Ronkonkoma,Engineering,1,"Ronkonkoma, United States",40.8064187,-73.1241488
+609,United States,Roseville,ICT,1,"Roseville, United States",38.7521235,-121.2880059
+610,United States,Rumford,Other or Unknown,1,"Rumford, United States",44.5536606,-70.5508829
+611,United States,Rye,Other or Unknown,1,"Rye, United States",40.9806535,-73.6837399
+612,United States,Sacramento,Other or Unknown,1,"Sacramento, United States",38.5815719,-121.4943996
+613,United States,Sacramento,Public Sector,1,"Sacramento, United States",38.5815719,-121.4943996
+614,United States,Saint Petersburg,Health,1,"Saint Petersburg, United States",27.7518284,-82.6267345
+615,United States,Salem,Mining,1,"Salem, United States",44.9428975,-123.0350963
+616,United States,Salt Lake City,Engineering,1,"Salt Lake City, United States",40.7607793,-111.8910474
+617,United States,Salt Lake City,Other or Unknown,1,"Salt Lake City, United States",40.7607793,-111.8910474
+618,United States,Sammamish,ICT,1,"Sammamish, United States",47.6162683,-122.0355736
+619,United States,Sammamish,Other or Unknown,1,"Sammamish, United States",47.6162683,-122.0355736
+620,United States,San Diego,Health,1,"San Diego, United States",32.715738,-117.1610838
+621,United States,San Diego,Other or Unknown,1,"San Diego, United States",32.715738,-117.1610838
+622,United States,San Francisco,Energy & Transport,1,"San Francisco, United States",37.7749295,-122.4194155
+623,United States,San Francisco,ICT,2,"San Francisco, United States",37.7749295,-122.4194155
+624,United States,San Francisco,Other or Unknown,3,"San Francisco, United States",37.7749295,-122.4194155
+625,United States,San Francisco,Public Sector,1,"San Francisco, United States",37.7749295,-122.4194155
+626,United States,San Jose,Engineering,1,"San Jose, United States",37.3382082,-121.8863286
+627,United States,San Jose,Health,1,"San Jose, United States",37.3382082,-121.8863286
+628,United States,San Jose,ICT,1,"San Jose, United States",37.3382082,-121.8863286
+629,United States,San Jose,Other or Unknown,1,"San Jose, United States",37.3382082,-121.8863286
+630,United States,San Jose ,Other or Unknown,1,"San Jose , United States",37.3382082,-121.8863286
+631,United States,San Mateo,Energy & Transport,1,"San Mateo, United States",37.5629917,-122.3255254
+632,United States,San Mateo,Engineering,1,"San Mateo, United States",37.5629917,-122.3255254
+633,United States,San Mateo,Other or Unknown,1,"San Mateo, United States",37.5629917,-122.3255254
+634,United States,Santa Ana,Engineering,1,"Santa Ana, United States",33.7455731,-117.8678338
+635,United States,Santa Clara,ICT,1,"Santa Clara, United States",37.3541079,-121.9552356
+636,United States,Santa Monica,Media & Marketing,2,"Santa Monica, United States",34.0194543,-118.4911912
+637,United States,Scituate,Health,1,"Scituate, United States",42.195929,-70.7258633
+638,United States,Scotch Plains,ICT,1,"Scotch Plains, United States",40.6400404,-74.369018
+639,United States,Scottsdale,Health,1,"Scottsdale, United States",33.4941704,-111.9260519
+640,United States,Scottsdale,Other or Unknown,1,"Scottsdale, United States",33.4941704,-111.9260519
+641,United States,Seattle,Finance & Insurance,1,"Seattle, United States",47.6062095,-122.3320708
+642,United States,Sharon,Health,1,"Sharon, United States",42.1236499,-71.1786237
+643,United States,Sherborn,Legal Services,1,"Sherborn, United States",42.2389857,-71.3697813
+644,United States,Shorewood,Media & Marketing,1,"Shorewood, United States",41.5200305,-88.2017293
+645,United States,Shrewsbury,ICT,1,"Shrewsbury, United States",42.2959267,-71.7128471
+646,United States,Silver Spring,Public Sector,1,"Silver Spring, United States",38.9906657,-77.026088
+647,United States,Somerville,ICT,1,"Somerville, United States",42.3875968,-71.0994968
+648,United States,Somerville,Other or Unknown,1,"Somerville, United States",42.3875968,-71.0994968
+649,United States,South Planfield,Engineering,1,"South Planfield, United States",40.5792701,-74.4115401
+650,United States,Springfield,Media & Marketing,1,"Springfield, United States",37.2089572,-93.2922989
+651,United States,Sringfield,Public Sector,1,"Sringfield, United States",37.2089572,-93.2922989
+652,United States,St. Louis,Other or Unknown,1,"St. Louis, United States",38.6270025,-90.1994042
+653,United States,Stirling,Other or Unknown,1,"Stirling, United States",38.024974,-122.244713
+654,United States,Sudbury,Media & Marketing,1,"Sudbury, United States",42.3834278,-71.4161725
+655,United States,Sugar Land,Health,1,"Sugar Land, United States",29.6196787,-95.6349463
+656,United States,Sun Valley,Engineering,1,"Sun Valley, United States",43.6971294,-114.3517172
+657,United States,Sunnyvale,Other or Unknown,3,"Sunnyvale, United States",37.36883,-122.0363496
+658,United States,Swissvale,Other or Unknown,1,"Swissvale, United States",40.4236801,-79.8828275
+659,United States,Tampa,Other or Unknown,1,"Tampa, United States",27.950575,-82.4571776
+660,United States,Taylors,Other or Unknown,1,"Taylors, United States",42.240872,-83.2696509
+661,United States,Tigard,ICT,1,"Tigard, United States",45.4312294,-122.7714861
+662,United States,Tinley Park,Other or Unknown,1,"Tinley Park, United States",41.5731442,-87.7932939
+663,United States,Troy,ICT,2,"Troy, United States",42.6064095,-83.1497751
+664,United States,Upland,Media & Marketing,1,"Upland, United States",34.09751,-117.6483876
+665,United States,Urbandale,ICT,1,"Urbandale, United States",41.6266555,-93.7121656
+666,United States,Vienna,Other or Unknown,2,"Vienna, United States",38.9012225,-77.2652604
+667,United States,Wakefield,Engineering,1,"Wakefield, United States",42.5039395,-71.0723391
+668,United States,Waltham,Media & Marketing,1,"Waltham, United States",42.3764852,-71.2356113
+669,United States,Washington,Media & Marketing,2,"Washington, United States",38.9071923,-77.0368707
+670,United States,Washington,Other or Unknown,3,"Washington, United States",38.9071923,-77.0368707
+671,United States,Washington,Public Sector,2,"Washington, United States",38.9071923,-77.0368707
+672,United States,Wauwatosa,Other or Unknown,1,"Wauwatosa, United States",43.0494572,-88.0075875
+673,United States,Waxhaw,Other or Unknown,1,"Waxhaw, United States",34.9245935,-80.7434019
+674,United States,Wellington,Other or Unknown,1,"Wellington, United States",26.6617635,-80.2683571
+675,United States,West Hartford,Health,1,"West Hartford, United States",41.7620842,-72.7420151
+676,United States,West Jordan,Other or Unknown,1,"West Jordan, United States",40.6096698,-111.9391031
+677,United States,West Linn,Other or Unknown,1,"West Linn, United States",45.3656761,-122.6123141
+678,United States,West Norriton,ICT,1,"West Norriton, United States",40.1295515,-75.3785172
+679,United States,Westerly,Other or Unknown,1,"Westerly, United States",41.3775987,-71.8272871
+680,United States,Whippany,Finance & Insurance,1,"Whippany, United States",40.8254055,-74.4022355
+681,United States,White Plains,Arts & Education,1,"White Plains, United States",41.0339862,-73.7629097
+682,United States,Whitehouse Station,Other or Unknown,1,"Whitehouse Station, United States",40.6155663,-74.7702576
+683,United States,Wichita,Other or Unknown,1,"Wichita, United States",37.6871761,-97.330053
+684,United States,Woburn,ICT,1,"Woburn, United States",42.4792618,-71.1522765
+685,United States,Woodbridge,Finance & Insurance,1,"Woodbridge, United States",38.6581722,-77.2497049
+686,United States,Woodside,Health,1,"Woodside, United States",37.4299388,-122.2538557
+687,United States,Woodside,Other or Unknown,1,"Woodside, United States",37.4299388,-122.2538557
+688,United States,Worcester,Other or Unknown,1,"Worcester, United States",42.2625932,-71.8022934
+689,"Venezuela, Bolivarian Republic Of",Caracas,Engineering,1,"Caracas, Venezuela, Bolivarian Republic Of",10.4805937,-66.9036063

@@ -1,0 +1,95 @@
+---
+title: "Generic snippets on R-Markdown"
+author: "Vivek Vijayaraghavan"
+date: "4/4/2019"
+output:
+  html_document:
+    df_print: paged
+    toc: true # table of content true
+    toc_depth: 3  # upto three depths of headings (specified by #, ## and ###)
+    number_sections: true  ## if you want number sections at each table header
+    theme: united  # many options for theme, this one is my favorite.
+    highlight: tango  # specifies the syntax highlighting style
+    #css: my.css   # you can add your custom css, should be in same folder
+---
+
+```{r echo=FALSE}
+library(knitr)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = '/Users/user/SynapseIT/Dropbox/SynapseIT/Education/DataScience/Masters in Data Science/IU Bloomington/Courses/02-INFO-I590-Applied Data Science/project/DataScience/CodePortfolio/data' )
+```
+
+# Overview
+In this section we will document and describe code snippets and pre-requisites that would be required even before being able to handle the data science lifecycle. For example, for us to be able to load a package into R, we will first need to install the package, which includes downloading the package and installing and configuring them.
+
+## Pre-Requisities
+
+## References
+ - [Cheatsheets](https://www.rstudio.com/resources/cheatsheets/#ide)
+ - [R Markdown Defintive Guide](https://bookdown.org/yihui/rmarkdown/)
+ - [R Markdown Basics](https://rmarkdown.rstudio.com/authoring_basics.html)
+
+# R-Markdown
+An R Markdown (.Rmd) file is a record of your research. It contains the code that a scientist needs to reproduce your work along with the narration that a reader needs to understand your work. The work needs to be reproducible, which means that without much additional need, we should be able to rerun the code in a R Markdown file and export the results as a finished product. There are many ways to export the finished report in a variety of formats, including html, pdf, MS Word, or RTF documents; html or pdf based slides, Notebooks, and more.
+
+## Workflow
+ 1. Open a new .Rmd file at File ▶ New File ▶ R Markdown.  
+ 2. Use the wizard that opens to prepopulate the file with a template.
+ 3. Write document by editing template
+ 4. Knit document to create report; use knit button or render() to knit
+ 5. Preview Output in IDE window
+ 6. Publish (optional) to web server
+ 7. Examine build log in R Markdown console
+ 8. Use output file that is saved along side .Rmd
+ 
+## Structure
+ - YAML Header
+  Optional section of render (e.g. pandoc) options written as key:value pairs (YAML).
+  At start of file
+  Between lines of - - -
+ - Text
+  Narration formatted with markdown, mixed with:
+ - Code Chunks
+  Chunks of embedded code. Each chunk:
+  Begins with ```{r}
+  ends with ```
+
+R Markdown will run the code and append the results to the doc. It will use the location of the .Rmd file as the working directory.
+
+## Chunk Options
+Listed below are some common chunk options. I have found some of these very useful, either to get additional information or to suppress excess information. One would notice that some combination of these options be used across the various sections within CodePortfolio sections.
+
+ - cache - cache results for future knits (default = FALSE)
+ - comment - prefix for each line of results (default = '##')
+ - echo - Display code in output document (default = TRUE)
+ - error - Display error messages in doc (TRUE) or stop render when errors occur (FALSE) (default = FALSE)
+ - message - display code messages in document (default = TRUE)
+ - results (default = 'markup')
+ - 'hide' - do not display results
+ - tidy - tidy code for display (default = FALSE)
+ - warning - display code warnings in document (default = TRUE)
+ - fig.align - 'left', 'right', or 'center' (default = 'default')
+ - fig.cap - figure caption as character string (default = NULL)
+ - fig.height, fig.width - Dimensions of plots in inches
+ - include - Include chunk in doc after running (default = TRUE)
+
+# Debug & Troubleshooting
+## Anaconda Installation
+One can update Anaconda Navigator manually.
+
+ - Open the Anaconda prompt (Terminal on Linux or macOS):
+ - Run this command to deactivate conda:
+ 	- conda deactivate
+ - Then run this command to update Navigator:
+ 	- conda update anaconda-navigator
+ 	
+## Install Packages
+Before we can load the packages into R workspace, we will need to install these packages. Th epackages can be installed from the R-Studio console or using the terminal. The installation type will depend on the dependencies of the packages being installed. The same applies when installing a package for loading datasets.
+```{r}
+# The below code is to highlight the syntax that will be used for installing packages.
+# The code is commented out so that we do not keep installing the packages.
+# install.packages('ROCR')
+```

@@ -1,0 +1,536 @@
+Occupation,Industry,All_workers,All_weekly,M_workers,M_weekly,F_workers,F_weekly
+Chief executives,Management,1046,2041,763,2251,283,1836
+General and operations managers,Management,823,1260,621,1347,202,1002
+Legislators,Management,8,NA,5,NA,4,NA
+Advertising and promotions managers,Management,55,1050,29,NA,26,NA
+Marketing and sales managers,Management,948,1462,570,1603,378,1258
+Public relations and fundraising managers,Management,59,1557,24,NA,35,NA
+Administrative services managers,Management,170,1191,96,1451,73,981
+Computer and information systems managers,Management,636,1728,466,1817,169,1563
+Financial managers,Management,1124,1408,551,1732,573,1130
+Compensation and benefits managers,Management,23,NA,7,NA,16,NA
+Human resources managers,Management,254,1365,68,1495,186,1274
+Training and development managers,Management,37,NA,17,NA,20,NA
+Industrial production managers,Management,267,1485,221,1528,45,NA
+Purchasing managers,Management,193,1348,109,1404,84,1226
+"Transportation, storage, and distribution managers",Management,276,966,224,1006,52,749
+"Farmers, ranchers, and other agricultural managers",Management,129,769,106,847,23,NA
+Construction managers,Management,471,1329,429,1357,42,NA
+Education administrators,Management,778,1423,282,1585,496,1252
+Architectural and engineering managers,Management,110,1899,101,1892,10,NA
+Food service managers,Management,763,742,389,820,374,680
+Funeral service managers,Management,13,NA,10,NA,2,NA
+Gaming managers,Management,19,NA,13,NA,6,NA
+Lodging managers,Management,123,985,54,1171,68,902
+Medical and health services managers,Management,592,1210,154,1422,438,1156
+Natural sciences managers,Management,24,NA,11,NA,13,NA
+Postmasters and mail superintendents,Management,20,NA,10,NA,10,NA
+"Property, real estate, and community association managers",Management,401,914,171,1137,230,823
+Social and community service managers,Management,305,1022,105,1142,200,965
+Emergency management directors,Management,9,NA,6,NA,3,NA
+"Managers, all other",Management,2803,1408,1717,1525,1085,1213
+"Agents and business managers of artists, performers, and athletes",Business,27,NA,13,NA,14,NA
+"Buyers and purchasing agents, farm products",Business,11,NA,9,NA,2,NA
+"Wholesale and retail buyers, except farm products",Business,142,926,73,886,69,985
+"Purchasing agents, except wholesale, retail, and farm products",Business,260,1009,136,1020,124,986
+"Claims adjusters, appraisers, examiners, and investigators",Business,317,963,141,1134,176,824
+Compliance officers,Business,235,1198,126,1375,109,1025
+Cost estimators,Business,95,1232,83,1264,12,NA
+Human resources workers,Business,592,1002,151,1158,441,984
+"Compensation, benefits, and job analysis specialists",Business,63,998,12,NA,50,898
+Training and development specialists,Business,107,990,42,NA,65,1037
+Logisticians,Business,111,1028,66,1075,44,NA
+Management analysts,Business,529,1431,291,1519,237,1348
+"Meeting, convention, and event planners",Business,117,859,27,NA,90,840
+Fundraisers,Business,62,1136,14,NA,48,NA
+Market research analysts and marketing specialists,Business,203,1284,85,1411,118,1239
+"Business operations specialists, all other",Business,186,1090,74,1461,112,969
+Accountants and auditors,Business,1464,1132,618,1345,846,988
+Appraisers and assessors of real estate,Business,42,NA,21,NA,21,NA
+Budget analysts,Business,44,NA,17,NA,28,NA
+Credit analysts,Business,17,NA,8,NA,9,NA
+Financial analysts,Business,295,1426,168,1680,127,1171
+Personal financial advisors,Business,407,1419,248,1738,159,1033
+Insurance underwriters,Business,106,1149,44,NA,63,956
+Financial examiners,Business,17,NA,9,NA,8,NA
+Credit counselors and loan officers,Business,313,997,146,1186,166,906
+"Tax examiners and collectors, and revenue agents",Business,59,1051,20,NA,39,NA
+Tax preparers,Business,56,892,19,NA,37,NA
+"Financial specialists, all other",Business,66,1162,25,NA,40,NA
+Computer and information research scientists,Computational,28,NA,23,NA,5,NA
+Computer systems analysts,Computational,499,1389,325,1462,173,1256
+Information security analysts,Computational,67,1538,56,1562,11,NA
+Computer programmers,Computational,450,1438,357,1501,93,1302
+"Software developers, applications and systems software",Computational,1287,1682,1054,1751,232,1415
+Web developers,Computational,151,1165,98,1233,53,1026
+Computer support specialists,Computational,396,1079,291,1135,105,908
+Database administrators,Computational,90,1536,58,1829,32,NA
+Network and computer systems administrators,Computational,208,1242,179,1266,28,NA
+Computer network architects,Computational,115,1552,100,1577,15,NA
+"Computer occupations, all other",Computational,490,1227,374,1252,116,1145
+Actuaries,Computational,24,NA,18,NA,6,NA
+Mathematicians,Computational,6,NA,6,NA,0,NA
+Operations research analysts,Computational,122,1441,59,1574,63,1325
+Statisticians,Computational,76,1275,37,NA,39,NA
+Miscellaneous mathematical science occupations,Computational,1,NA,1,NA,0,NA
+"Architects, except naval",Engineering,138,1441,106,1492,31,NA
+"Surveyors, cartographers, and photogrammetrists",Engineering,29,NA,23,NA,6,NA
+Aerospace engineers,Engineering,140,1662,122,1668,18,NA
+Agricultural engineers,Engineering,5,NA,5,NA,0,NA
+Biomedical engineers,Engineering,12,NA,10,NA,2,NA
+Chemical engineers,Engineering,79,1532,69,1583,10,NA
+Civil engineers,Engineering,316,1460,275,1474,41,NA
+Computer hardware engineers,Engineering,72,1876,62,1871,10,NA
+Electrical and electronics engineers,Engineering,283,1778,246,1819,37,NA
+Environmental engineers,Engineering,35,NA,26,NA,9,NA
+"Industrial engineers, including health and safety",Engineering,205,1447,168,1430,37,NA
+Marine engineers and naval architects,Engineering,9,NA,9,NA,0,NA
+Materials engineers,Engineering,36,NA,33,NA,4,NA
+Mechanical engineers,Engineering,316,1534,294,1550,23,NA
+"Mining and geological engineers, including mining safety engineers",Engineering,15,NA,15,NA,0,NA
+Nuclear engineers,Engineering,5,NA,3,NA,2,NA
+Petroleum engineers,Engineering,43,NA,39,NA,3,NA
+"Engineers, all other",Engineering,393,1527,339,1537,54,1448
+Drafters,Engineering,114,977,91,977,23,NA
+"Engineering technicians, except drafters",Engineering,352,963,284,984,68,827
+Surveying and mapping technicians,Engineering,58,1012,54,1031,4,NA
+Agricultural and food scientists,Science,22,NA,12,NA,10,NA
+Biological scientists,Science,74,1233,46,NA,28,NA
+Conservation scientists and foresters,Science,23,NA,16,NA,7,NA
+Medical scientists,Science,151,1250,68,1362,84,1082
+"Life scientists, all other",Science,1,NA,1,NA,0,NA
+Astronomers and physicists,Science,14,NA,11,NA,3,NA
+Atmospheric and space scientists,Science,8,NA,8,NA,1,NA
+Chemists and materials scientists,Science,93,1432,61,1496,33,NA
+Environmental scientists and geoscientists,Science,90,1423,65,1740,25,NA
+"Physical scientists, all other",Science,189,1553,121,1770,68,1170
+Economists,Science,29,NA,17,NA,12,NA
+Survey researchers,Science,0,NA,0,NA,0,NA
+Psychologists,Science,114,1367,31,NA,83,1189
+Sociologists,Science,0,NA,0,NA,0,NA
+Urban and regional planners,Science,22,NA,13,NA,9,NA
+Miscellaneous social scientists and related workers,Science,37,NA,19,NA,19,NA
+Agricultural and food science technicians,Science,28,NA,21,NA,7,NA
+Biological technicians,Science,20,NA,10,NA,10,NA
+Chemical technicians,Science,75,944,43,NA,32,NA
+Geological and petroleum technicians,Science,22,NA,18,NA,4,NA
+Nuclear technicians,Science,2,NA,2,NA,0,NA
+Social science research assistants,Science,3,NA,0,NA,3,NA
+"Miscellaneous life, physical, and social science technicians",Science,157,846,79,1001,78,780
+Counselors,Social Service,635,904,184,908,451,902
+Social workers,Social Service,677,877,127,943,549,862
+Probation officers and correctional treatment specialists,Social Service,85,967,42,NA,43,NA
+Social and human service assistants,Social Service,173,676,23,NA,149,673
+"Miscellaneous community and social service specialists, including health educators and community health workers",Social Service,92,831,29,NA,63,728
+Clergy,Social Service,376,1002,316,1021,60,924
+"Directors, religious activities and education",Social Service,62,929,31,NA,31,NA
+"Religious workers, all other",Social Service,44,NA,23,NA,21,NA
+Lawyers,Legal,803,1886,503,1914,300,1717
+Judicial law clerks,Legal,11,NA,1,NA,10,NA
+"Judges, magistrates, and other judicial workers",Legal,54,1952,33,NA,20,NA
+Paralegals and legal assistants,Legal,341,927,47,NA,294,910
+Miscellaneous legal support workers,Legal,136,770,40,NA,97,746
+Postsecondary teachers,Education,917,1258,516,1405,401,1144
+Preschool and kindergarten teachers,Education,517,616,11,NA,506,618
+Elementary and middle school teachers,Education,2806,974,543,1077,2262,957
+Secondary school teachers,Education,1048,1066,438,1149,610,1006
+Special education teachers,Education,297,987,38,NA,258,990
+Other teachers and instructors,Education,378,896,179,1024,199,817
+"Archivists, curators, and museum technicians",Education,38,NA,18,NA,20,NA
+Librarians,Education,130,991,27,NA,102,966
+Library technicians,Education,18,NA,4,NA,15,NA
+Teacher assistants,Education,614,541,48,NA,565,530
+"Other education, training, and library workers",Education,123,1001,28,NA,95,1031
+Artists and related workers,Arts,58,1166,39,NA,20,NA
+Designers,Arts,593,993,301,1099,291,918
+Actors,Arts,12,NA,8,NA,4,NA
+Producers and directors,Arts,120,1270,67,1340,53,1234
+"Athletes, coaches, umpires, and related workers",Arts,147,780,108,818,39,NA
+Dancers and choreographers,Arts,11,NA,2,NA,9,NA
+"Musicians, singers, and related workers",Arts,42,NA,33,NA,9,NA
+"Entertainers and performers, sports and related workers, all other",Arts,14,NA,11,NA,3,NA
+Announcers,Arts,25,NA,21,NA,5,NA
+"News analysts, reporters and correspondents",Arts,56,1218,29,NA,27,NA
+Public relations specialists,Arts,120,1211,49,NA,71,971
+Editors,Arts,108,1148,58,1205,50,1125
+Technical writers,Arts,52,1158,22,NA,30,NA
+Writers and authors,Arts,79,1232,36,NA,42,NA
+Miscellaneous media and communication workers,Arts,46,NA,16,NA,30,NA
+Broadcast and sound engineering technicians and radio operators,Arts,83,954,77,937,7,NA
+Photographers,Arts,45,NA,24,NA,21,NA
+"Television, video, and motion picture camera operators and editors",Arts,30,NA,28,NA,1,NA
+"Media and communication equipment workers, all other",Arts,2,NA,2,NA,0,NA
+Chiropractors,Healthcare Professional,22,NA,15,NA,7,NA
+Dentists,Healthcare Professional,59,1656,39,NA,20,NA
+Dietitians and nutritionists,Healthcare Professional,79,886,9,NA,69,879
+Optometrists,Healthcare Professional,19,NA,6,NA,13,NA
+Pharmacists,Healthcare Professional,206,1920,98,2117,108,1811
+Physicians and surgeons,Healthcare Professional,740,1824,457,1915,283,1533
+Physician assistants,Healthcare Professional,57,1368,17,NA,40,NA
+Podiatrists,Healthcare Professional,9,NA,5,NA,4,NA
+Audiologists,Healthcare Professional,8,NA,1,NA,6,NA
+Occupational therapists,Healthcare Professional,74,1210,10,NA,64,1199
+Physical therapists,Healthcare Professional,178,1265,56,1347,123,1215
+Radiation therapists,Healthcare Professional,12,NA,5,NA,7,NA
+Recreational therapists,Healthcare Professional,6,NA,2,NA,4,NA
+Respiratory therapists,Healthcare Professional,99,1000,32,NA,67,937
+Speech-language pathologists,Healthcare Professional,108,1147,1,NA,106,1148
+Exercise physiologists,Healthcare Professional,3,NA,3,NA,0,NA
+"Therapists, all other",Healthcare Professional,132,944,31,NA,101,951
+Veterinarians,Healthcare Professional,55,1455,16,NA,39,NA
+Registered nurses,Healthcare Professional,2382,1116,278,1222,2104,1098
+Nurse anesthetists,Healthcare Professional,23,NA,11,NA,12,NA
+Nurse midwives,Healthcare Professional,6,NA,0,NA,6,NA
+Nurse practitioners,Healthcare Professional,115,1532,11,NA,103,1522
+"Health diagnosing and treating practitioners, all other",Healthcare Professional,2,NA,0,NA,2,NA
+Clinical laboratory technologists and technicians,Healthcare Professional,270,901,69,1089,201,796
+Dental hygienists,Healthcare Professional,86,914,6,NA,80,953
+Diagnostic related technologists and technicians,Healthcare Professional,253,964,76,1106,177,908
+Emergency medical technicians and paramedics,Healthcare Professional,175,811,126,899,49,NA
+Health practitioner support technologists and technicians,Healthcare Professional,487,636,99,652,389,633
+Licensed practical and licensed vocational nurses,Healthcare Professional,508,743,48,NA,459,737
+Medical records and health information technicians,Healthcare Professional,174,740,17,NA,157,723
+"Opticians, dispensing",Healthcare Professional,44,NA,21,NA,23,NA
+Miscellaneous health technologists and technicians,Healthcare Professional,99,671,32,NA,66,642
+Other healthcare practitioners and technical occupations,Healthcare Professional,78,1128,40,NA,38,NA
+"Nursing, psychiatric, and home health aides",Healthcare Support,1400,467,163,526,1237,457
+Occupational therapy assistants and aides,Healthcare Support,17,NA,4,NA,12,NA
+Physical therapist assistants and aides,Healthcare Support,53,742,18,NA,35,NA
+Massage therapists,Healthcare Support,37,NA,16,NA,22,NA
+Dental assistants,Healthcare Support,188,531,14,NA,175,522
+Medical assistants,Healthcare Support,422,539,35,NA,387,530
+Medical transcriptionists,Healthcare Support,28,NA,3,NA,26,NA
+Pharmacy aides,Healthcare Support,22,NA,4,NA,18,NA
+Veterinary assistants and laboratory animal caretakers,Healthcare Support,21,NA,4,NA,17,NA
+Phlebotomists,Healthcare Support,91,551,15,NA,76,534
+"Miscellaneous healthcare support occupations, including medical equipment preparers",Healthcare Support,115,524,44,NA,71,511
+First-line supervisors of correctional officers,Protective Service,57,856,41,NA,16,NA
+First-line supervisors of police and detectives,Protective Service,114,1427,97,1425,17,NA
+First-line supervisors of fire fighting and prevention workers,Protective Service,42,NA,39,NA,3,NA
+"First-line supervisors of protective service workers, all other",Protective Service,72,808,56,825,16,NA
+Firefighters,Protective Service,260,1033,245,1052,16,NA
+Fire inspectors,Protective Service,18,NA,15,NA,3,NA
+"Bailiffs, correctional officers, and jailers",Protective Service,453,754,341,779,112,686
+Detectives and criminal investigators,Protective Service,141,1159,100,1265,41,NA
+Fish and game wardens,Protective Service,6,NA,5,NA,1,NA
+Parking enforcement workers,Protective Service,9,NA,6,NA,3,NA
+Police and sheriff's patrol officers,Protective Service,655,1002,569,1001,86,1009
+Transit and railroad police,Protective Service,3,NA,3,NA,0,NA
+Animal control workers,Protective Service,4,NA,2,NA,2,NA
+Private detectives and investigators,Protective Service,85,843,49,NA,36,NA
+Security guards and gaming surveillance officers,Protective Service,708,567,555,592,153,515
+Crossing guards,Protective Service,26,NA,13,NA,13,NA
+Transportation security screeners,Protective Service,33,NA,22,NA,11,NA
+"Lifeguards and other recreational, and all other protective service workers",Protective Service,42,NA,24,NA,18,NA
+Chefs and head cooks,Culinary,340,619,285,656,55,492
+First-line supervisors of food preparation and serving workers,Culinary,378,498,156,621,222,458
+Cooks,Culinary,1302,416,808,427,494,400
+Food preparation workers,Culinary,366,402,174,414,192,388
+Bartenders,Culinary,252,521,110,569,142,493
+"Combined food preparation and serving workers, including fast food",Culinary,173,391,67,401,107,380
+"Counter attendants, cafeteria, food concession, and coffee shop",Culinary,56,354,28,NA,28,NA
+Waiters and waitresses,Culinary,868,451,305,501,563,411
+"Food servers, nonrestaurant",Culinary,93,509,31,NA,62,485
+Dining room and cafeteria attendants and bartender helpers,Culinary,107,403,59,389,48,NA
+Dishwashers,Culinary,117,398,98,401,19,NA
+"Hosts and hostesses, restaurant, lounge, and coffee shop",Culinary,66,400,8,NA,58,397
+"Food preparation and serving related workers, all other",Culinary,6,NA,4,NA,3,NA
+First-line supervisors of housekeeping and janitorial workers,Groundskeeping,172,620,108,700,64,571
+"First-line supervisors of landscaping, lawn service, and groundskeeping workers",Groundskeeping,80,649,79,653,1,NA
+Janitors and building cleaners,Groundskeeping,1536,507,1111,547,425,429
+Maids and housekeeping cleaners,Groundskeeping,876,416,134,475,742,407
+Pest control workers,Groundskeeping,77,585,74,591,3,NA
+Grounds maintenance workers,Groundskeeping,862,469,824,473,39,NA
+First-line supervisors of gaming workers,Service,117,769,65,900,52,680
+First-line supervisors of personal service workers,Service,60,608,25,NA,35,NA
+Animal trainers,Service,26,NA,19,NA,8,NA
+Nonfarm animal caretakers,Service,100,505,32,NA,68,501
+Gaming services workers,Service,69,676,30,NA,39,NA
+Motion picture projectionists,Service,3,NA,3,NA,0,NA
+"Ushers, lobby attendants, and ticket takers",Service,9,NA,5,NA,4,NA
+Miscellaneous entertainment attendants and related workers,Service,69,485,42,NA,28,NA
+Embalmers and funeral attendants,Service,2,NA,2,NA,0,NA
+"Morticians, undertakers, and funeral directors",Service,23,NA,17,NA,7,NA
+Barbers,Service,46,NA,33,NA,12,NA
+"Hairdressers, hairstylists, and cosmetologists",Service,253,461,23,NA,229,463
+Miscellaneous personal appearance workers,Service,191,501,32,NA,159,497
+"Baggage porters, bellhops, and concierges",Service,75,608,63,606,12,NA
+Tour and travel guides,Service,21,NA,11,NA,9,NA
+Childcare workers,Service,407,437,14,NA,393,430
+Personal care aides,Service,680,462,128,537,552,441
+Recreation and fitness workers,Service,185,555,78,684,107,526
+Residential advisors,Service,24,NA,8,NA,16,NA
+"Personal care and service workers, all other",Service,67,499,35,NA,32,NA
+First-line supervisors of retail sales workers,Sales,2326,711,1296,825,1030,614
+First-line supervisors of non-retail sales workers,Sales,835,1028,556,1140,280,896
+Cashiers,Sales,1342,415,411,471,931,405
+Counter and rental clerks,Sales,73,594,35,NA,37,NA
+Parts salespersons,Sales,92,601,82,600,11,NA
+Retail salespersons,Sales,1918,590,1159,694,759,494
+Advertising sales agents,Sales,161,925,78,1155,83,729
+Insurance sales agents,Sales,427,815,194,1028,232,717
+"Securities, commodities, and financial services sales agents",Sales,211,1155,146,1461,65,767
+Travel agents,Sales,62,711,9,NA,53,685
+"Sales representatives, services, all other",Sales,406,966,268,1147,139,699
+"Sales representatives, wholesale and manufacturing",Sales,1138,1020,843,1066,295,917
+"Models, demonstrators, and product promoters",Sales,15,NA,4,NA,11,NA
+Real estate brokers and sales agents,Sales,463,837,197,1052,266,735
+Sales engineers,Sales,33,NA,31,NA,2,NA
+Telemarketers,Sales,39,NA,17,NA,21,NA
+"Door-to-door sales workers, news and street vendors, and related workers",Sales,28,NA,9,NA,18,NA
+"Sales and related workers, all other",Sales,158,916,89,1088,70,727
+First-line supervisors of office and administrative support workers,Office,1297,812,434,878,863,781
+"Switchboard operators, including answering service",Office,17,NA,7,NA,10,NA
+Telephone operators,Office,22,NA,4,NA,18,NA
+"Communications equipment operators, all other",Office,5,NA,2,NA,3,NA
+Bill and account collectors,Office,152,657,54,674,98,648
+Billing and posting clerks,Office,406,657,39,NA,366,664
+"Bookkeeping, accounting, and auditing clerks",Office,769,692,87,690,682,692
+Gaming cage workers,Office,11,NA,2,NA,10,NA
+Payroll and timekeeping clerks,Office,128,757,17,NA,111,751
+Procurement clerks,Office,35,NA,15,NA,21,NA
+Tellers,Office,264,514,33,NA,231,516
+"Financial clerks, all other",Office,61,767,30,NA,32,NA
+Brokerage clerks,Office,3,NA,1,NA,1,NA
+Correspondence clerks,Office,3,NA,1,NA,2,NA
+"Court, municipal, and license clerks",Office,60,755,9,NA,51,743
+"Credit authorizers, checkers, and clerks",Office,42,NA,12,NA,29,NA
+Customer service representatives,Office,1760,621,611,690,1149,604
+"Eligibility interviewers, government programs",Office,67,781,17,NA,50,805
+File clerks,Office,145,634,25,NA,120,627
+"Hotel, motel, and resort desk clerks",Office,127,481,58,486,69,467
+"Interviewers, except eligibility and loan",Office,105,615,16,NA,89,617
+"Library assistants, clerical",Office,35,NA,7,NA,28,NA
+Loan interviewers and clerks,Office,134,710,25,NA,109,722
+New accounts clerks,Office,20,NA,3,NA,17,NA
+Order clerks,Office,74,599,26,NA,48,NA
+"Human resources assistants, except payroll and timekeeping",Office,50,737,11,NA,40,NA
+Receptionists and information clerks,Office,852,575,72,619,781,569
+Reservation and transportation ticket agents and travel clerks,Office,95,713,34,NA,61,680
+"Information and record clerks, all other",Office,100,618,22,NA,78,616
+Cargo and freight agents,Office,20,NA,12,NA,9,NA
+Couriers and messengers,Office,153,752,134,750,19,NA
+Dispatchers,Office,250,698,109,759,141,655
+"Meter readers, utilities",Office,39,NA,34,NA,4,NA
+Postal service clerks,Office,127,927,76,974,51,833
+Postal service mail carriers,Office,302,954,187,1021,115,854
+"Postal service mail sorters, processors, and processing machine operators",Office,53,828,27,NA,26,NA
+"Production, planning, and expediting clerks",Office,256,838,116,978,141,732
+"Shipping, receiving, and traffic clerks",Office,502,591,354,604,148,566
+Stock clerks and order fillers,Office,1027,520,651,537,376,506
+"Weighers, measurers, checkers, and samplers, recordkeeping",Office,59,629,29,NA,31,NA
+Secretaries and administrative assistants,Office,2223,687,124,786,2099,683
+Computer operators,Office,58,751,25,NA,33,NA
+Data entry keyers,Office,223,619,55,589,169,638
+Word processors and typists,Office,68,650,6,NA,62,639
+Desktop publishers,Office,1,NA,1,NA,0,NA
+Insurance claims and policy processing clerks,Office,259,689,56,762,203,675
+"Mail clerks and mail machine operators, except postal service",Office,63,563,24,NA,39,NA
+"Office clerks, general",Office,929,620,156,609,773,622
+"Office machine operators, except computer",Office,31,NA,14,NA,16,NA
+Proofreaders and copy markers,Office,2,NA,0,NA,2,NA
+Statistical assistants,Office,15,NA,5,NA,10,NA
+"Office and administrative support workers, all other",Office,391,745,93,852,298,718
+"First-line supervisors of farming, fishing, and forestry workers",Agricultural,42,NA,32,NA,10,NA
+Agricultural inspectors,Agricultural,12,NA,7,NA,6,NA
+Animal breeders,Agricultural,2,NA,2,NA,0,NA
+"Graders and sorters, agricultural products",Agricultural,83,486,32,NA,51,468
+Miscellaneous agricultural workers,Agricultural,613,445,511,460,102,398
+Fishers and related fishing workers,Agricultural,11,NA,11,NA,0,NA
+Hunters and trappers,Agricultural,0,NA,0,NA,0,NA
+Forest and conservation workers,Agricultural,15,NA,10,NA,5,NA
+Logging workers,Agricultural,31,NA,31,NA,0,NA
+First-line supervisors of construction trades and extraction workers,Construction,560,1040,540,1047,20,NA
+Boilermakers,Construction,21,NA,21,NA,0,NA
+"Brickmasons, blockmasons, and stonemasons",Construction,122,652,122,652,0,NA
+Carpenters,Construction,802,687,792,687,10,NA
+"Carpet, floor, and tile installers and finishers",Construction,89,637,89,634,1,NA
+"Cement masons, concrete finishers, and terrazzo workers",Construction,44,NA,44,NA,0,NA
+Construction laborers,Construction,1181,639,1155,642,25,NA
+"Paving, surfacing, and tamping equipment operators",Construction,10,NA,10,NA,0,NA
+Pile-driver operators,Construction,2,NA,2,NA,0,NA
+Operating engineers and other construction equipment operators,Construction,324,856,318,859,6,NA
+"Drywall installers, ceiling tile installers, and tapers",Construction,121,596,119,595,2,NA
+Electricians,Construction,651,888,632,891,19,NA
+Glaziers,Construction,33,NA,32,NA,0,NA
+Insulation workers,Construction,43,NA,41,NA,3,NA
+"Painters, construction and maintenance",Construction,344,585,330,587,14,NA
+Paperhangers,Construction,0,NA,0,NA,0,NA
+"Pipelayers, plumbers, pipefitters, and steamfitters",Construction,456,863,455,862,2,NA
+Plasterers and stucco masons,Construction,20,NA,19,NA,1,NA
+Reinforcing iron and rebar workers,Construction,9,NA,9,NA,0,NA
+Roofers,Construction,171,584,170,580,2,NA
+Sheet metal workers,Construction,106,766,100,776,6,NA
+Structural iron and steel workers,Construction,54,869,52,864,2,NA
+Solar photovoltaic installers,Construction,8,NA,8,NA,0,NA
+"Helpers, construction trades",Construction,47,NA,47,NA,0,NA
+Construction and building inspectors,Construction,67,939,58,965,9,NA
+Elevator installers and repairers,Construction,23,NA,23,NA,0,NA
+Fence erectors,Construction,33,NA,33,NA,0,NA
+Hazardous materials removal workers,Construction,39,NA,35,NA,5,NA
+Highway maintenance workers,Construction,91,754,91,755,0,NA
+Rail-track laying and maintenance equipment operators,Construction,9,NA,9,NA,0,NA
+Septic tank servicers and sewer pipe cleaners,Construction,8,NA,8,NA,0,NA
+Miscellaneous construction and related workers,Construction,25,NA,23,NA,2,NA
+"Derrick, rotary drill, and service unit operators, oil, gas, and mining",Construction,28,NA,27,NA,1,NA
+"Earth drillers, except oil and gas",Construction,30,NA,30,NA,0,NA
+"Explosives workers, ordnance handling experts, and blasters",Construction,5,NA,5,NA,0,NA
+Mining machine operators,Construction,68,1106,65,1098,2,NA
+"Roof bolters, mining",Construction,3,NA,3,NA,0,NA
+"Roustabouts, oil and gas",Construction,7,NA,7,NA,0,NA
+Helpers--extraction workers,Construction,6,NA,6,NA,0,NA
+Other extraction workers,Construction,61,900,58,918,3,NA
+"First-line supervisors of mechanics, installers, and repairers",Maintenance,270,1032,252,1033,18,NA
+"Computer, automated teller, and office machine repairers",Maintenance,194,856,166,865,28,NA
+Radio and telecommunications equipment installers and repairers,Maintenance,139,862,126,879,13,NA
+Avionics technicians,Maintenance,4,NA,4,NA,0,NA
+"Electric motor, power tool, and related repairers",Maintenance,22,NA,20,NA,1,NA
+"Electrical and electronics installers and repairers, transportation equipment",Maintenance,2,NA,2,NA,0,NA
+"Electrical and electronics repairers, industrial and utility",Maintenance,18,NA,17,NA,0,NA
+"Electronic equipment installers and repairers, motor vehicles",Maintenance,17,NA,17,NA,0,NA
+Electronic home entertainment equipment installers and repairers,Maintenance,30,NA,28,NA,2,NA
+Security and fire alarm systems installers,Maintenance,67,911,65,913,2,NA
+Aircraft mechanics and service technicians,Maintenance,133,1025,125,1032,7,NA
+Automotive body and related repairers,Maintenance,120,846,118,849,2,NA
+Automotive glass installers and repairers,Maintenance,21,NA,20,NA,1,NA
+Automotive service technicians and mechanics,Maintenance,710,722,694,724,16,NA
+Bus and truck mechanics and diesel engine specialists,Maintenance,327,831,327,830,0,NA
+Heavy vehicle and mobile equipment service technicians and mechanics,Maintenance,206,928,206,928,0,NA
+Small engine mechanics,Maintenance,39,NA,39,NA,0,NA
+"Miscellaneous vehicle and mobile equipment mechanics, installers, and repairers",Maintenance,66,592,65,591,1,NA
+Control and valve installers and repairers,Maintenance,23,NA,23,NA,0,NA
+"Heating, air conditioning, and refrigeration mechanics and installers",Maintenance,341,806,337,810,4,NA
+Home appliance repairers,Maintenance,36,NA,36,NA,0,NA
+Industrial and refractory machinery mechanics,Maintenance,394,895,383,894,11,NA
+"Maintenance and repair workers, general",Maintenance,469,773,459,771,10,NA
+"Maintenance workers, machinery",Maintenance,31,NA,30,NA,1,NA
+Millwrights,Maintenance,49,NA,48,NA,1,NA
+Electrical power-line installers and repairers,Maintenance,113,1105,112,1105,0,NA
+Telecommunications line installers and repairers,Maintenance,157,882,148,880,9,NA
+Precision instrument and equipment repairers,Maintenance,64,996,60,1009,4,NA
+Wind turbine service technicians,Maintenance,3,NA,3,NA,0,NA
+"Coin, vending, and amusement machine servicers and repairers",Maintenance,38,NA,34,NA,4,NA
+Commercial divers,Maintenance,1,NA,1,NA,0,NA
+Locksmiths and safe repairers,Maintenance,12,NA,12,NA,0,NA
+Manufactured building and mobile home installers,Maintenance,4,NA,4,NA,1,NA
+Riggers,Maintenance,7,NA,7,NA,0,NA
+Signal and track switch repairers,Maintenance,9,NA,9,NA,0,NA
+"Helpers--installation, maintenance, and repair workers",Maintenance,17,NA,17,NA,0,NA
+"Other installation, maintenance, and repair workers",Maintenance,150,792,144,810,6,NA
+First-line supervisors of production and operating workers,Production,783,875,650,924,133,623
+"Aircraft structure, surfaces, rigging, and systems assemblers",Production,15,NA,11,NA,4,NA
+"Electrical, electronics, and electromechanical assemblers",Production,123,554,59,566,64,544
+Engine and other machine assemblers,Production,14,NA,12,NA,2,NA
+Structural metal fabricators and fitters,Production,31,NA,28,NA,3,NA
+Miscellaneous assemblers and fabricators,Production,950,581,573,637,377,512
+Bakers,Production,150,505,69,570,80,475
+"Butchers and other meat, poultry, and fish processing workers",Production,247,542,187,582,60,463
+"Food and tobacco roasting, baking, and drying machine operators and tenders",Production,9,NA,7,NA,1,NA
+Food batchmakers,Production,79,500,25,NA,54,489
+Food cooking machine operators and tenders,Production,7,NA,5,NA,2,NA
+"Food processing workers, all other",Production,132,594,82,679,50,508
+Computer control programmers and operators,Production,83,833,81,857,2,NA
+"Extruding and drawing machine setters, operators, and tenders, metal and plastic",Production,8,NA,7,NA,1,NA
+"Forging machine setters, operators, and tenders, metal and plastic",Production,6,NA,6,NA,0,NA
+"Rolling machine setters, operators, and tenders, metal and plastic",Production,15,NA,12,NA,3,NA
+"Cutting, punching, and press machine setters, operators, and tenders, metal and plastic",Production,78,633,62,674,15,NA
+"Drilling and boring machine tool setters, operators, and tenders, metal and plastic",Production,5,NA,5,NA,1,NA
+"Grinding, lapping, polishing, and buffing machine tool setters, operators, and tenders, metal and plastic",Production,41,NA,39,NA,3,NA
+"Lathe and turning machine tool setters, operators, and tenders, metal and plastic",Production,12,NA,11,NA,1,NA
+"Milling and planing machine setters, operators, and tenders, metal and plastic",Production,1,NA,1,NA,0,NA
+Machinists,Production,338,834,320,840,17,NA
+"Metal furnace operators, tenders, pourers, and casters",Production,29,NA,28,NA,1,NA
+"Model makers and patternmakers, metal and plastic",Production,6,NA,3,NA,3,NA
+"Molders and molding machine setters, operators, and tenders, metal and plastic",Production,47,NA,39,NA,9,NA
+"Multiple machine tool setters, operators, and tenders, metal and plastic",Production,1,NA,1,NA,0,NA
+Tool and die makers,Production,49,NA,49,NA,0,NA
+"Welding, soldering, and brazing workers",Production,568,760,545,767,23,NA
+"Heat treating equipment setters, operators, and tenders, metal and plastic",Production,4,NA,4,NA,0,NA
+"Layout workers, metal and plastic",Production,4,NA,4,NA,1,NA
+"Plating and coating machine setters, operators, and tenders, metal and plastic",Production,24,NA,24,NA,0,NA
+"Tool grinders, filers, and sharpeners",Production,7,NA,7,NA,0,NA
+"Metal workers and plastic workers, all other",Production,351,639,278,678,72,581
+Prepress technicians and workers,Production,14,NA,12,NA,2,NA
+Printing press operators,Production,160,707,134,729,26,NA
+Print binding and finishing workers,Production,16,NA,9,NA,6,NA
+Laundry and dry-cleaning workers,Production,133,466,53,487,80,460
+"Pressers, textile, garment, and related materials",Production,21,NA,9,NA,12,NA
+Sewing machine operators,Production,147,493,42,NA,105,476
+Shoe and leather workers and repairers,Production,5,NA,4,NA,1,NA
+Shoe machine operators and tenders,Production,1,NA,0,NA,1,NA
+"Tailors, dressmakers, and sewers",Production,37,NA,9,NA,27,NA
+Textile bleaching and dyeing machine operators and tenders,Production,2,NA,2,NA,0,NA
+"Textile cutting machine setters, operators, and tenders",Production,9,NA,7,NA,2,NA
+"Textile knitting and weaving machine setters, operators, and tenders",Production,8,NA,3,NA,4,NA
+"Textile winding, twisting, and drawing out machine setters, operators, and tenders",Production,7,NA,5,NA,2,NA
+"Extruding and forming machine setters, operators, and tenders, synthetic and glass fibers",Production,0,NA,0,NA,0,NA
+Fabric and apparel patternmakers,Production,4,NA,3,NA,1,NA
+Upholsterers,Production,29,NA,21,NA,7,NA
+"Textile, apparel, and furnishings workers, all other",Production,16,NA,12,NA,4,NA
+Cabinetmakers and bench carpenters,Production,40,NA,38,NA,2,NA
+Furniture finishers,Production,6,NA,6,NA,0,NA
+"Model makers and patternmakers, wood",Production,0,NA,0,NA,0,NA
+"Sawing machine setters, operators, and tenders, wood",Production,26,NA,22,NA,4,NA
+"Woodworking machine setters, operators, and tenders, except sawing",Production,23,NA,21,NA,1,NA
+"Woodworkers, all other",Production,17,NA,14,NA,3,NA
+"Power plant operators, distributors, and dispatchers",Production,35,NA,34,NA,1,NA
+Stationary engineers and boiler operators,Production,84,996,81,1012,3,NA
+Water and wastewater treatment plant and system operators,Production,82,880,79,868,3,NA
+Miscellaneous plant and system operators,Production,35,NA,33,NA,3,NA
+"Chemical processing machine setters, operators, and tenders",Production,62,1052,57,1082,5,NA
+"Crushing, grinding, polishing, mixing, and blending workers",Production,82,652,75,668,7,NA
+Cutting workers,Production,51,685,41,NA,9,NA
+"Extruding, forming, pressing, and compacting machine setters, operators, and tenders",Production,31,NA,25,NA,6,NA
+"Furnace, kiln, oven, drier, and kettle operators and tenders",Production,6,NA,5,NA,0,NA
+"Inspectors, testers, sorters, samplers, and weighers",Production,701,710,440,844,260,583
+Jewelers and precious stone and metal workers,Production,19,NA,11,NA,7,NA
+"Medical, dental, and ophthalmic laboratory technicians",Production,86,648,44,NA,42,NA
+Packaging and filling machine operators and tenders,Production,239,518,118,605,120,482
+Painting workers,Production,129,708,110,733,18,NA
+Photographic process workers and processing machine operators,Production,26,NA,12,NA,14,NA
+Semiconductor processors,Production,1,NA,1,NA,0,NA
+Adhesive bonding machine operators and tenders,Production,9,NA,5,NA,4,NA
+"Cleaning, washing, and metal pickling equipment operators and tenders",Production,4,NA,2,NA,1,NA
+Cooling and freezing equipment operators and tenders,Production,4,NA,3,NA,0,NA
+Etchers and engravers,Production,12,NA,8,NA,4,NA
+"Molders, shapers, and casters, except metal and plastic",Production,14,NA,12,NA,2,NA
+"Paper goods machine setters, operators, and tenders",Production,27,NA,22,NA,5,NA
+Tire builders,Production,8,NA,8,NA,0,NA
+Helpers--production workers,Production,24,NA,18,NA,7,NA
+"Production workers, all other",Production,846,625,643,666,203,501
+Supervisors of transportation and material moving workers,Transportation,186,894,153,898,33,NA
+Aircraft pilots and flight engineers,Transportation,114,1735,104,1830,9,NA
+Air traffic controllers and airfield operations specialists,Transportation,32,NA,24,NA,8,NA
+Flight attendants,Transportation,63,846,20,NA,43,NA
+"Ambulance drivers and attendants, except emergency medical technicians",Transportation,18,NA,14,NA,4,NA
+Bus drivers,Transportation,323,615,184,681,138,572
+Driver/sales workers and truck drivers,Transportation,2687,747,2582,751,105,632
+Taxi drivers and chauffeurs,Transportation,253,585,216,600,38,NA
+"Motor vehicle operators, all other",Transportation,21,NA,18,NA,3,NA
+Locomotive engineers and operators,Transportation,44,NA,42,NA,2,NA
+"Railroad brake, signal, and switch operators",Transportation,5,NA,5,NA,0,NA
+Railroad conductors and yardmasters,Transportation,55,1117,52,1137,4,NA
+"Subway, streetcar, and other rail transportation workers",Transportation,15,NA,12,NA,3,NA
+Sailors and marine oilers,Transportation,10,NA,9,NA,0,NA
+Ship and boat captains and operators,Transportation,29,NA,28,NA,1,NA
+Ship engineers,Transportation,5,NA,4,NA,1,NA
+Bridge and lock tenders,Transportation,4,NA,4,NA,0,NA
+Parking lot attendants,Transportation,57,492,49,NA,8,NA
+Automotive and watercraft service attendants,Transportation,63,452,58,470,5,NA
+Transportation inspectors,Transportation,21,NA,14,NA,7,NA
+"Transportation attendants, except flight attendants",Transportation,17,NA,9,NA,8,NA
+Other transportation workers,Transportation,39,NA,35,NA,4,NA
+Conveyor operators and tenders,Transportation,7,NA,7,NA,0,NA
+Crane and tower operators,Transportation,75,988,71,1016,4,NA
+"Dredge, excavating, and loading machine operators",Transportation,25,NA,25,NA,0,NA
+Hoist and winch operators,Transportation,5,NA,5,NA,0,NA
+Industrial truck and tractor operators,Transportation,579,609,541,612,37,NA
+Cleaners of vehicles and equipment,Transportation,222,485,200,498,22,NA
+"Laborers and freight, stock, and material movers, hand",Transportation,1433,526,1214,547,219,455
+Machine feeders and offbearers,Transportation,30,NA,21,NA,9,NA
+"Packers and packagers, hand",Transportation,385,438,158,462,227,424
+Pumping station operators,Transportation,18,NA,17,NA,1,NA
+Refuse and recyclable material collectors,Transportation,72,501,66,496,6,NA
+Mine shuttle car operators,Transportation,0,NA,0,NA,0,NA
+"Tank car, truck, and ship loaders",Transportation,6,NA,6,NA,0,NA
+"Material moving workers, all other",Transportation,37,NA,32,NA,5,NA

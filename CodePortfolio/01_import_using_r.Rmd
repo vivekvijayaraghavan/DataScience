@@ -1,0 +1,245 @@
+---
+title: "Import using R"
+author: "Vivek Vijayaraghavan"
+date: "4/4/2019"
+output:
+  html_document:
+    df_print: paged
+    toc: true # table of content true
+    toc_depth: 3  # upto three depths of headings (specified by #, ## and ###)
+    number_sections: true  ## if you want number sections at each table header
+    theme: united  # many options for theme, this one is my favorite.
+    highlight: tango  # specifies the syntax highlighting style
+    #css: my.css   # you can add your custom css, should be in same folder
+---
+
+```{r echo=FALSE}
+library(knitr)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = '/Users/user/SynapseIT/Dropbox/SynapseIT/Education/DataScience/Masters in Data Science/IU Bloomington/Courses/02-INFO-I590-Applied Data Science/project/DataScience/CodePortfolio/data' )
+```
+
+# Input Data
+## Overview
+There are multiple ways to get input data in R. No matter the type of data, the most common form of landing the input data in R is a dataframe. A dataframe in R is a 2-D array structure (a table) that comprises of rows and columns. Each row indicates an observation and each column represents a feature (or variable).
+
+In this section, we will cover two aspects of input data - on how to get raw data into R as well as what are the basic data structures to store the data being imported.
+
+## Pre-Requisites
+There are a few generic pre-rquisites that will be required as we learn on how to load files (data) into R. We will learn how to load flat files in R using the readr package, which is part of the tidyverse package.
+```{r}
+# Load tidyverse package
+library(tidyverse)
+```
+
+
+## References
+ - R for Data Science - Hadley Wickham & Garrett Grolemund
+ - 
+
+# Using R built-in datasets and functions
+There are many ways to get the data into R and is one of the basic initial step required before we can do any additional transformation or analysis on the data. Working with data provided as part of the built-in dataset in R is a great way to learn the tools of datascience. However, sooner or later, we will need to start working with our own data and that data will not be part of the built-in datasets in R.
+
+## Creating a dataframe from hardcoded static values.  
+```{r}
+# Create a dataframe called squares that have hardcoded values as input.
+squares <- data.frame(
+	size = c("small","big","medium"),
+	edge = c("dotted","striped","normal"),
+	color = c("green","yellow","green")
+)
+```
+
+## Loading a builtin dataset in R.  
+```{r}
+data() #A glossary of builtin datasets in R
+data(iris) #Loading a specific dataset
+head(iris) #Returns the top 6 rows (observations) of mtcars dataaset.
+```
+
+# Importing rectangualr flat files
+In this section we will look at how to read plain-text rectangular files into R. However, many of the principles learnt can be translated into importng other forms of data as well.
+
+## Overview
+The primary purpose of the readr() function is to turn flat files into dataframes.
+ - read_csv() reads comma delimited files, while read_csv2() reads semicolon seperated files, read_tsv() reads tab delimited files and read_delim() can read files with any delimiter.
+ - read_fwf() reads fixed width fields that can be either by fixed widths fwf_widths() or by position fwf_positions(). read_table() reads a common variation of fixed_width files where the columns are seperated by white space.
+ - read_log() can read Apache style log files. Webreadr is an useful package for reading log file formats.
+
+## Reading inline csv files
+Reading an inline csv file is similar to inputting hardcoded values, except, in the csv format. This could be useful when you want to get a quick subset of data input for creating reproducible example to share with others. This example also highlights on how to represent missing values.
+
+```{r}
+# Read an inline csv file that contain data
+# Example shows missing values as well as incorrect value "."
+input_df <- read_csv("a,b,c \n1,2,3 \nA,,C \n4,.,6", na = ".")
+input_df
+```
+
+As can be seen from the above, the first line was used as column headers and was read. Similarly, while reading external files, all of the rows will be parsed and read, unless we are explicit about the metadata. We will be working through some of these parameters below.
+
+## Reading external flat files (csv)
+In this section we will show the basic syntax to read a comma separated file. Once we get an idea of this syntax, similar patterns can be applied for readng other types of formats. In the example below, the heights csv file contains headers (first row) and is automatically associated with the columns.
+```{r}
+# Read a csv file that contain data about heights into a dataframe called heights
+# Note that we have already set the data working directory as the first step.
+# Note that the default assumption is that the first row is the column header
+heights <- read_csv("heights.csv")
+head(heights)
+```
+
+However, where there is no header data, we can create and associate column headers (and row headers) as we import the data. Note that col_names = FALSE works the same way as header = FALSE attribute. We also show on how to assign the column names after we raed the file. It should be noted that we can assign column names as we read the data as well. There are many ways we can chieve the same result and we focus here on some of the common ways only. Notice the datatypes that have been apllied by default. We will come back to the datatypes as part of the parsing section.
+
+```{r}
+# Read a csv file that does not contain a header and associate column headers...
+# Default variable names are assigned to the columns.
+heights_raw <- read.csv("heights_noheader.csv", header=FALSE)
+head(heights_raw)
+
+heights_colnames <- read.csv("heights_noheader.csv", header=FALSE)
+colnames(heights_colnames) = c("earn","height","sex","ed","age","race")
+head(heights_colnames)
+```
+
+## Reading external flat files (tab seperated)
+In this example below, we highlight reading a tab seperated data fiel that does not contain a header.
+```{r}
+# loading the seeds data from txt file.
+seeds_raw <- read.table('seeds_dataset.txt', sep = '\t',header = FALSE)
+colnames( seeds_raw ) <- c('area', 'perimeter', 'compactness', 'length', 'width', 'asymmetry', 'groove_length', 'class')
+head(seeds_raw)
+```
+
+## Parsing
+We will focus a little bit on the parsing function here as it is an important building block of the readr function. We can use the parse function to parse_integer(), parse_logical(), parse_double(), parse_character(), parse_factor(), parse_date(), parse_time and parse_datetime(). We will not be going through the syntax of each here, but will showcase on how the parsing functions are useful as we read data from files.
+```{r}
+# We will use the challenge data file to illustrate some challenges with parsing large datafiles.
+challenge <- read_csv(readr_example("challenge.csv"))
+problems(challenge)
+
+# We can work column by column to validate and make sure we parse using the correct datatype. This can be done as we read the data.
+challenge1 <- read_csv(
+	readr_example("challenge.csv"),
+	col_types = cols(
+		x = col_double(),
+		y = col_date()
+	)
+)
+tail(challenge1)
+
+# We should be able to do the same with the heights data we loaded earlier
+# Here we show how to do that after the data is read
+head(heights_colnames)
+heights_colnames$earn <- as.integer(heights_colnames$earn)
+heights_colnames$sex <- as.character(heights_colnames$sex)
+heights_colnames$race <- as.character(heights_colnames$race)
+head(heights_colnames)
+```
+
+## Writing to a file
+The readr function can also be used to writing data back to disk. We can do that using the write_csv() and write_tsv() functions for creating comma sepearted or tab seperated files. These functions alway encode strings in UTF-8 and saves date and date-times in ISO8601 format.
+
+We could also use the RDS wrapper functions write_rds() and read_rds() to store data in a relational data store (RDS) which is stored in R custom binary format. 
+```{r}
+# Writing back the challenge data that we read and prased in the previous section.
+# However, note that the type information is lost by this default approach.
+write_csv(challenge1, "challenge.csv")
+```
+
+
+# Reading data from other sources
+In this section we explore reading data from relational databases as well as external web API. Not all o fthe data is available as formatted files to be downloaded and henece it is important to understand these additional ways to get to the data.
+
+## Reading data through Web API
+Reading data through Web API allows the owner of the data to be able to mainating the data content, while the consumers will need a mechanism to access this data over the internet. We will typically use a function called scan to access these tyoe of datasets. An example on how to get data through standard web interface is shown below. Notice how the data types are not parsed correctly. This can be fixed based on the samples shown in the previous sections.
+```{r}
+# Reading data directly from the web.
+# Here we are reading adult data using the read_table function.
+
+adult <- read.table('https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data', 
+                    sep = ',', fill = F, strip.white = T)
+colnames(adult) <- c('age', 'workclass', 'fnlwgt', 'educatoin', 
+                     'educatoin_num', 'marital_status', 'occupation', 'relationship', 'race', 'sex', 
+                     'capital_gain', 'capital_loss', 'hours_per_week', 'native_country', 'income')
+
+head(adult)
+```
+
+## Read JSON Files Into R
+We can read json formats as well. Below is an example of the same. We will need rjason package to be installed first.
+```{r}
+# Reading json file.
+library(rjson)
+library(jsonlite)
+
+# Import data from json file from a local working directory
+JsonData1 <- fromJSON(txt ="nyc.json" )
+
+# Import data from json file
+JsonData2 <- fromJSON(txt = "https://data.cityofnewyork.us/api/views/kku6-nxdu/rows.json" )
+
+# Import and validate json data using jsonlite using url as a parameter
+url <- 'https://data.cityofnewyork.us/api/views/kku6-nxdu/rows.json'
+
+# read url and convert to data.frame
+JsonData3 <- fromJSON(txt=url)
+```
+
+## Reading data from databases (sql lite)
+More often than not, we might have to connect to relational databases to get data directly as opposed to export from databases and import to R. This can be achieved using the read_rds() and write_rds() functions. In the example below, we are showing example of using sql lite as the database from whcih to get data.
+```{r}
+set.seed(123)
+df <- data.frame(replicate(10, sample(0:2000, 15 * 10^5, rep = TRUE)),
+                 replicate(10, stringi::stri_rand_strings(1000, 5)))
+
+library(RSQLite)
+conn <- dbConnect(RSQLite::SQLite(), dbname="myDB")
+dbWriteTable(conn,"mytable",df, overwrite=TRUE)
+alltables <- dbListTables(conn)
+# Use sql queries to query data...
+oneColumn <- dbGetQuery(conn,"SELECT X1 FROM mytable")
+
+library(dplyr)
+library(dbplyr)
+my_db <- tbl(conn, "mytable")
+my_db
+# Use dplyr functions to query data...
+my_db %>% select(X1)
+```
+
+
+# Dataframe Functions
+Once we read the data (either created internally or from external files), we invariable store that rectangular data as a dataframe. 
+
+There are many functions we can use on the dataframe to understand the content and structure of data. Some functions are listed below. As we weave through the defintions and understanding of these functions, we will walk through examples that are simple (squares) as well as more complex, lik ethe builtin dataset mtcars.
+
+## Dimensions  
+The dimension function provides the number of observations and features in the dataframe. In this example, we have 3 obervations and 3 features. Hence the output 3 3.
+```{r}
+dim(squares)
+```
+## String  
+The string function provides the overview of the structure of the dataframe. Here you will notice information about the number of obervations and features (varaibales) as we all characteristics of each of the variable.
+```{r}
+str(squares)
+```
+## Head and Tail
+The head function returns the top 6 rows of the dataframe and the tail returns the bottom 6. Th evalue six can be configured / adjusted / specified to return a user desired numer of rows.
+```{r}
+head(iris) #Returns the top 6 rows (observations) of mtcars dataaset.
+head(iris, 10) #Returns the top 10 rows (observations) of mtcars dataaset.
+tail(iris) #Returns the bottom 6 rows (observations) of mtcars dataaset.
+```
+
+
+## Summary  
+The summary function provides the distribution measures of the data within the dataframe.In our example, you can see the summary function providing the count of the values across each observation and variables.
+```{r}
+summary(squares)
+```
+
+# Conclusion
+In this section we have provided examples on how to create as well as read and write data from external disk. This is one of the first steps before we can do any type of wrangling / transformation with the data prior to visualization and analysis. We will cover wrangling, analysis and visualization as seperate focussed sections.

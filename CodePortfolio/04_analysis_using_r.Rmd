@@ -1,0 +1,745 @@
+---
+title: "Analysis using R"
+author: "Vivek Vijayaraghavan"
+date: "4/4/2019"
+output:
+  html_document:
+    df_print: paged
+    toc: true # table of content true
+    toc_depth: 3  # upto three depths of headings (specified by #, ## and ###)
+    number_sections: true  ## if you want number sections at each table header
+    theme: united  # many options for theme, this one is my favorite.
+    highlight: tango  # specifies the syntax highlighting style
+    #css: my.css   # you can add your custom css, should be in same folder
+---
+```{r echo=FALSE}
+library(knitr)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = '/Users/user/SynapseIT/Dropbox/SynapseIT/Education/DataScience/Masters in Data Science/IU Bloomington/Courses/02-INFO-I590-Applied Data Science/project/DataScience/CodePortfolio/data' )
+```
+
+
+# Introduction
+The code portfolio for analysis using R will focus on the machine learning techniques, analysis associated with those techniques, evaluation of the performance and error measures to validate the models and the influence of supervised, unsupervised and semi-supervised learning.  
+
+In the sections below, there will be an overview and brief explanation of the concepts. More importantly, along with the core machine learning techniques of classification, regression and clustering, there will be examples on how to run and evaluate the models. Multiple datasets are used deliberately to highlight the various concepts as it breaks the monotony of using the same dataset, but also helping in understanding the structure and context of the datasets and the choice of the machine learning models that are applied on them.
+
+## References
+The primary reference to the content here is from the datacamp course.
+
+ - [Intro to Machine Learning with R](https://campus.datacamp.com/courses/introduction-to-machine-learning-with-r).
+ - [ROC Curve](https://rpubs.com/H_Zhu/235617)
+ - [k means clustering](https://uc-r.github.io/kmeans_clustering).
+ 
+# Machine Learning Overview
+The basic concept of machine learning is to build a model that can make predictions about the current data as well as future instances of similar problems. Machine learning is more than simply computing averages or performing some data manipulation. It actually involves making predictions about observations based on previous information. Some machine learning examples are predicting height/weight using linear regression function, recommendation engines, self-driving car decision making analysis etc.    
+
+## Estimation Functions  
+A function is some transformation that is applied on the inputs to generate an output. This function can be very specific (formula or relation between input and out is already defined and specified) or estimated (based on the input provided and prior known conditions, we estimate/predict what the output value will be). Note that in case of the estimated function, the direct relation between the input and output may not be define apriori.  
+
+## Basic Prediction Model  
+The most basic of the prediction model has three steps. They are:  
+
+ - Build a linear regression model from a dataset.
+ - Define the dataframe for the specific data we want to predict (input) and
+ - Use the predict function to predict the output.  
+ 
+In the example below, we are trying to predict the wage for a 60 year olde worker. The dataset wage (part of ISLR package) contains data about the wage of workers along with their age. We will build a linear regression model and then use the predic function by pass in this model as well as the data from which we want to predict.  In the example below, the prediction of the wage for a 60 year old works is approximately USD 124/-. We were able to predict this value 
+
+```{r}
+library('ISLR')
+data(Wage) #Load the builtin dataset Wage.
+head(Wage) # Top 6 rows of the dataset Wage.
+
+# Build a linear regression model that can predict the wage of a worker based on the age.
+lm_wage <- lm(wage ~ age, data = Wage)
+
+data_60 <- data.frame(age = 60) #Create a dataframe with data of all workers whose age is 60.
+
+predict(lm_wage, data_60) #Use predict function to determine the wage of a 60 year old worker.
+```
+
+## Machine Learning Techniques    
+### Classification  
+The goal of the classification problem is to predict if a given observation belongs to a certain category. Some examples of classification problem in machine learning is in medical diagnosis (sick, not sick), animal recognition (cat, horse, dog) etc. The main characterisitics of classifier technique is that the output is qualitative and the types of classes that an input can be classified is known apriori.  
+
+### Regression  
+The goal of the regression model is to fit a linear function between predictor and response. For example, based on the height and weight relation among a group of people, is it possible to predict the weight of a person, given their height. The linear regression function we are trying to fit is:  
+$$ Height \approx \beta_0 + \beta_1 \ast Weight $$
+where $\beta_0$ and $\beta_1$ are known as the model co-efficients (or parameters) and is estimated based on previous input-output values. Some applications of regression models are credit scoring, paying for subcriptions over time and landing a job based on grades and college attended. Th emain characteristic of the regression technique is that the output is quantitative and is calculated from previous knowledge of input-output observations.    
+
+### Clustering  
+The goal of clustering model is group inputs into clusters of similar values, while the clusters themselvs are dissimialr from each other. Clustering does not require any knowledge of labels. Ther eis no right or worng answers with clustering and can vary based on how the clusters are formed. One of the common examples of clustering is k-means clustering, that groups input data into k clusters based on the similarity measures.  
+
+Let us use the iris dataset to help articulate clustering mechanism. First, looking at the dataset, we can see that each observation has an associated species setosa, versicolor and virginica. To highlight the clustering method, we will create a dataframe without the species information. We will be using clusyering to group the observations and then analyze how close (or far) was our clustering function.  
+
+```{r}
+data(iris) #Load the builtin dataset iris
+head(iris) # Top 6 rows of the dataset iris
+
+set.seed(1) # Set random seed. Don't remove this line. This is used to find our frame of reference.
+
+# Chop up iris in my_iris and species
+my_iris <- iris[-5]
+species <- iris$Species
+
+# Perform k-means clustering on my_iris: kmeans_iris
+kmeans_iris <- kmeans(my_iris, 3)
+
+# Compare the actual Species to the clustering using table()
+table(kmeans_iris$cluster, species)
+
+# Plot Petal.Width against Petal.Length, coloring by cluster
+plot(Petal.Length ~ Petal.Width, data = my_iris, col = kmeans_iris$cluster)
+
+```
+
+
+## Supervised vs Unsupervised Learning  
+Supervised learning is to find an estimation function which can be used to assign a class or value to unseen observations, given a set of labeled observations. Classification and Regression techniques fall into this category of supervised learning. Unsupervised learning does ot require labeled observations and will learn from the data to group similar observations. Clustering is a form of unsupervised learning. Semi-Supervised learning can be used where we have lots of unlabeled observations and a few labelled observations. We can then use clustering to group similar observations and then use labels to label the observations. We can then run supervised learning on the labelled observations.  
+
+### Supervised Learning  
+In thie example below, we will use the iris dataset and use the Species column (label) to do some supervised learning using recursive partitioning.  
+```{r}
+# Set random seed. Don't remove this line.
+set.seed(1)
+
+# Take a look at the iris dataset
+str(iris)
+summary(iris)
+
+# Load rpart package
+library('rpart')
+
+# Build a decision tree model based on Species label...
+tree <- rpart(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width,
+              data = iris, method = "class")
+
+# A dataframe containing unseen observations
+unseen <- data.frame(Sepal.Length = c(5.3, 7.2),
+                     Sepal.Width = c(2.9, 3.9),
+                     Petal.Length = c(1.7, 5.4),
+                     Petal.Width = c(0.8, 2.3))
+
+# Predict the label of the unseen observations. Print out the result.
+predict(tree, unseen, type = "class")
+```
+
+### Unsupervised Learning  
+In the example below we will use the builtin dataset mtcars to highlight the unsupervised learning model. In the case of clustering, visualization is key to interpretation! One way to achieve this is by plotting the features of the cars and coloring the points based on their corresponding cluster.
+```{r}
+# The cars data frame is part of the builtin dataset mtcars
+
+# Set random seed. Don't remove this line.
+set.seed(1)
+
+# Explore the cars dataset
+str(cars)
+summary(cars)
+
+
+# Group the dataset into two clusters: km_cars
+km_cars <- kmeans(cars, 2)
+
+# Print out the contents of each cluster
+print(km_cars)
+
+# Add points to the cluster and color code them for each cluster
+plot(cars, col = km_cars$cluster)
+
+# Print out the cluster centroids
+print(km_cars$centers)
+
+# Add the centroids to the plot
+points(km_cars$centers, pch = 22, bg = c(1, 2), cex = 2)
+```
+
+## Performance and/or Error Measures  
+How do we figure out if the model is any good. For this we need to understand the context of the tasks being performed. Accuracy, Computation time, Interpretability are all factors affecting the quallity of the model. For the various techniques of machine learning, these measures can vary.  
+
+### Classification Measures using Confusion Matrix  
+Confusion Matrix is used with Classification technique and contains rows and columns (matrix) of all available labels. Each cell contains teh frequency of the instances (observations) classified in a certain way. Binary Classifiers have a positive (1) and negative (0) values. Consider the rows to be the outcomes of the truth and the columns the outcomes of the predition. This yields a matrix as below:
+```{r echo=FALSE}
+image_loc <- "/Users/user/SynapseIT/Dropbox/SynapseIT/Education/DataScience/Masters in Data Science/IU Bloomington/Courses/02-INFO-I590-Applied Data Science/project/DataScience/CodePortfolio/images/"
+image_name <- "Confusion_Matrix.png"
+include_graphics(paste(image_loc,image_name,sep=""))
+```
+
+The confusion matrix can be used to calculate ratios such as accuracy, precision and recall. Accuracy is $Total Correct Observations / Total Observations = (TP+TN) / (TP+TN+FP+FN)$, precision is $TP/(TP+FP)$ and recall is $TP / (TP + FN)$. We can use these three measures to be able to better understand the performance of the model.
+
+Below is an example on how to use the confusion matrix. Here, a decision tree is learned on the titanic dataset. The tree aims to predict whether a person would have survived the accident based on the variables Age, Sex and Pclass (travel class). The decision the tree makes can be deemed correct or incorrect if we know what the person's true outcome was. That is, if it's a supervised learning problem. Since the true fate of the passengers, Survived, is also provided in titanic, we can compare it to the prediction made by the tree and the results can be summarized in a confusion matrix. Note that the accuracy, precision and recall are all 1 as we are working on the training set which has data that is classified correctly.
+
+```{r}
+# The titanic data is part of the titanic package and can be installed.
+# This data gave some inconsistent resukts, hence getting the titanic data from kaggle site.
+# install.packages('titanic')
+# library(titanic)
+
+# Import titianic traing and test data from csv file...
+titanic_train <- read.csv("titanic_train.csv", header=TRUE)
+titanic_test <- read.csv("titanic_test.csv", header=TRUE)
+# Cannot merge the two datasets as the columns (features) do not match
+# The test dataset does not have the Survived attribute calculated.
+# titanic <- rbind(titanic_train, titanic_test)
+
+# Set random seed. Don't remove this line.
+set.seed(101)
+
+# Have a look at the structure of titanic
+str(titanic_train)
+
+# A decision tree classification model is built on the data
+tree <- rpart(Survived ~ ., data = titanic_train, method = "class")
+
+# Use the predict() method to make predictions, assign to pred
+pred <- predict(tree, titanic_train, type = "class")
+
+# Use the table() method to make the confusion matrix
+conf <- table(titanic_train$Survived, pred)
+
+# Assign TP, FN, FP and TN using conf
+TP <- conf[1, 1] # this will be 549
+FN <- conf[1, 2] # this will be 0
+FP <- conf[2, 1] # this will be 0
+TN <- conf[2, 2] # this will be 342
+
+# Calculate and print the accuracy: acc
+acc = (TP + TN) / (TP + FN + FP + TN)
+print(acc)
+
+# Calculate and print out the precision: prec
+prec = (TP ) / (TP + FP)
+print(prec)
+
+
+# Calculate and print out the recall: rec
+rec = (TP ) / (TP + FN)
+print(rec)
+```
+
+
+### Regression measures using RMSE  
+We can use Root Mean Square Error to help understand the performance of the regression model. RMSE can be calculated as follows and is strongly related to the mean distances between the estimates and the regression line. RMSE will be large if the estimates are far from the regression line and small if the estimates are closer to the regression line.  
+$$
+RMSE = \sqrt{\frac{1}{N} \Sigma{_{i=1}{^N}} \ast (y_i - \hat{y_i})^2}
+$$
+### Regression using R-squared
+
+### Clustering measures  
+Clustering measures are different from the above two as there is no apriori labels available. The performance mesures consists of two elements. Similarity within a cluster (which should be high) and similarity between clusters (which should be low). For Within cluster similarity, we can measure within sum of squares (wss) and the diameter size. The smaller the wss and diameter the more similar are the elements within the cluster. For between cluster similarity, we can use the between sum of squares and the intercluster distance. The higher these values, the more dissimilar are the clusters.
+
+Another measure in clustering is the Dunn's index. This index can be represented as $minimal intercluster distance / maximal diameter$. There are multiple measures to quantitatively describe the models. The most important factor is to think critically and understand the model being applied and then use the approriate measure.
+
+An example of getting and validating performance measures for clustering is given below:
+```{r}
+# The seeds data is part of the UCIMLR repository. However, loading the data using R gives the warning
+# "package ‘seeds’ is not available (for R version 3.5.1)"
+
+# Hence loading the seeds data from txt file.
+seeds_raw <- read.table('seeds_dataset.txt', sep = '\t',header = FALSE)
+seeds <- seeds_raw[-8]
+colnames( seeds ) <- c('area', 'perimeter', 'compactness', 'length', 'width', 'asymmetry', 'groove_length')
+
+# Set random seed. Don't remove this line.
+set.seed(1)
+
+# Explore the structure of the dataset
+str(seeds)
+
+# Group the seeds in three clusters
+km_seeds <- kmeans(seeds, 3)
+
+# Color the points in the plot based on the clusters
+plot(length ~ compactness, data = seeds, col = km_seeds$cluster)
+# legend(.82, 6.5, legend=unique(km_seeds$cluster),col=unique(as.numeric(km_seeds$cluster)),pch=19)
+
+# Print out the ratio of the WSS to the BSS
+km_seeds$tot.withinss / km_seeds$betweenss
+```
+
+
+### Datasets - Training and Test Data
+For supervised learning, it is important to shuffle and split the dataset into training and test datasets. Training dataset is used to help tune the model and the test dataset is where you use the model to understand its predictive power. The test and train datasets are mutually exclusive. Cross-Validation is the process of using multiple splits of the train and test data sets to validated. N-fold cross-validation will split the datasets to 1/N random observations nad then repeat the process of validation N times, each time randomly splitting the dataset into train (1/N) and the rest to test.  
+The example below shows on how to do a 70/30 train/test split of the dataset. The dataset used is the titanic dataset from previous example. An example of getting and validating performance measures for clustering is given below:
+```{r}
+# Using iris dataset that was already loaded as part of the previous section in this file.
+str(titanic_train)
+
+# Set random seed. Don't remove this line.
+set.seed(1)
+
+# Shuffle the dataset, call the result shuffled
+n <- nrow(titanic_train)
+shuffled <- titanic_train[sample(n),]
+
+# Split the data in train and test
+train_indicies <- 1:round(0.7 * n)
+train <- shuffled[train_indicies, ]
+test_indices <- (round(0.7 * n) + 1):n
+test <- shuffled[test_indices, ]
+
+
+# Print the structure of train and test
+str(train)
+str(test)
+```
+
+Now that we have shuffled and split the dataset, we can then use these datasets to train our model and test its predictive power.
+```{r}
+# Fill in the model that has been learned.
+tree <- rpart(Survived ~ ., train, method = "class")
+
+# Need to make sure that the levels in test and train datasets are the same.
+# Cannot have new levels show up inthe test dataset that was not there in train dataset.
+id <- which(!(test$Survived %in% levels(train$Survived)))
+test$Survived[id] <- NA
+#predict(model,newdata=foo.new)
+# Predict the outcome on the test set with tree: pred
+pred <- predict(tree, train, type = "class")
+
+# Calculate the confusion matrix: conf
+conf <- table(train$Survived, pred)
+
+# Print this confusion matrix
+print(conf)
+```
+Taking it a step further to perform a 6 fold cross validation and with each fold perform an accuracy test. In the examples below, the mean accuracy of classification for a 6 fold cross validation is 78%.
+```{r}
+# Initialize the accs vector
+accs <- rep(0,6)
+
+for (i in 1:6) {
+  # These indices indicate the interval of the test set
+  indices <- (((i-1) * round((1/6)*nrow(shuffled))) + 1):((i*round((1/6) * nrow(shuffled))))
+  
+  # Exclude them from the train set
+  train <- shuffled[-indices,]
+  
+  # Include them in the test set
+  test <- shuffled[indices,]
+  
+  # A model is learned using each training set
+  tree <- rpart(Survived ~ ., train, method = "class")
+  
+  # Make a prediction on the test set using tree
+  pred <- predict(tree, test, type = "class")
+
+  
+  # Assign the confusion matrix to conf
+  conf <- table(test$Survived, pred)
+
+  
+  # Assign the accuracy of this model to the ith index in accs
+  accs[i] <- sum(diag(conf))/sum(conf)
+}
+
+# Print out the mean of accs
+print(mean(accs))
+```
+
+## Classification Deep Dive
+We will be dwelling deeper into the Classification Machine Learning technique, starting with decision trees to K-Nearest neighbors. Th etask of classification is to automatically assign class to observations with features. The predictive model is to automatically assign new observations with features to classes based on previous observations. Binary classifications classifies into two classes.
+### Decision Trees
+The intuitive way of classifying observations is to ask questions. And iteratively partition the observations until we come to a conclusion of that observation. It can be viewed as a tree, where a node can be split until we reach to the nodes that ends up associated to a class (make a prediction). Decision tree is a type of supervised learning algorithm that can be used in both regression and classification problems. It works for both categorical and continuous input and output variables.  
+
+Choosing the best feature set to use for spliting can be complex to identify the splitting criteria to choose. One option for identifying splitting criteria can be information gain (entropy) - the information gained from a split, based on the featureset. Nicely divided classes have high entropy and classes scrambled all over the tree have low entropy.
+
+Pruning the decision tree can result in higher bias, but will reduce the chance to overfit. The art is to find the best way to find the stopping criteria. If we keep pruning the tree, we get to a point where we start losing information that affects the accuracy of classifications.
+
+The example below uses the carseats dataset to generate a classification tree, prune the tree and analyze the accuracy of the tree before and after pruning.
+
+```{r}
+# load the Carseats dataframe from the ISLR package
+library(ISLR)
+data(package="ISLR")
+carseats<-Carseats
+require(tree)
+
+names(carseats)
+hist(carseats$Sales)
+
+``` 
+The Carseats dataset is a dataframe with 400 observations on the following 11 variables:
+
+* Sales: unit sales in thousands
+* CompPrice: price charged by competitor at each location
+* Income: community income level in 1000s of dollars
+* Advertising: local ad budget at each location in 1000s of dollars
+* Population: regional pop in thousands
+* Price: price for car seats at each site
+* ShelveLoc: Bad, Good or Medium indicates quality of shelving location
+* Age: age level of the population
+* Education: ed level at location
+* Urban: Yes/No
+* US: Yes/No
+
+Converting the quantitative variable sales into a binary variable, so we can use the variable for decision in a binary tree classifier. If the sales is greater than 8, we will convert the sales to high and for all else it is low.
+```{r}
+High = ifelse(carseats$Sales<=8, "No", "Yes")
+carseats = data.frame(carseats, High)
+
+# fill a model using decision trees
+tree.carseats = tree(High~.-Sales, data=carseats)
+summary(tree.carseats)
+
+# Visualize the tree using plot
+plot(tree.carseats)
+text(tree.carseats, pretty = 0)
+``` 
+
+
+It's time to prune the tree down. Let's create a training set and a test by splitting the carseats dataframe into 250 training and 150 test samples. 
+
+```{r}
+# set a seed to make the results reproducible
+set.seed(101)
+
+# Create a training set of 250 observations from thetotal of 400
+strain=sample(1:nrow(carseats), 250)
+
+# Create a decision tree from the training dataset
+tree.carseats = tree(High~.-Sales, carseats, subset=strain)
+
+# Plot the tree
+plot(tree.carseats)
+text(tree.carseats, pretty=0)
+``` 
+
+The plot looks a bit different because of the slightly different dataset. Nevertheless, the complexity of the tree looks roughly the same. Now you're going to take this tree and predict it on the test set, using the predict method for trees. Here you'll want to actually predict the class labels. Then you can evalute the error by using a misclassification table.
+
+```{r}
+tree.pred = predict(tree.carseats, carseats[-strain,], type="class")
+with(carseats[-strain,], table(tree.pred, High))
+```
+On the diagonals are the correct classifications, while off the diagonals are the incorrect ones. You only want to recored the correct ones. To do that, you can take the sum of the 2 diagonals divided by the total (150 test observations).
+
+Ok, you get an error of 0.76 with this tree.
+
+When growing a big bushy tree, it could have too much variance. Thus, let's use cross-validation to prune the tree optimally. Using cv.tree, you'll use the misclassification error as the basis for doing the pruning.
+
+Printing out the results shows the details of the path of the cross-validation. You can see the sizes of the trees as they were pruned back, the deviances as the pruning proceeded, as well as the cost complexity parameter used in the process.
+
+Let's plot this out:
+Looking at the plot, you see a downward spiral part because of the misclassification error on 250 cross-validated points. So let's pick a value in the downward steps (12). Then, let's prune the tree to a size of 12 to identify that tree. Finally, let's plot and annotate that tree to see the outcome.
+
+```{r}
+cv.carseats = cv.tree(tree.carseats, FUN = prune.misclass)
+cv.carseats
+plot(cv.carseats)
+prune.carseats = prune.misclass(tree.carseats, best = 12)
+plot(prune.carseats)
+text(prune.carseats, pretty=0)
+```
+It's a bit shallower than previous trees, and you can actually read the labels. Let's evaluate it on the test dataset again.
+```{r}
+tree.pred = predict(prune.carseats, carseats[-strain,], type="class")
+with(carseats[-strain,], table(tree.pred, High))
+```
+
+Seems like the correct classifications dropped a little bit. It has done about the same as your original tree, so pruning did not hurt much with respect to misclassification errors, and gave a simpler tree.
+
+Often case, trees don't give very good prediction errors, so let's go ahead take a look at random forests and boosting, which tend to outperform trees as far as prediction and misclassification are concerned.
+
+
+
+### K-Nearest Neighbors
+This is an instance based learning method. Unlike decision trees there is no clear model, but rather than find nearest neighbor and classify them accordingly. When asked to classify an unseen observation, then the algorithm looks for closest observations and then classify. The distance can be calulated using multiple methods such as standard eucledian distance, manhattan distance etc.
+
+Scaling problem is the fact that calculation of the distance is affected when we scale the features. In the example below, we will use the titanci dataset to normalize the features and then apply the knn algorith for 5 nearest neighbors once and then run the same knn algorithm multiple times, with each time the k is increased to identify the one that gives the optimal accuracy.
+
+```{r}
+# Copy train and test to knn_train and knn_test
+knn_train <- na.omit(subset(train, select = c(2, 3, 6)))
+knn_test <- na.omit(subset(test, select = c(2, 3, 6)))
+
+# Store the Survived column of train and test in train_labels and test_labels
+train_labels <- knn_train$Survived
+test_labels <- knn_test$Survived
+
+# Drop Survived column for knn_train and knn_test
+knn_train$Survived <- NULL
+knn_test$Survived <- NULL
+
+# Normalize Pclass
+min_class <- min(knn_train$Pclass)
+max_class <- max(knn_train$Pclass)
+knn_train$Pclass <- (knn_train$Pclass - min_class) / (max_class - min_class)
+knn_test$Pclass <- (knn_test$Pclass - min_class) / (max_class - min_class)
+
+# Normalize Age
+min_age <- min(knn_train$Age)
+max_age <- max(knn_train$Age)
+knn_train$Age <- (knn_train$Age - min_age) / (max_age - min_age)
+knn_test$Age <- (knn_test$Age - min_age) / (max_age - min_age)
+
+
+# Set random seed. Don't remove this line.
+set.seed(10)
+
+# Load the class package
+library("class")
+
+# make predictions using knn algorithm:
+pred <- knn(train = knn_train, test = knn_test, cl = train_labels, k = 5)
+
+# Construct the confusion matrix: conf
+conf <- table(test_labels, pred)
+
+# Print out the confusion matrix
+print(conf)
+
+# define range and accs for iterating through the knn algorithm for different values of k
+range <- 1:round(0.2 * nrow(knn_train))
+accs <- rep(0, length(range))
+
+for (k in range) {
+
+  # make predictions using knn: pred
+  pred <- knn(knn_train, knn_test, train_labels, k = k)
+
+  # construct the confusion matrix: conf
+  conf <- table(test_labels, pred)
+
+  # calculate the accuracy and store it in accs[k]
+  accs[k] <- sum(diag(conf))/sum(conf)
+  # print(accs[k])
+}
+
+# Plot the accuracies. Title of x-axis is "k".
+plot(range, accs, xlab = "k")
+
+# Calculate the best k
+print(which.max(accs))
+```
+
+
+### ROC Curve
+ROC is a very powerful performance measure for binary classifiers. ROC curve stands for Receiver Operator Characteristic curve. There are two ratios that are importatnt in calculating the ROC curve. They are:
+ - True Positive Rate (TPR) and is the same as recall -> TP / (TP + FN)
+ - False Positive Rate (FPR) -> FP / ( FP + TN)
+
+ROC curve is a graph of TPR (Vertical axis) and FPR (Horizontal axis). Inpertreting the ROC curve is to find if th eclassifier can get as close to the upper left corner of the plot. The closer it is to the upper left corner, the better is the classifier output. The upper left is where the TPR is 1 and FPR is 0. AUC (Area under the curve) will be large as we get to the upper left corner of the plot.
+
+So, how doe we create a ROC curve. The example below illustrates it. [Reference](https://rpubs.com/H_Zhu/235617)
+
+```{r}
+# Set the input data
+library(ggplot2)
+library(plyr)
+library(ROCR)
+adult <- read.table('https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data', 
+                    sep = ',', fill = F, strip.white = T)
+colnames(adult) <- c('age', 'workclass', 'fnlwgt', 'educatoin', 
+                     'educatoin_num', 'marital_status', 'occupation', 'relationship', 'race', 'sex', 
+                     'capital_gain', 'capital_loss', 'hours_per_week', 'native_country', 'income')
+
+
+# Create training and testing sets..
+sz <- round(.8 * dim(adult)[1])  # training set size
+training_set <- adult[1:sz,]
+testing_set <- adult[-(1:sz),]
+
+
+# Set the seed, calculate the tree and identify the probabilities.
+set.seed(1)
+tree <- rpart(income ~ ., training_set, method = "class")
+probs <- predict(tree, testing_set, type = "prob")[,2]
+
+# Make a prediction object: pred
+pred <- prediction(probs, testing_set$income)
+
+# Make a performance object: perf
+perf <- performance(pred, "tpr", "fpr")
+perf1 <- performance(pred, "auc")
+
+# Plot this curve
+plot(perf)
+
+# Print out the AUC
+print(perf1@y.values[[1]])
+```
+
+### Comparing the methods using ROC curve
+We will now create a decision tree as well as KNN models and then generate the ROC curve to compare the performance of the two models. We will use the same income data from previous section here.
+
+```{r}
+# Set the seed, calculate the tree and identify the probabilities.
+set.seed(1)
+tree <- rpart(income ~ ., training_set, method = "class")
+probs_t <- predict(tree, testing_set, type = "class")
+probs_k <- predict(tree, testing_set, type = "prob")[,2]
+
+# Make a prediction object: pred
+pred_t <- prediction(as.numeric(probs_t), as.numeric(testing_set$income))
+pred_k <- prediction(probs_k, testing_set$income)
+
+# Make a performance object: perf
+perf_t <- performance(pred_t, "tpr", "fpr")
+perf_k <- performance(pred_k, "tpr", "fpr")
+
+# Plot these curves
+plot(perf_t, col="red", ann=FALSE, las=2)
+par(new=TRUE)
+plot(perf_k, ann=FALSE, axes=FALSE,col='blue')
+legend(0.7, 0.2, legend=c("Decision Tree", "KNN"),
+       col=c("red", "blue"), lty=1:1, cex=0.8,
+       title="Line types", text.font=4, bg='lightblue')
+```
+
+
+## Regression Deep Dive
+Regression technique is another form for supervised learning. Unlike the classifiers, with regression, we are trying to perdict a specific value instead of a class that the observation fits. In the next couple of sections we will look a little deeper in the various types and concepts of regression.
+
+### Linear Regression
+Simple linear regression model is focussed on a single predictor to model a response and the relation between the predictor and response is approximately linear. Most often than not, a scatterplot is the best mechanism to figure out the plausibility of the linear relationship. In this case, we are trying to fit a line that follows the formal defintion of $Y = \beta_0 + \beta_1 X + \varepsilon$, where X is the predictor and Y is the response. $\beta_0$ is the slope, $\btea_1$ is the slope and $\varepsilon$ is the residual error.
+
+To estimate the co-efficients, we can use the lm() function in R. The example below is a code snippet to highlight on how we go about estimating the co-efficients and draw the regression line.
+
+```{r}
+
+# New value for which we will predict the estimated value
+sepal_width_new = list()
+sepal_width_new$Sepal.Width = 5.0
+
+# The iris dataset contains relationship between sepal length and width. 
+# describe the linear relationship between the two variables: lm_sepal
+lm_sepal <- lm(Sepal.Length ~ Sepal.Width, data = iris)
+
+# Print the coefficients of lm_sepal
+coefficients(lm_sepal)
+
+# Predict and print the sepal length of the new observation
+predict(lm_sepal, sepal_width_new)
+
+
+# Build model and make plot
+lm_sepal <- lm(Sepal.Width ~ Sepal.Length, data = iris)
+plot(iris$Sepal.Width, iris$Sepal.Length, xlab = "sepal width", ylab = "sepal length")
+abline(lm_sepal$coefficients, col = "red")
+
+# Apply predict() to lm_kang: nose_length_est
+sepal_length_est <- predict(lm_sepal, iris)
+
+# Calculate difference between the predicted and the true values: res
+res <- iris$Sepal.Width - sepal_length_est
+
+# Calculate RMSE, assign it to rmse and print it
+rmse <- sqrt(mean(res^2))
+print(rmse)
+
+# kang_nose, lm_kang and res are already loaded in your workspace
+
+# Calculate the residual sum of squares: ss_res
+ss_res <- sum(res^2)
+
+# Determine the total sum of squares: ss_tot
+ss_tot <- sum((iris$Sepal.Width - mean(iris$Sepal.Width))^2)
+
+# Calculate R-squared and assign it to r_sq. Also print it.
+r_sq <- (1 - (ss_res/ss_tot))
+print(r_sq)
+
+# Apply summary() to lm_kang
+summary(lm_sepal)
+```
+
+### Multi-Variable Linear Regression
+We will use the dataset mtcars to highlight the multi-variable linear regression analysis. In this case, our response in mpg and its relation to disp, hp and wt. We will start with creating plots to understand the relation, then build a linear model and plot the residuals vs fitted values and finally plot the qqnorm plot and test the p-value for significance. As can be seen from the summary, weight might be the only signifcant predictor for the mpg response.
+```{r}
+data(mtcars) #load mtcars data
+
+# Create scatter plots: Linearity plausible?
+plot(mpg ~ disp, mtcars)
+plot(mpg ~ hp, mtcars)
+plot(mpg ~ wt, mtcars)
+
+
+# Build a linear model for the energy based on all other variables:
+lm_mtcars <- lm(mpg ~ ., data = mtcars)
+
+# Plot the residuals in function of your fitted observations
+plot(lm_mtcars$fitted.values, lm_mtcars$residuals)
+
+# Make a Q-Q plot of your residual quantiles
+qqnorm(lm_mtcars$residuals, ylab = "Residual Quantiles")
+
+# Summarize lm_choco
+summary(lm_mtcars)
+```
+
+### Residuals & p-values
+Often, the **assumptions of linear regression**, are stated as,
+
+- **L**inearity: the response can be written as a linear combination of the predictors. (With noise about this true linear relationship.)
+- **I**ndependence: the errors are independent.
+- **N**ormality: the distribution of the errors should follow a normal distribution.
+- **E**qual Variance: the error variance is the same at any set of predictor values.
+
+If these assumptions are met, great! We can perform inference, **and it is valid**. If these assumptions are *not* met, we can still "perform" a $t$-test using `R`, but the results are **not valid**. The distributions of the parameter estimates will not be what we expect. Hypothesis tests will then accept or reject incorrectly. Essentially, **garbage in, garbage out.**
+
+We'll now look at a number of tools for checking the assumptions of a linear model.
+```{r}
+data(cars) #Load cars data
+fit = lm(dist ~ speed, cars) # Run a regression analysis
+par(mfrow=c(2,2)) # Change the panel layout to 2 x 2
+plot(fit)
+par(mfrow=c(1,1)) # Change back to 1 x 1
+shapiro.test(resid(fit))
+```
+
+
+## Clustering Deep Dive
+Clustering machine learning technique is of the type unsupervised learning. In this scenarion, we will need to predict from the data as the predictors to either classify or quantify is not available. Many problemns in th ereal world do not have labels to help classify. A cluster is a colletion of data objects taht are similar to each other within a cluster and disimilar across the clusters. Clustering technique is often not measured as right or wrong, but as different data can provide different clusters.
+
+### k-means clustering
+K-means clustering is the most commonly used unsupervised machine learning algorithm. We can use this technique to partition a given data set into a set of k groups (clusters), where k represents the number of groups specified apriori. The algorithm classifies objects in multiple groups (i.e., clusters), such that objects within the same cluster are as similar as possible (i.e., high intra-class similarity), whereas objects from different clusters are as dissimilar as possible (i.e., low inter-class similarity). In k-means clustering, each cluster is represented by its center (i.e, centroid) which corresponds to the mean of points assigned to the cluster.[Reference](https://uc-r.github.io/kmeans_clustering).
+
+We will now use the builtin R dataset USArrests to highlight some of the key characteristics of k-means algorithm. We will also calculate the Dunn's Index and compare with Heirarchichal clustering methods (single as well as complete).
+
+```{r message=FALSE, warning=FALSE}
+# Load libraries
+library(tidyverse)  # data manipulation
+library(cluster)    # clustering algorithms
+library(factoextra) # clustering algorithms & visualization
+
+# Load dataset
+df <- USArrests
+
+# remove missing values
+df <- na.omit(df)
+
+# Scale the dataset to standardize
+df <- scale(df)
+
+# Apply k-means algorithm function for 2 clusters
+k2 <- kmeans(seeds, centers = 2, nstart = 20)
+
+# Print out k-means algorithm output
+str(k2)
+
+# Elbow Method - To detrmine optimal clusters
+# function to compute total within-cluster sum of square 
+wss <- function(k) {
+  kmeans(df, k, nstart = 10 )$tot.withinss
+}
+
+# Compute and plot wss for k = 1 to k = 15
+k.values <- 1:15
+
+# extract wss for 2-15 clusters
+wss_values <- map_dbl(k.values, wss)
+
+plot(k.values, wss_values,
+       type="b", pch = 19, frame = FALSE, 
+       xlab="Number of clusters K",
+       ylab="Total within-clusters sum of squares")
+
+# Cluster Visualization
+final <- kmeans(df, 4, nstart = 25)
+fviz_cluster(final, data = df)
+
+```
+
